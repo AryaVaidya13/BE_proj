@@ -1,0 +1,288 @@
+[
+  {
+    "paperId": "f37076f426023241f19cdc2fb0a0fd733a6fa7fa",
+    "url": "https://www.semanticscholar.org/paper/f37076f426023241f19cdc2fb0a0fd733a6fa7fa",
+    "title": "Abstractive Text Summarization using Sequence-to-sequence RNNs and Beyond",
+    "year": 2016,
+    "openAccessPdf": {
+      "url": "https://www.aclweb.org/anthology/K16-1028.pdf",
+      "status": "HYBRID",
+      "license": "CCBY",
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1602.06023, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "1701451",
+        "name": "Ramesh Nallapati"
+      },
+      {
+        "authorId": "145218984",
+        "name": "Bowen Zhou"
+      },
+      {
+        "authorId": "1790831",
+        "name": "C. D. Santos"
+      },
+      {
+        "authorId": "1854385",
+        "name": "Çaglar Gülçehre"
+      },
+      {
+        "authorId": "144028698",
+        "name": "Bing Xiang"
+      }
+    ],
+    "abstract": "In this work, we model abstractive text summarization using Attentional Encoder-Decoder Recurrent Neural Networks, and show that they achieve state-of-the-art performance on two different corpora. We propose several novel models that address critical problems in summarization that are not adequately modeled by the basic architecture, such as modeling key-words, capturing the hierarchy of sentence-to-word structure, and emitting words that are rare or unseen at training time. Our work shows that many of our proposed models contribute to further improvement in performance. We also propose a new dataset consisting of multi-sentence summaries, and establish performance benchmarks for further research."
+  },
+  {
+    "paperId": "c181d9e2e488d3e4a78f67e9e8884565f3c7051e",
+    "url": "https://www.semanticscholar.org/paper/c181d9e2e488d3e4a78f67e9e8884565f3c7051e",
+    "title": "Abstractive Text Summarization Using GAN",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://doi.org/10.38124/ijisrt/ijisrt24aug334",
+      "status": "GOLD",
+      "license": "CCBYNC",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.38124/ijisrt/ijisrt24aug334?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.38124/ijisrt/ijisrt24aug334, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2318877751",
+        "name": "Tanushree Bharti"
+      },
+      {
+        "authorId": "2318878369",
+        "name": "Satyam Kumar Sinha"
+      },
+      {
+        "authorId": "2318878679",
+        "name": "Harshit Singhal"
+      },
+      {
+        "authorId": "2318878071",
+        "name": "Rohit Saini"
+      },
+      {
+        "authorId": "2318877017",
+        "name": "Dipesh Parihar"
+      }
+    ],
+    "abstract": "In the field of natural language processing, the task of writing long concepts into short expressions has attracted attention due to its ability to simplify the processing and understanding of information. While traditional transcription techniques are effective to some extent, they often fail to capture the essence and nuances of the original texts. This article explores a new approach to collecting abstract data using artificial neural networks (GANs), a class of deep learning models known for their ability to create patterns of real information. We describe the fundamentals of text collection through a comprehensive review of existing literature and methods and highlight the complexity of GAN-based text. Our goal is to transform complex text into context and meaning by combining the power of GANs with natural language understanding. We detail the design and training of an adaptive GAN model for the text recognition task. We also conduct various experiments and evaluations using established metrics such as ROUGE and BLEU scores to evaluate the effectiveness and efficiency of our approach. The results show that GANs can be used to improve the quality and consistency of generated content, data storage, data analysis paper, etc. It shows its promise in paving the way for advanced applications in fields. Through this research, we aim to contribute to the continued evolution of writing technology, providing insights and innovations that support the field to a new level of well-done."
+  },
+  {
+    "paperId": "0c5598424cc96d8fb500eb553cb7969f86a0ede0",
+    "url": "https://www.semanticscholar.org/paper/0c5598424cc96d8fb500eb553cb7969f86a0ede0",
+    "title": "Evaluating the Factual Consistency of Abstractive Text Summarization",
+    "year": 2019,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/1910.12840",
+      "status": "GREEN",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/1910.12840, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "51232396",
+        "name": "Wojciech Kryscinski"
+      },
+      {
+        "authorId": "143775536",
+        "name": "Bryan McCann"
+      },
+      {
+        "authorId": "2228109",
+        "name": "Caiming Xiong"
+      },
+      {
+        "authorId": "2166511",
+        "name": "R. Socher"
+      }
+    ],
+    "abstract": "Currently used metrics for assessing summarization algorithms do not account for whether summaries are factually consistent with source documents. We propose a weakly-supervised, model-based approach for verifying factual consistency and identifying conflicts between source documents and a generated summary. Training data is generated by applying a series of rule-based transformations to the sentences of source documents. The factual consistency model is then trained jointly for three tasks: 1) identify whether sentences remain factually consistent after transformation, 2) extract a span in the source documents to support the consistency prediction, 3) extract a span in the summary sentence that is inconsistent if one exists. Transferring this model to summaries generated by several state-of-the art models reveals that this highly scalable approach substantially outperforms previous models, including those trained with strong supervision using standard datasets for natural language inference and fact checking. Additionally, human evaluation shows that the auxiliary span extraction tasks provide useful assistance in the process of verifying factual consistency."
+  },
+  {
+    "paperId": "04ce6c9e753b57991b66b9c3e1e41b7eab687023",
+    "url": "https://www.semanticscholar.org/paper/04ce6c9e753b57991b66b9c3e1e41b7eab687023",
+    "title": "Abstractive text summarization: State of the art, challenges, and improvements",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://arxiv.org/abs/2409.02413, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2379295118",
+        "name": "Hassan Shakil"
+      },
+      {
+        "authorId": "2327237780",
+        "name": "Ahmad Farooq"
+      },
+      {
+        "authorId": "2261083539",
+        "name": "Jugal K. Kalita"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "2db77485736cf29778a4464fe500a289bd46e7ac",
+    "url": "https://www.semanticscholar.org/paper/2db77485736cf29778a4464fe500a289bd46e7ac",
+    "title": "ChatGPT as a Factual Inconsistency Evaluator for Abstractive Text Summarization",
+    "year": 2023,
+    "openAccessPdf": {
+      "url": "http://arxiv.org/pdf/2303.15621",
+      "status": "CLOSED",
+      "license": null,
+      "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.48550/arXiv.2303.15621?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.48550/arXiv.2303.15621, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "31689330",
+        "name": "Zheheng Luo"
+      },
+      {
+        "authorId": "145229872",
+        "name": "Qianqian Xie"
+      },
+      {
+        "authorId": "1881965",
+        "name": "S. Ananiadou"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "ac897649adc326626874fca3dbfb67ab07a69cde",
+    "url": "https://www.semanticscholar.org/paper/ac897649adc326626874fca3dbfb67ab07a69cde",
+    "title": "Sentence salience contrastive learning for abstractive text summarization",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1016/j.neucom.2024.127808?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/j.neucom.2024.127808, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2267159418",
+        "name": "Ying Huang"
+      },
+      {
+        "authorId": "2267053888",
+        "name": "Zhixin Li"
+      },
+      {
+        "authorId": "2162766981",
+        "name": "Zhenbin Chen"
+      },
+      {
+        "authorId": "7924036",
+        "name": "Canlong Zhang"
+      },
+      {
+        "authorId": "46389488",
+        "name": "Huifang Ma"
+      }
+    ],
+    "abstract": null
+  },
+  {
+    "paperId": "4ac697145c90850bc0c084c84fa9a4020dfded47",
+    "url": "https://www.semanticscholar.org/paper/4ac697145c90850bc0c084c84fa9a4020dfded47",
+    "title": "Single-Document Abstractive Text Summarization: A Systematic Literature Review",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://dl.acm.org/doi/pdf/10.1145/3700639",
+      "status": "BRONZE",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1145/3700639?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1145/3700639, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2087506883",
+        "name": "Abishek Rao"
+      },
+      {
+        "authorId": "2020604971",
+        "name": "Shivani Aithal"
+      },
+      {
+        "authorId": "2292877523",
+        "name": "Sanjay Singh"
+      }
+    ],
+    "abstract": "Abstractive text summarization is a task in natural language processing that automatically generates the summary from the source document in a human-written form with minimal loss of information. Research in text summarization has shifted towards abstractive text summarization due to its challenging aspects. This study provides a broad systematic literature review of abstractive text summarization on single-document summarization to gain insights into the challenges, widely used datasets, evaluation metrics, approaches, and methods. This study reviews research articles published between 2011 and 2023 from popular electronic databases. In total, 226 journal and conference publications were included in this review. The in-depth analysis of these papers helps researchers understand the challenges, widely used datasets, evaluation metrics, approaches, and methods. This article identifies and discusses potential opportunities and directions along with a generic conceptual framework and guidelines on abstractive summarization models and techniques for research in abstractive text summarization."
+  },
+  {
+    "paperId": "c9a3e97b2ab738f3877e99db2d4822f9a1236a83",
+    "url": "https://www.semanticscholar.org/paper/c9a3e97b2ab738f3877e99db2d4822f9a1236a83",
+    "title": "Improving Faithfulness in Abstractive Text Summarization with EDUs Using BART (Student Abstract)",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://ojs.aaai.org/index.php/AAAI/article/download/30433/32515",
+      "status": "GOLD",
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1609/aaai.v38i21.30433?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1609/aaai.v38i21.30433, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2293534700",
+        "name": "Narjes Delpisheh"
+      },
+      {
+        "authorId": "1735475",
+        "name": "Yllias Chali"
+      }
+    ],
+    "abstract": "Abstractive text summarization uses the summarizer’s own words to capture the main information of a source document in a summary. While it is more challenging to automate than extractive text summarization, recent advancements in deep learning approaches and pre-trained language models have improved its performance. However, abstractive text summarization still has issues such as unfaithfulness. To address this problem, we propose a new approach that utilizes important Elementary Discourse Units (EDUs) to guide BART-based text summarization. Our approach showed the improvement in truthfulness and source document coverage in comparison to some previous studies."
+  },
+  {
+    "paperId": "3538924c6a0d5b049e55083369b6a26bd5a40cce",
+    "url": "https://www.semanticscholar.org/paper/3538924c6a0d5b049e55083369b6a26bd5a40cce",
+    "title": "Abstractive Text Summarization for the Urdu Language: Data and Methods",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "https://ieeexplore.ieee.org/ielx7/6287639/6514899/10474013.pdf",
+      "status": "GOLD",
+      "license": "CCBYNCND",
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/ACCESS.2024.3378300?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/ACCESS.2024.3378300, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2292619737",
+        "name": "M. Awais"
+      },
+      {
+        "authorId": "2299538667",
+        "name": "Rao Muhammad Adeel Nawab"
+      }
+    ],
+    "abstract": "The task of abstractive text summarization aims to automatically generate a short and concise summary of a given source article. In recent years, automatic abstractive text summarization has attracted the attention of researchers because large volumes of digital text are readily available in multiple languages on a wide range of topics. Automatically generating precise summaries from large text has potential application in the generation of news headlines, a summary of research articles, the moral of the stories, media marketing, search engine optimization, financial research, social media marketing, question-answering systems, and chatbots. In literature, the problem of abstractive text summarization has been mainly investigated for English and some other languages. However, it has not been thoroughly explored for the Urdu language despite having a huge amount of data available in digital format. To fulfill this gap, this paper presents a large benchmark corpus of 2,067,784 Urdu news articles for the Urdu abstractive text summarization task. As a secondary contribution, we applied a range of deep learning (LSTM, Bi-LSTM, LSTM with attention, GRU, Bi-GRU, and GRU with attention), and large language models (BART and GPT-3.5) on our proposed corpus. Our extensive evaluation on 20,000 test instances showed that GRU with attention model outperforms the other models with ROUGE- $1=46.7$ , ROUGE- $2=24.1$ , and ROUGE-L =48.7. To foster research in Urdu, our proposed corpus is publically and freely available for research purposes under the Creative Common Licence."
+  },
+  {
+    "paperId": "d0880bbc312269ba5fe540606c772aae02ccfaec",
+    "url": "https://www.semanticscholar.org/paper/d0880bbc312269ba5fe540606c772aae02ccfaec",
+    "title": "Advancements in the Efficacy of Flan-T5 for Abstractive Text Summarization: A Multi-Dataset Evaluation Using ROUGE and BERTScore",
+    "year": 2024,
+    "openAccessPdf": {
+      "url": "",
+      "status": null,
+      "license": null,
+      "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1109/APCI61480.2024.10616418?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1109/APCI61480.2024.10616418, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+    },
+    "authors": [
+      {
+        "authorId": "2253754819",
+        "name": "Abdulrahman Mohsen Ahmed Zeyad"
+      },
+      {
+        "authorId": "2253764927",
+        "name": "Arun Biradar"
+      }
+    ],
+    "abstract": "This research ventured into the realm of abstractive text summarization, focusing on the amalgamation and efficacy of sophisticated NLP models, notably Flan-T5. We employed these cutting-edge models on a variety of datasets, such as XSum, CNN/DailyMail, Multi-News, Newsroom, and Gigaword, to gauge their summarization abilities. The models' performance was assessed using complex metrics like ROUGE and BERTScore. A remarkable discovery was the attainment of a ROUGE-L score of 0.5021 on the Gigaword dataset, underscoring the models' proficiency in producing coherent and contextually precise summaries. The outcomes were substantial, indicating a noticeable improvement in the quality, coherence, and contextual accuracy of the summaries generated by these models. This study concludes that the application of Flan-T5 signifies a considerable progression in the field of abstractive text summarization. Their capacity to effectively process and abridge extensive information is a reflection of their technological capability and constitutes a significant step forward in NLP, opening up new avenues for data processing and knowledge dissemination."
+  }
+]
