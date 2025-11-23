@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Chain of Preference Optimization: Improving Chain-of-Thought Reasoning in LLMs",
+    "abstract": "The recent development of chain-of-thought (CoT) decoding has enabled large language models (LLMs) to generate explicit logical reasoning paths for complex problem-solving. However, research indicates that these paths are not always deliberate and optimal. The tree-of-thought (ToT) method employs tree-searching to extensively explore the reasoning space and find better reasoning paths that CoT decoding might overlook. This deliberation, however, comes at the cost of significantly increased inference complexity. In this work, we demonstrate that fine-tuning LLMs leveraging the search tree constructed by ToT allows CoT to achieve similar or better performance, thereby avoiding the substantial inference burden. This is achieved through Chain of Preference Optimization (CPO), where LLMs are fine-tuned to align each step of the CoT reasoning paths with those of ToT using the inherent preference information in the tree-search process. Extensive experimental results show that CPO significantly improves LLM performance in solving a variety of complex problems, including question answering, fact verification, and arithmetic reasoning, demonstrating its effectiveness. Our code is available at https://github.com/sail-sg/CPO.",
+    "authors": [
+      "Xuan Zhang",
+      "Chao Du",
+      "Tianyu Pang",
+      "Qian Liu",
+      "Wei Gao",
+      "Min Lin"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/3fb26c0cf930b04635540e4815c4b8ca0581155c",
+    "source": "semantic_scholar",
+    "summary": "Chain-of-thought (CoT) decoding has enabled large language models to generate explicit logical reasoning paths for complex problem-solving. This deliberation, however, comes at the cost of significantly increased inference complexity. Chain of Preference Optimization (CPO) allows CoT to achieve similar or better performance, avoiding the substantial inference burden.",
+    "timestamp": "2025-11-23 17:25:01"
+  },
+  {
+    "title": "Self-Training with Direct Preference Optimization Improves Chain-of-Thought Reasoning",
+    "abstract": "Effective training of language models (LMs) for mathematical reasoning tasks demands high-quality supervised fine-tuning data. Besides obtaining annotations from human experts, a common alternative is sampling from larger and more powerful LMs. However, this knowledge distillation approach can be costly and unstable, particularly when relying on closed-source, proprietary LMs like GPT-4, whose behaviors are often unpredictable. In this work, we demonstrate that the reasoning abilities of small-scale LMs can be enhanced through self-training, a process where models learn from their own outputs. We also show that the conventional self-training can be further augmented by a preference learning algorithm called Direct Preference Optimization (DPO). By integrating DPO into self-training, we leverage preference data to guide LMs towards more accurate and diverse chain-of-thought reasoning. We evaluate our method across various mathematical reasoning tasks using different base models. Our experiments show that this approach not only improves LMs' reasoning performance but also offers a more cost-effective and scalable solution compared to relying on large proprietary LMs.",
+    "authors": [
+      "Tianduo Wang",
+      "Shichen Li",
+      "Wei Lu"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/c6f21c64c08295e595c82602c37f0bcac96d3907",
+    "source": "semantic_scholar",
+    "summary": "A common alternative is sampling from larger and more powerful LMs. However, this knowledge distillation approach can be costly and unstable. In this work, we demonstrate that the reasoning abilities of small-scale LMs can be enhanced through self-training.",
+    "timestamp": "2025-11-23 17:25:08"
+  },
+  {
+    "title": "Improve Vision Language Model Chain-of-thought Reasoning",
+    "abstract": "Chain-of-thought (CoT) reasoning in vision language models (VLMs) is crucial for improving interpretability and trustworthiness. However, current training recipes lack robust CoT reasoning data, relying on datasets dominated by short annotations with minimal rationales. In this work, we show that training VLM on short answers does not generalize well to reasoning tasks that require more detailed responses. To address this, we propose a two-fold approach. First, we distill rationales from GPT-4o model to enrich the training data and fine-tune VLMs, boosting their CoT performance. Second, we apply reinforcement learning to further calibrate reasoning quality. Specifically, we construct positive (correct) and negative (incorrect) pairs of model-generated reasoning chains, by comparing their predictions with annotated short answers. Using this pairwise data, we apply the Direct Preference Optimization algorithm to refine the model's reasoning abilities. Our experiments demonstrate significant improvements in CoT reasoning on benchmark datasets and better generalization to direct answer prediction as well. This work emphasizes the importance of incorporating detailed rationales in training and leveraging reinforcement learning to strengthen the reasoning capabilities of VLMs.",
+    "authors": [
+      "Ruohong Zhang",
+      "Bowen Zhang",
+      "Yanghao Li",
+      "Haotian Zhang",
+      "Zhiqing Sun",
+      "Zhe Gan",
+      "Yinfei Yang",
+      "Ruoming Pang",
+      "Yiming Yang"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/d27b8bb0aa2775c270d6f4edc2f32437aae20afc",
+    "source": "semantic_scholar",
+    "summary": "Chain-of-thought (CoT) reasoning in vision language models is crucial for improving interpretability and trustworthiness. Current training recipes lack robust CoT reasoning data, relying on datasets dominated by short annotations with minimal rationales. We show that training VLM on short answers does not generalize well to reasoning tasks that require more detailed responses.",
+    "timestamp": "2025-11-23 17:25:19"
+  },
+  {
+    "title": "Unsupervised Visual Chain-of-Thought Reasoning via Preference Optimization",
+    "abstract": "Chain-of-thought (CoT) reasoning greatly improves the interpretability and problem-solving abilities of multimodal large language models (MLLMs). However, existing approaches are focused on text CoT, limiting their ability to leverage visual cues. Visual CoT remains underexplored, and the only work is based on supervised fine-tuning (SFT) that relies on extensive labeled bounding-box data and is hard to generalize to unseen cases. In this paper, we introduce Unsupervised Visual CoT (UV-CoT), a novel framework for image-level CoT reasoning via preference optimization. UV-CoT performs preference comparisons between model-generated bounding boxes (one is preferred and the other is dis-preferred), eliminating the need for bounding-box annotations. We get such preference data by introducing an automatic data generation pipeline. Given an image, our target MLLM (e.g., LLaVA-1.5-7B) generates seed bounding boxes using a template prompt and then answers the question using each bounded region as input. An evaluator MLLM (e.g., OmniLLM-12B) ranks the responses, and these rankings serve as supervision to train the target MLLM with UV-CoT by minimizing negative log-likelihood losses. By emulating human perception--identifying key regions and reasoning based on them--UV-CoT can improve visual comprehension, particularly in spatial reasoning tasks where textual descriptions alone fall short. Our experiments on six datasets demonstrate the superiority of UV-CoT, compared to the state-of-the-art textual and visual CoT methods. Our zero-shot testing on four unseen datasets shows the strong generalization of UV-CoT. The code is available in https://github.com/kesenzhao/UV-CoT.",
+    "authors": [
+      "Kesen Zhao",
+      "Beier Zhu",
+      "Qianru Sun",
+      "H. Zhang"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/766b8ff9ccc77eb062dde58253da39d0907ebfb0",
+    "source": "semantic_scholar",
+    "summary": "Unsupervised Visual CoT is a framework for image-level CoT reasoning via preference optimization. UV-CoT performs preference comparisons between model-generated bounding boxes (one is preferred and the other is dis-preferred)",
+    "timestamp": "2025-11-23 17:25:27"
+  },
+  {
+    "title": "Uncovering the Impact of Chain-of-Thought Reasoning for Direct Preference Optimization: Lessons from Text-to-SQL",
+    "abstract": "Direct Preference Optimization (DPO) has proven effective in complex reasoning tasks like math word problems and code generation. However, when applied to Text-to-SQL datasets, it often fails to improve performance and can even degrade it. Our investigation reveals the root cause: unlike math and code tasks, which naturally integrate Chain-of-Thought (CoT) reasoning with DPO, Text-to-SQL datasets typically include only final answers (gold SQL queries) without detailed CoT solutions. By augmenting Text-to-SQL datasets with synthetic CoT solutions, we achieve, for the first time, consistent and significant performance improvements using DPO. Our analysis shows that CoT reasoning is crucial for unlocking DPO's potential, as it mitigates reward hacking, strengthens discriminative capabilities, and improves scalability. These findings offer valuable insights for building more robust Text-to-SQL models. To support further research, we publicly release the code and CoT-enhanced datasets.",
+    "authors": [
+      "Hanbing Liu",
+      "Haoyang Li",
+      "Xiaokang Zhang",
+      "Ruotong Chen",
+      "Haiyong Xu",
+      "Tian Tian",
+      "Qi Qi",
+      "Jing Zhang"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/7726d40d59af31de2a88d265d3eb8ee5be5f74c1",
+    "source": "semantic_scholar",
+    "summary": "Direct Preference Optimization (DPO) has proven effective in complex reasoning tasks like math word problems and code generation. However, it often fails to improve performance and can even degrade it. Unlike math and code tasks, which naturally integrate Chain-of-Thought (CoT) reasoning with DPO, Text-to-SQL datasets typically include only final answers (gold SQL queries) without detailed CoT solutions.",
+    "timestamp": "2025-11-23 17:25:39"
+  }
+]

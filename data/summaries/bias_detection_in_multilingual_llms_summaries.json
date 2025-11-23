@@ -1,0 +1,87 @@
+[
+  {
+    "title": "Ready to Translate, Not to Represent? Bias and Performance Gaps in Multilingual LLMs Across Language Families and Domains",
+    "abstract": "The rise of Large Language Models (LLMs) has redefined Machine Translation (MT), enabling context-aware and fluent translations across hundreds of languages and textual domains. Despite their remarkable capabilities, LLMs often exhibit uneven performance across language families and specialized domains. Moreover, recent evidence reveals that these models can encode and amplify different biases present in their training data, posing serious concerns for fairness, especially in low-resource languages. To address these gaps, we introduce Translation Tangles, a unified framework and dataset for evaluating the translation quality and fairness of open-source LLMs. Our approach benchmarks 24 bidirectional language pairs across multiple domains using different metrics. We further propose a hybrid bias detection pipeline that integrates rule-based heuristics, semantic similarity filtering, and LLM-based validation. We also introduce a high-quality, bias-annotated dataset based on human evaluations of 1,439 translation-reference pairs. The code and dataset are accessible on GitHub: https://github.com/faiyazabdullah/TranslationTangles",
+    "authors": [
+      "Md. Faiyaz Abdullah Sayeedi",
+      "Md. Mahbub Alam",
+      "Subhey Sadi Rahman",
+      "Md. Adnanul Islam",
+      "Jannatul Ferdous Deepti",
+      "Tasnim Mohiuddin",
+      "Md Mofijul Islam",
+      "Swakkhar Shatabda"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/619a1b74f44164a9660e65a689504f27fe9359e5",
+    "source": "semantic_scholar",
+    "summary": "The rise of Large Language Models (LLMs) has redefined Machine Translation. Despite their remarkable capabilities, LLMs often exhibit uneven performance across language families and specialized domains. Recent evidence reveals that these models can encode and amplify different biases present in their training data.",
+    "timestamp": "2025-11-23 23:54:52"
+  },
+  {
+    "title": "Guardians of Discourse: Evaluating LLMs on Multilingual Offensive Language Detection",
+    "abstract": "Identifying offensive language is essential for maintaining safety and sustainability in the social media era. Though large language models (LLMs) have demonstrated encouraging potential in social media analytics, they lack thorough evaluation when in offensive language detection, particularly in multilingual environments. We for the first time evaluate multilingual offensive language detection of LLMs in three languages: English, Spanish, and German with three LLMs, GPT-3.5, Flan-T5, and Mistral, in both monolingual and multilingual settings. We further examine the impact of different prompt languages and augmented translation data for the task in non-English contexts. Furthermore, we discuss the impact of the inherent bias in LLMs and the datasets in the mispredictions related to sensitive topics.",
+    "authors": [
+      "Jianfei He",
+      "Lilin Wang",
+      "Jiaying Wang",
+      "Zhenyu Liu",
+      "Hongbin Na",
+      "Zimu Wang",
+      "Wei Wang",
+      "Qi Chen"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/89e1bb4681535ce9149c8ec8c67eeb1a70bff9a1",
+    "source": "semantic_scholar",
+    "summary": "Large language models (LLMs) have demonstrated encouraging potential in social media analytics. We for the first time evaluate multilingual offensive language detection of LLMs in three languages: English, Spanish, and German. We further examine the impact of different prompt languages and augmented translation data.",
+    "timestamp": "2025-11-23 23:55:01"
+  },
+  {
+    "title": "Investigating Language and Retrieval Bias in Multilingual Previously Fact-Checked Claim Detection",
+    "abstract": "Multilingual Large Language Models (LLMs) offer powerful capabilities for cross-lingual fact-checking. However, these models often exhibit language bias, performing disproportionately better on high-resource languages such as English than on low-resource counterparts. We also present and inspect a novel concept - retrieval bias, when information retrieval systems tend to favor certain information over others, leaving the retrieval process skewed. In this paper, we study language and retrieval bias in the context of Previously Fact-Checked Claim Detection (PFCD). We evaluate six open-source multilingual LLMs across 20 languages using a fully multilingual prompting strategy, leveraging the AMC-16K dataset. By translating task prompts into each language, we uncover disparities in monolingual and cross-lingual performance and identify key trends based on model family, size, and prompting strategy. Our findings highlight persistent bias in LLM behavior and offer recommendations for improving equity in multilingual fact-checking. To investigate retrieval bias, we employed multilingual embedding models and look into the frequency of retrieved claims. Our analysis reveals that certain claims are retrieved disproportionately across different posts, leading to inflated retrieval performance for popular claims while under-representing less common ones.",
+    "authors": [
+      "Ivan Vykopal",
+      "Antonia Karamolegkou",
+      "Jaroslav Kopcan",
+      "Qiwei Peng",
+      "Tomas Javurek",
+      "Michal Gregor",
+      "Marián Simko"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/75d4efc7e6872957735f59f86f75dc1a3562fc98",
+    "source": "semantic_scholar",
+    "summary": "Multilingual Large Language Models (LLMs) offer powerful capabilities for cross-lingual fact-checking. However, these models often exhibit language bias, performing disproportionately better on high-resource languages such as English than on low-resource counterparts. We also present and inspect a novel concept - retrieval bias.",
+    "timestamp": "2025-11-23 23:55:10"
+  },
+  {
+    "title": "RuBia: A Russian Language Bias Detection Dataset",
+    "abstract": "Warning: this work contains upsetting or disturbing content. Large language models (LLMs) tend to learn the social and cultural biases present in the raw pre-training data. To test if an LLM’s behavior is fair, functional datasets are employed, and due to their purpose, these datasets are highly language and culture-specific. In this paper, we address a gap in the scope of multilingual bias evaluation by presenting a bias detection dataset specifically designed for the Russian language, dubbed as RuBia. The RuBia dataset is divided into 4 domains: gender, nationality, socio-economic status, and diverse, each of the domains is further divided into multiple fine-grained subdomains. Every example in the dataset consists of two sentences with the first reinforcing a potentially harmful stereotype or trope and the second contradicting it. These sentence pairs were first written by volunteers and then validated by native-speaking crowdsourcing workers. Overall, there are nearly 2,000 unique sentence pairs spread over 19 subdomains in RuBia. To illustrate the dataset’s purpose, we conduct a diagnostic evaluation of state-of-the-art or near-state-of-the-art LLMs and discuss the LLMs’ predisposition to social biases.",
+    "authors": [
+      "Veronika Grigoreva",
+      "Anastasiia Ivanova",
+      "I. Alimova",
+      "Ekaterina Artemova"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/d4a6a5c3b03440238d91433995c639df5608c174",
+    "source": "semantic_scholar",
+    "summary": "Large language models (LLMs) tend to learn the social and cultural biases present in the raw pre-training data. To test if an LLM’s behavior is fair, functional datasets are employed, and due to their purpose, these datasets are highly language and culture-specific.",
+    "timestamp": "2025-11-23 23:55:19"
+  },
+  {
+    "title": "Bias in, Bias out: Annotation Bias in Multilingual Large Language Models",
+    "abstract": "Annotation bias in NLP datasets remains a major challenge for developing multilingual Large Language Models (LLMs), particularly in culturally diverse settings. Bias from task framing, annotator subjectivity, and cultural mismatches can distort model outputs and exacerbate social harms. We propose a comprehensive framework for understanding annotation bias, distinguishing among instruction bias, annotator bias, and contextual and cultural bias. We review detection methods (including inter-annotator agreement, model disagreement, and metadata analysis) and highlight emerging techniques such as multilingual model divergence and cultural inference. We further outline proactive and reactive mitigation strategies, including diverse annotator recruitment, iterative guideline refinement, and post-hoc model adjustments. Our contributions include: (1) a typology of annotation bias; (2) a synthesis of detection metrics; (3) an ensemble-based bias mitigation approach adapted for multilingual settings, and (4) an ethical analysis of annotation processes. Together, these insights aim to inform more equitable and culturally grounded annotation pipelines for LLMs.",
+    "authors": [
+      "Xia Cui",
+      "Ziyi Huang",
+      "Naeemeh Adel"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/52d33a48e7637f1f0e81005e464dfcaa124e8a00",
+    "source": "semantic_scholar",
+    "summary": "Annotation bias in NLP datasets remains a major challenge for developing multilingual Large Language Models. Bias from task framing, annotator subjectivity, and cultural mismatches can distort model outputs and exacerbate social harms. We propose a comprehensive framework for understanding annotation bias.",
+    "timestamp": "2025-11-23 23:55:28"
+  }
+]

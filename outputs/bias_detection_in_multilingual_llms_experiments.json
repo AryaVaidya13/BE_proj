@@ -1,0 +1,94 @@
+{
+    "experiments": [
+        {
+            "paper_title": "Ready to Translate, Not to Represent? Bias and Performance Gaps in Multilingual LLMs Across Language Families and Domains",
+            "datasets": [
+                "Translation Tangles (unified framework and dataset)",
+                "high-quality, bias-annotated dataset (1,439 translation-reference pairs based on human evaluations)"
+            ],
+            "models_used": [
+                "open-source LLMs"
+            ],
+            "training_setup": "Evaluation across 24 bidirectional language pairs and multiple domains.",
+            "metrics": [
+                "translation quality metrics",
+                "fairness metrics",
+                "hybrid bias detection pipeline (rule-based heuristics, semantic similarity filtering, LLM-based validation)"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Introduced Translation Tangles framework and dataset. Proposed a hybrid bias detection pipeline. Created a high-quality, bias-annotated dataset."
+        },
+        {
+            "paper_title": "Guardians of Discourse: Evaluating LLMs on Multilingual Offensive Language Detection",
+            "datasets": [
+                "Augmented translation data"
+            ],
+            "models_used": [
+                "GPT-3.5",
+                "Flan-T5",
+                "Mistral"
+            ],
+            "training_setup": "Evaluation in both monolingual and multilingual settings. Examined impact of different prompt languages and augmented translation data.",
+            "metrics": [
+                "multilingual offensive language detection performance"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "Impact of different prompt languages; Impact of augmented translation data for non-English contexts.",
+            "key_results": "Evaluated multilingual offensive language detection capabilities of GPT-3.5, Flan-T5, and Mistral in English, Spanish, and German. Discussed the impact of inherent bias in LLMs and datasets on mispredictions related to sensitive topics."
+        },
+        {
+            "paper_title": "Investigating Language and Retrieval Bias in Multilingual Previously Fact-Checked Claim Detection",
+            "datasets": [
+                "AMC-16K dataset"
+            ],
+            "models_used": [
+                "six open-source multilingual LLMs",
+                "multilingual embedding models"
+            ],
+            "training_setup": "Fully multilingual prompting strategy, translating task prompts into each language. Evaluation across 20 languages.",
+            "metrics": [
+                "monolingual and cross-lingual performance",
+                "frequency of retrieved claims",
+                "retrieval performance"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Uncovered disparities in monolingual and cross-lingual performance. Identified key trends based on model family, size, and prompting strategy. Highlighted persistent bias in LLM behavior. Revealed disproportionate retrieval of certain claims, leading to inflated performance for popular claims."
+        },
+        {
+            "paper_title": "RuBia: A Russian Language Bias Detection Dataset",
+            "datasets": [
+                "RuBia (Russian Language Bias Detection Dataset) consisting of nearly 2,000 unique sentence pairs across 19 subdomains (gender, nationality, socio-economic status, diverse), created by volunteers and validated by native-speaking crowdsourcing workers."
+            ],
+            "models_used": [
+                "state-of-the-art or near-state-of-the-art LLMs"
+            ],
+            "training_setup": "Diagnostic evaluation.",
+            "metrics": [
+                "bias detection"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Introduced the RuBia dataset for Russian language bias detection. Conducted a diagnostic evaluation of LLMs to illustrate their predisposition to social biases using the new dataset."
+        },
+        {
+            "paper_title": "Bias in, Bias out: Annotation Bias in Multilingual Large Language Models",
+            "datasets": [],
+            "models_used": [
+                "multilingual Large Language Models (LLMs)"
+            ],
+            "training_setup": "Proposed a comprehensive framework for understanding annotation bias, distinguishing instruction bias, annotator bias, and contextual/cultural bias. Outlined proactive and reactive mitigation strategies including diverse annotator recruitment, iterative guideline refinement, and post-hoc model adjustments.",
+            "metrics": [
+                "inter-annotator agreement",
+                "model disagreement",
+                "metadata analysis",
+                "multilingual model divergence",
+                "cultural inference"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Proposed a typology of annotation bias, a synthesis of detection metrics, and an ensemble-based bias mitigation approach adapted for multilingual settings. Provided an ethical analysis of annotation processes."
+        }
+    ]
+}

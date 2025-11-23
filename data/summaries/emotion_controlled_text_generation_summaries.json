@@ -1,0 +1,159 @@
+[
+  {
+    "title": "EmoHuman: Fine-Grained Emotion-Controlled Talking Head Generation via Audio-Text Multimodal Detangling",
+    "abstract": "Audio-driven talking head generation has made significant strides in creating realistic and lip-synchronized portraits. However, most existing approaches overlook facial expressions, with only a few attempting to model facial emotions explicitly, often leading to unnatural results. To address this gap, we introduce EmoHuman, an audio-to-video synthesis method that generates emotionally nuanced talking head videos without relying on intermediate 3D representations or facial landmarks. EmoHuman decouples content, emotion, and emotional intensity from the multimodal information of the audio and the corresponding textual content through an Audio Emotion Decoupling Module. The content features are used to drive a powerful video diffusion model, generating synchronized lip movements, while emotion and emotional intensity govern the simulation of facial expressions, resulting in more realistic video outputs. Extensive experiments demonstrate that EmoHuman outperforms state-of-the-art methods in image and video quality, expression correlation, and lip-synchronization accuracy.",
+    "authors": [
+      "Qifeng Dai",
+      "Huidong Feng",
+      "Wendi Cui",
+      "Xinqi Cai",
+      "Yinglin Zheng",
+      "Ming Zeng"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/001006557262952b7a5d58265206618f486d6ed6",
+    "source": "semantic_scholar",
+    "summary": "EmoHuman is an audio-to-video synthesis method that generates emotionally nuanced talking head videos. EmoHuman decouples content, emotion, and emotional intensity from the multimodal information of the audio and the corresponding textual content. The content features are used to drive a powerful video diffusion model, generating synchronized lip movements.",
+    "timestamp": "2025-11-23 17:30:32"
+  },
+  {
+    "title": "Style2Talker: High-Resolution Talking Head Generation with Emotion Style and Art Style",
+    "abstract": "Although automatically animating audio-driven talking heads has recently received growing interest, previous efforts have mainly concentrated on achieving lip synchronization with the audio, neglecting two crucial elements for generating expressive videos: emotion style and art style. In this paper, we present an innovative audio-driven talking face generation method called Style2Talker. It involves two stylized stages, namely Style-E and Style-A, which integrate text-controlled emotion style and picture-controlled art style into the final output. In order to prepare the scarce emotional text descriptions corresponding to the videos, we propose a labor-free paradigm that employs large-scale pretrained models to automatically annotate emotional text labels for existing audio-visual datasets. Incorporating the synthetic emotion texts, the Style-E stage utilizes a large-scale CLIP model to extract emotion representations, which are combined with the audio, serving as the condition for an efficient latent diffusion model designed to produce emotional motion coefficients of a 3DMM model. Moving on to the Style-A stage, we develop a coefficient-driven motion generator and an art-specific style path embedded in the well-known StyleGAN. This allows us to synthesize high-resolution artistically stylized talking head videos using the generated emotional motion coefficients and an art style source picture. Moreover, to better preserve image details and avoid artifacts, we provide StyleGAN with the multi-scale content features extracted from the identity image and refine its intermediate feature maps by the designed content encoder and refinement network, respectively. Extensive experimental results demonstrate our method outperforms existing state-of-the-art methods in terms of audio-lip synchronization and performance of both emotion style and art style.",
+    "authors": [
+      "Shuai Tan",
+      "Bin Ji",
+      "Ye Pan"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/5e95dfb1e2c929b8b9608cb04f9e9bb0d7179c74",
+    "source": "semantic_scholar",
+    "summary": "Style2Talker involves two stylized stages, namely Style-E and Style-A. They integrate text-controlled emotion style and picture-controlled art style into the final output. Extensive experimental results demonstrate our method outperforms existing state-of-the-art methods.",
+    "timestamp": "2025-11-23 17:30:41"
+  },
+  {
+    "title": "Adapting a Language Model for Controlled Affective Text Generation",
+    "abstract": "Human use language not just to convey information but also to express their inner feelings and mental states. In this work, we adapt the state-of-the-art language generation models to generate affective (emotional) text. We posit a model capable of generating affect-driven and topic focused sentences without losing grammatical correctness as the affect intensity increases. We propose to incorporate emotion as prior for the probabilistic state-of-the-art text generation model such as GPT-2. The model gives a user the flexibility to control the category and intensity of emotion as well as the topic of the generated text. Previous attempts at modelling fine-grained emotions fall out on grammatical correctness at extreme intensities, but our model is resilient to this and delivers robust results at all intensities. We conduct automated evaluations and human studies to test the performance of our model, and provide a detailed comparison of the results with other models. In all evaluations, our model outperforms existing affective text generation models.",
+    "authors": [
+      "Ishika Singh",
+      "Ahsan Barkati",
+      "Tushar Goswamy",
+      "Ashutosh Modi"
+    ],
+    "year": 2020,
+    "url": "https://www.semanticscholar.org/paper/a2d534fda2eafabf5ac19934ce500cd975e33030",
+    "source": "semantic_scholar",
+    "summary": "We propose to incorporate emotion as prior for the probabilistic state-of-the-art text generation model such as GPT-2. Model gives a user the flexibility to control the category and intensity of emotion as well as the topic of the generated text.",
+    "timestamp": "2025-11-23 17:30:48"
+  },
+  {
+    "title": "ECGText: Human-Centric Text Generation with Enhanced Emotional Intelligence",
+    "abstract": "The recent improvements in the natural language processing (NLP) field have made it possible to create extremely powerful models such as Generative Pre-trained Transformers (GPT), used for generating human-sounding, contextually relevant text. Nevertheless, these types of models often fail to convey the proper emotional fidelity that we need for human communication. We propose ECGText (Emotional Controlled Generation of Text), a new framework that implements GPT to respond Emotion-controlled prompt with the assistance of RoBERTa-based GoEmotions model for emotion recognition in order to mitigate this limitation. ECGText generates emotionally aligned text while maintaining coherence and the author’s writing style. The model supports multiple languages and is designed for applications requiring emotionally intelligent text. We evaluated ECGText using various datasets, including Obama speeches, film reviews, and Rabindranath Tagore’s works. The results demonstrate that ECGText achieves superior performance in text diversity, coherence, and emotional alignment compared to baseline models. This work represents a significant step toward developing emotionally intelligent AI systems, with potential applications in affective computing and human-AI interaction.",
+    "authors": [
+      "Biswajit Nath Roy",
+      "Soumik Maity",
+      "K. Singh",
+      "Pankaj Chowdhury",
+      "Arijit Das",
+      "Diganta Saha"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/774f01356297d902646a7f076d8c6ed16d0d9010",
+    "source": "semantic_scholar",
+    "summary": "ECGText generates emotionally aligned text while maintaining coherence and the author’s writing style. The model supports multiple languages and is designed for applications requiring emotionally intelligent text. This work represents a significant step toward developing emotionally intelligent AI systems.",
+    "timestamp": "2025-11-23 17:30:56"
+  },
+  {
+    "title": "EmoSen: Generating Sentiment and Emotion Controlled Responses in a Multimodal Dialogue System",
+    "abstract": "An essential skill for effective communication is the ability to express specific sentiment and emotion in a conversation. Any robust dialogue system should handle the combined effect of both sentiment and emotion while generating responses. This is expected to provide a better experience and concurrently increase users’ satisfaction. Previously, research on either emotion or sentiment controlled dialogue generation has shown great promise in developing the next generation conversational agents, but the simultaneous effect of both is still unexplored. The existing dialogue systems are majorly based on unimodal sources, predominantly the text, and thereby cannot utilize the information present in the other sources, such as video, audio, image, etc. In this article, we present at first a large scale benchmark Sentiment Emotion aware Multimodal Dialogue (SEMD) dataset for the task of sentiment and emotion controlled dialogue generation. The SEMD dataset consists of 55k conversations from 10 TV shows having text, audio, and video information. To utilize multimodal information, we propose multimodal attention based conditional variational autoencoder (M-CVAE) that outperforms several baselines. Quantitative and qualitative analyses show that multimodality, along with contextual information, plays an essential role in generating coherent and diverse responses for any given emotion and sentiment.",
+    "authors": [
+      "Mauajama Firdaus",
+      "Hardik Chauhan",
+      "Asif Ekbal",
+      "P. Bhattacharyya"
+    ],
+    "year": 2022,
+    "url": "https://www.semanticscholar.org/paper/32eab735c5c41de82930dc873cde46d07a45b971",
+    "source": "semantic_scholar",
+    "summary": "Any robust dialogue system should handle the combined effect of both sentiment and emotion while generating responses. This is expected to provide a better experience and concurrently increase users’ satisfaction. We present a large scale benchmark Sentiment Emotion aware Multimodal Dialogue (SEMD) dataset.",
+    "timestamp": "2025-11-23 17:31:05"
+  },
+  {
+    "title": "Stylistic MR-to-Text Generation Using Pre-trained Language Models",
+    "abstract": "",
+    "authors": [
+      "Kunal Pagarey",
+      "Kanika Kalra",
+      "Abhay Garg",
+      "Saumajit Saha",
+      "Mayur Patidar",
+      "S. Karande"
+    ],
+    "year": 2021,
+    "url": "https://www.semanticscholar.org/paper/eb78cde880f3dc95a72eb63435137abeacba557a",
+    "source": "semantic_scholar",
+    "summary": "No abstract available.",
+    "timestamp": "2025-11-23 17:31:05"
+  },
+  {
+    "title": "Multimodal-Driven Emotion-Controlled Facial Animation Generation Model",
+    "abstract": "",
+    "authors": [
+      "Zhenyu Qiu",
+      "Yuting Luo",
+      "Yiren Zhou",
+      "Teng Gao"
+    ],
+    "year": null,
+    "url": "https://www.semanticscholar.org/paper/0b042a72527d9b853d4b0cbe04a8344298c6be59",
+    "source": "semantic_scholar",
+    "summary": "No abstract available.",
+    "timestamp": "2025-11-23 17:31:05"
+  },
+  {
+    "title": "IndexTTS2: A Breakthrough in Emotionally Expressive and Duration-Controlled Auto-Regressive Zero-Shot Text-to-Speech",
+    "abstract": "Existing autoregressive large-scale text-to-speech (TTS) models have advantages in speech naturalness, but their token-by-token generation mechanism makes it difficult to precisely control the duration of synthesized speech. This becomes a significant limitation in applications requiring strict audio-visual synchronization, such as video dubbing. This paper introduces IndexTTS2, which proposes a novel, general, and autoregressive model-friendly method for speech duration control. The method supports two generation modes: one explicitly specifies the number of generated tokens to precisely control speech duration; the other freely generates speech in an autoregressive manner without specifying the number of tokens, while faithfully reproducing the prosodic features of the input prompt. Furthermore, IndexTTS2 achieves disentanglement between emotional expression and speaker identity, enabling independent control over timbre and emotion. In the zero-shot setting, the model can accurately reconstruct the target timbre (from the timbre prompt) while perfectly reproducing the specified emotional tone (from the style prompt). To enhance speech clarity in highly emotional expressions, we incorporate GPT latent representations and design a novel three-stage training paradigm to improve the stability of the generated speech. Additionally, to lower the barrier for emotional control, we designed a soft instruction mechanism based on text descriptions by fine-tuning Qwen3, effectively guiding the generation of speech with the desired emotional orientation. Finally, experimental results on multiple datasets show that IndexTTS2 outperforms state-of-the-art zero-shot TTS models in terms of word error rate, speaker similarity, and emotional fidelity. Audio samples are available at: https://index-tts.github.io/index-tts2.github.io/",
+    "authors": [
+      "Siyi Zhou",
+      "Yiquan Zhou",
+      "Yi He",
+      "Xun Zhou",
+      "Jinchao Wang",
+      "Wei Deng",
+      "Jingchen Shu"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/5ce5bfa0733c0309876ba2bfa68288fc286e189c",
+    "source": "semantic_scholar",
+    "summary": "IndexTTS2 proposes a novel, general, and autoregressive model-friendly method for speech duration control. In the zero-shot setting, the model can accurately reconstruct the target timbre (from the timbre prompt) while perfectly reproducing the specified emotional tone.",
+    "timestamp": "2025-11-23 17:31:15"
+  },
+  {
+    "title": "On Multimodal Emotion Recognition for Human-Chatbot Interaction in the Wild",
+    "abstract": "The field of natural language generation is swiftly evolving, giving rise to powerful conversational characters for use in different applications such as entertainment, education, and healthcare. A central aspect of these applications is providing personalized interactions, driven by the ability of the characters to recognize and adapt to user emotions. Current emotion recognition models primarily rely on datasets collected from actors or in controlled laboratory settings focusing on human-human interactions, which hinders their adaptability to real-world applications for conversational agents. In this work, we unveil the complexity of human-chatbot emotion recognition in the wild. We collected a multimodal dataset consisting of text, audio, and video recordings from 99 participants while they conversed with a GPT-3-based chatbot over three weeks. Using different transformer-based multimodal emotion recognition networks, we provide evidence for a strong domain gap between human-human interaction and human-chatbot interaction that is attributed to the subjective nature of self-reported emotion labels, the reduced activation and expressivity of the face, and the inherent subtlety of emotions in such settings, emphasizing the challenges of recognizing user emotions in real-world contexts. We show how personalizing our model to the user increases the model performance by up to 38% (user emotions) and up to 41% (perceived chatbot emotions), highlighting the potential of personalization for overcoming the observed domain gap.",
+    "authors": [
+      "N. Kovačević",
+      "Christian Holz",
+      "Markus Gross",
+      "Rafael Wampfler"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/864a793a2428d5752806d00a0abcdb3eb278d561",
+    "source": "semantic_scholar",
+    "summary": "The field of natural language generation is swiftly evolving, giving rise to powerful conversational characters for use in different applications. A central aspect of these applications is providing personalized interactions, driven by the ability of the characters to recognize and adapt to user emotions. Current emotion recognition models primarily rely on datasets collected from actors or in controlled laboratory settings.",
+    "timestamp": "2025-11-23 17:31:25"
+  },
+  {
+    "title": "CEV-LM: Controlled Edit Vector Language Model for Shaping Natural Language Generations",
+    "abstract": "As large-scale language models become the standard for text generation, there is a greater need to tailor the generations to be more or less concise, targeted, and informative, depending on the audience/application. Existing control approaches primarily adjust the semantic (e.g., emotion, topics), structural (e.g., syntax tree, parts-of-speech), and lexical (e.g., keyword/phrase inclusion) properties of text, but are insufficient to accomplish complex objectives such as pacing which control the complexity and readability of the text. In this paper, we introduce CEV-LM - a lightweight, semi-autoregressive language model that utilizes constrained edit vectors to control three complementary metrics (speed, volume, and circuitousness) that quantify the shape of text (e.g., pacing of content). We study an extensive set of state-of-the-art CTG models and find that CEV-LM provides significantly more targeted and precise control of these three metrics while preserving semantic content, using less training data, and containing fewer parameters.",
+    "authors": [
+      "Samraj Moorjani",
+      "A. Krishnan",
+      "Hari Sundaram"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/91810e6a58af763c7a9bebc468d5172f661bfff9",
+    "source": "semantic_scholar",
+    "summary": "CEV-LM is a lightweight, semi-autoregressive language model. It uses constrained edit vectors to control three complementary metrics (speed, volume, and circuitousness)",
+    "timestamp": "2025-11-23 17:31:31"
+  }
+]
