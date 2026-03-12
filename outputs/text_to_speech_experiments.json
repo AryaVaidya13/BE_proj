@@ -1,0 +1,208 @@
+{
+    "experiments": [
+        {
+            "paper_title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers",
+            "datasets": [
+                "50 k hours of English speech (pre-training data)"
+            ],
+            "models_used": [
+                "VALL-E"
+            ],
+            "training_setup": "Pre-training VALL-E using discrete codes derived from an off-the-shelf neural audio codec model, scaling up TTS training data to 50k hours of English speech. Emerges in-context learning capability using a 3-second enrolled recording as a prompt.",
+            "metrics": [
+                "Speech naturalness",
+                "Speaker similarity"
+            ],
+            "baseline_models": [
+                "State-of-the-art zero-shot TTS system"
+            ],
+            "ablation_studies": "",
+            "key_results": "VALL-E significantly outperforms the state-of-the-art zero-shot TTS system in terms of speech naturalness and speaker similarity. VALL-E could preserve the speaker's emotion and acoustic environment from the prompt."
+        },
+        {
+            "paper_title": "CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens",
+            "datasets": [
+                "Large-scale data"
+            ],
+            "models_used": [
+                "CosyVoice"
+            ],
+            "training_setup": "Speech represented with supervised semantic tokens derived from a multilingual speech recognition model by inserting vector quantization into the encoder. CosyVoice consists of an LLM for text-to-token generation and a conditional flow matching model for token-to-speech synthesis. Utilizes large-scale data.",
+            "metrics": [
+                "Content consistency",
+                "Speaker similarity"
+            ],
+            "baseline_models": [
+                "Existing unsupervised tokens"
+            ],
+            "ablation_studies": "Comparison of supervised semantic tokens against existing unsupervised tokens.",
+            "key_results": "Supervised semantic tokens significantly outperform existing unsupervised tokens in terms of content consistency and speaker similarity for zero-shot voice cloning. Utilizing large-scale data further improves synthesis performance, indicating scalable capacity."
+        },
+        {
+            "paper_title": "FastSpeech 2: Fast and High-Quality End-to-End Text to Speech",
+            "datasets": [],
+            "models_used": [
+                "FastSpeech 2",
+                "FastSpeech 2s"
+            ],
+            "training_setup": "FastSpeech 2 directly trains with ground-truth target (instead of distilled output from a teacher model) and introduces pitch, energy, and more accurate duration as conditional inputs. FastSpeech 2s generates speech waveform directly from text in parallel.",
+            "metrics": [
+                "Voice quality",
+                "Inference speed",
+                "Training pipeline complexity",
+                "Training time"
+            ],
+            "baseline_models": [
+                "FastSpeech",
+                "Autoregressive models"
+            ],
+            "ablation_studies": "Comparison between FastSpeech 2, FastSpeech 2s, and the original FastSpeech model.",
+            "key_results": "FastSpeech 2 and 2s outperform FastSpeech in voice quality with a much simplified training pipeline and reduced training time. FastSpeech 2 and 2s can match the voice quality of autoregressive models while enjoying much faster inference speed."
+        },
+        {
+            "paper_title": "Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech",
+            "datasets": [
+                "LJ Speech (single speaker dataset)"
+            ],
+            "models_used": [
+                "Proposed method (unnamed)"
+            ],
+            "training_setup": "Parallel end-to-end TTS method using variational inference augmented with normalizing flows and an adversarial training process. Includes a stochastic duration predictor.",
+            "metrics": [
+                "Mean Opinion Score (MOS)"
+            ],
+            "baseline_models": [
+                "Current two-stage models",
+                "Best publicly available TTS systems"
+            ],
+            "ablation_studies": "",
+            "key_results": "Generates more natural sounding audio than current two-stage models. Outperforms the best publicly available TTS systems and achieves a MOS comparable to ground truth on LJ Speech."
+        },
+        {
+            "paper_title": "XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model",
+            "datasets": [],
+            "models_used": [
+                "XTTS"
+            ],
+            "training_setup": "XTTS builds upon the Tortoise model, adding modifications for multilingual training, improved voice cloning, and faster training/inference. Trained in 16 languages.",
+            "metrics": [
+                "State-of-the-art results"
+            ],
+            "baseline_models": [
+                "YourTTS",
+                "VALL-E X",
+                "Mega-TTS 2",
+                "Voicebox",
+                "Most Zero-shot Multi-speaker TTS (ZS-TTS) systems"
+            ],
+            "ablation_studies": "",
+            "key_results": "XTTS was trained in 16 languages and achieved state-of-the-art results in most of them."
+        },
+        {
+            "paper_title": "MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer",
+            "datasets": [
+                "100K hours of in-the-wild speech"
+            ],
+            "models_used": [
+                "MaskGCT"
+            ],
+            "training_setup": "MaskGCT is a two-stage, fully non-autoregressive TTS model. The first stage predicts semantic tokens from a speech self-supervised learning model, and the second stage predicts acoustic tokens conditioned on these semantic tokens. It follows a mask-and-predict learning paradigm, trained with 100K hours of in-the-wild speech.",
+            "metrics": [
+                "Quality",
+                "Similarity",
+                "Intelligibility"
+            ],
+            "baseline_models": [
+                "Current state-of-the-art zero-shot TTS systems"
+            ],
+            "ablation_studies": "",
+            "key_results": "MaskGCT outperforms the current state-of-the-art zero-shot TTS systems in terms of quality, similarity, and intelligibility."
+        },
+        {
+            "paper_title": "VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild",
+            "datasets": [
+                "Audiobooks",
+                "Internet videos",
+                "Podcasts",
+                "RealEdit (new dataset for speech editing evaluation)"
+            ],
+            "models_used": [
+                "VoiceCraft"
+            ],
+            "training_setup": "VoiceCraft is a token infilling neural codec language model employing a Transformer decoder architecture and a token rearrangement procedure combining causal masking and delayed stacking. Evaluated on challenging and realistic datasets with diverse accents, speaking styles, recording conditions, and background noise/music.",
+            "metrics": [
+                "Naturalness (human evaluation)"
+            ],
+            "baseline_models": [
+                "VALLE",
+                "XTTS-v2",
+                "Prior SotA models",
+                "Real recordings"
+            ],
+            "ablation_studies": "",
+            "key_results": "VoiceCraft achieves state-of-the-art performance on both speech editing and zero-shot TTS. Produces edited speech nearly indistinguishable from unedited recordings in terms of naturalness. Outperforms prior SotA models, including VALLE and XTTS-v2."
+        },
+        {
+            "paper_title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+            "datasets": [
+                "LibriSpeech",
+                "VCTK"
+            ],
+            "models_used": [
+                "VALL-E 2"
+            ],
+            "training_setup": "Builds upon VALL-E with two enhancements: Repetition Aware Sampling (refines nucleus sampling, stabilizes decoding, circumvents infinite loop) and Grouped Code Modeling (organizes codec codes into groups to shorten sequence length, boosts inference speed, addresses long sequence modeling challenges).",
+            "metrics": [
+                "Speech robustness",
+                "Naturalness",
+                "Speaker similarity"
+            ],
+            "baseline_models": [
+                "Previous systems",
+                "VALL-E (predecessor)"
+            ],
+            "ablation_studies": "Implicitly compares VALL-E 2's enhancements against the original VALL-E.",
+            "key_results": "VALL-E 2 surpasses previous systems in speech robustness, naturalness, and speaker similarity, reaching human parity on LibriSpeech and VCTK benchmarks. Consistently synthesizes high-quality speech for complex or repetitive sentences."
+        },
+        {
+            "paper_title": "BASE TTS: Lessons from building a billion-parameter Text-to-Speech model on 100K hours of data",
+            "datasets": [
+                "100K hours of public domain speech data",
+                "Specialized dataset to measure emergent abilities"
+            ],
+            "models_used": [
+                "BASE TTS"
+            ],
+            "training_setup": "BASE TTS is a 1-billion-parameter autoregressive Transformer that converts raw texts into discrete codes (\"speechcodes\") followed by a convolution-based decoder. Trained on 100K hours of public domain speech data. Uses a novel speech tokenization technique featuring speaker ID disentanglement and compression with byte-pair encoding. BASE TTS variants built with 10K+ hours and 500M+ parameters.",
+            "metrics": [
+                "Speech naturalness"
+            ],
+            "baseline_models": [
+                "YourTTS",
+                "Bark",
+                "TortoiseTTS"
+            ],
+            "ablation_studies": "Evaluates BASE TTS variants with varying data volumes (10K+ hours vs. 100K hours) and parameter counts (500M+ vs. 1B).",
+            "key_results": "Achieves a new state-of-the-art in speech naturalness. BASE TTS variants with 10K+ hours and 500M+ parameters demonstrate natural prosody on textually complex sentences."
+        },
+        {
+            "paper_title": "Natural language guidance of high-fidelity text-to-speech with synthetic annotations",
+            "datasets": [
+                "45k hour dataset (with synthetic annotations)",
+                "Found data (used entirely for training)"
+            ],
+            "models_used": [
+                "Speech language model (unnamed)"
+            ],
+            "training_setup": "Scalable method for labeling various aspects of speaker identity, style, and recording conditions applied to a 45k hour dataset. Uses simple methods for increasing audio fidelity. Relies entirely on found data for training.",
+            "metrics": [
+                "Audio fidelity"
+            ],
+            "baseline_models": [
+                "Recent work"
+            ],
+            "ablation_studies": "",
+            "key_results": "Significantly outperforms recent work despite relying entirely on found data. Demonstrates high-fidelity speech generation in a diverse range of accents, prosodic styles, channel conditions, and acoustic conditions with a single model and natural language conditioning."
+        }
+    ]
+}

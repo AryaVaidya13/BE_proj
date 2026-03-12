@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Scale-free Characteristics of Multilingual Legal Texts and the Limitations of LLMs",
+    "abstract": "We present a comparative analysis of text complexity across domains using scale-free metrics. We quantify linguistic complexity via Heaps' exponent $β$ (vocabulary growth), Taylor's exponent $α$ (word-frequency fluctuation scaling), compression rate $r$ (redundancy), and entropy. Our corpora span three domains: legal documents (statutes, cases, deeds) as a specialized domain, general natural language texts (literature, Wikipedia), and AI-generated (GPT) text. We find that legal texts exhibit slower vocabulary growth (lower $β$) and higher term consistency (higher $α$) than general texts. Within legal domain, statutory codes have the lowest $β$ and highest $α$, reflecting strict drafting conventions, while cases and deeds show higher $β$ and lower $α$. In contrast, GPT-generated text shows the statistics more aligning with general language patterns. These results demonstrate that legal texts exhibit domain-specific structures and complexities, which current generative models do not fully replicate.",
+    "authors": [
+      "Haoyang Chen",
+      "Kumiko Tanaka-Ishii"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2509.17367v1",
+    "source": "arxiv",
+    "summary": "We present a comparative analysis of text complexity across domains. We quantify linguistic complexity via Heaps' exponent $β$ (vocabulary growth), Taylor's exponent $α$ (word-frequency fluctuation scaling), compression rate $r$ (redundancy), and entropy. Our corpora span three domains: legal documents (statutes, cases, deeds) as a specialized domain, general natural language texts (literature, Wikipedia), and AI-generated (GPT) text.",
+    "timestamp": "2025-12-27 19:13:30"
+  },
+  {
+    "title": "Recurrent Neural Network based Part-of-Speech Tagger for Code-Mixed Social Media Text",
+    "abstract": "This paper describes Centre for Development of Advanced Computing's (CDACM) submission to the shared task-'Tool Contest on POS tagging for Code-Mixed Indian Social Media (Facebook, Twitter, and Whatsapp) Text', collocated with ICON-2016. The shared task was to predict Part of Speech (POS) tag at word level for a given text. The code-mixed text is generated mostly on social media by multilingual users. The presence of the multilingual words, transliterations, and spelling variations make such content linguistically complex. In this paper, we propose an approach to POS tag code-mixed social media text using Recurrent Neural Network Language Model (RNN-LM) architecture. We submitted the results for Hindi-English (hi-en), Bengali-English (bn-en), and Telugu-English (te-en) code-mixed data.",
+    "authors": [
+      "Raj Nath Patel",
+      "Prakash B. Pimpale",
+      "M Sasikumar"
+    ],
+    "year": 2016,
+    "url": "http://arxiv.org/abs/1611.04989v2",
+    "source": "arxiv",
+    "summary": "This paper describes Centre for Development of Advanced Computing's (CDACM) submission to the shared task-'Tool Contest on POS tagging for Code-Mixed Indian Social Media (Facebook, Twitter, and Whatsapp) Text' The shared task was to predict Part of Speech (POS) tag at word level for a given text.",
+    "timestamp": "2025-12-27 19:13:41"
+  },
+  {
+    "title": "Expressive Text-to-Image Generation with Rich Text",
+    "abstract": "Plain text has become a prevalent interface for text-to-image synthesis. However, its limited customization options hinder users from accurately describing desired outputs. For example, plain text makes it hard to specify continuous quantities, such as the precise RGB color value or importance of each word. Furthermore, creating detailed text prompts for complex scenes is tedious for humans to write and challenging for text encoders to interpret. To address these challenges, we propose using a rich-text editor supporting formats such as font style, size, color, and footnote. We extract each word's attributes from rich text to enable local style control, explicit token reweighting, precise color rendering, and detailed region synthesis. We achieve these capabilities through a region-based diffusion process. We first obtain each word's region based on attention maps of a diffusion process using plain text. For each region, we enforce its text attributes by creating region-specific detailed prompts and applying region-specific guidance, and maintain its fidelity against plain-text generation through region-based injections. We present various examples of image generation from rich text and demonstrate that our method outperforms strong baselines with quantitative evaluations.",
+    "authors": [
+      "Songwei Ge",
+      "Taesung Park",
+      "Jun-Yan Zhu",
+      "Jia-Bin Huang"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2304.06720v4",
+    "source": "arxiv",
+    "summary": "Plain text has become a prevalent interface for text-to-image synthesis. We extract each word's attributes from rich text to enable local style control, explicit token reweighting, precise color rendering. We achieve these capabilities through a region-based diffusion process.",
+    "timestamp": "2025-12-27 19:13:50"
+  },
+  {
+    "title": "Text-Animator: Controllable Visual Text Video Generation",
+    "abstract": "Video generation is a challenging yet pivotal task in various industries, such as gaming, e-commerce, and advertising. One significant unresolved aspect within T2V is the effective visualization of text within generated videos. Despite the progress achieved in Text-to-Video~(T2V) generation, current methods still cannot effectively visualize texts in videos directly, as they mainly focus on summarizing semantic scene information, understanding, and depicting actions. While recent advances in image-level visual text generation show promise, transitioning these techniques into the video domain faces problems, notably in preserving textual fidelity and motion coherence. In this paper, we propose an innovative approach termed Text-Animator for visual text video generation. Text-Animator contains a text embedding injection module to precisely depict the structures of visual text in generated videos. Besides, we develop a camera control module and a text refinement module to improve the stability of generated visual text by controlling the camera movement as well as the motion of visualized text. Quantitative and qualitative experimental results demonstrate the superiority of our approach to the accuracy of generated visual text over state-of-the-art video generation methods. The project page can be found at https://laulampaul.github.io/text-animator.html.",
+    "authors": [
+      "Lin Liu",
+      "Quande Liu",
+      "Shengju Qian",
+      "Yuan Zhou",
+      "Wengang Zhou",
+      "Houqiang Li",
+      "Lingxi Xie",
+      "Qi Tian"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2406.17777v1",
+    "source": "arxiv",
+    "summary": "Video generation is a challenging yet pivotal task in various industries, such as gaming, e-commerce, and advertising. Despite the progress achieved in Text-to-Video~(T2V) generation, current methods still cannot effectively visualize texts in videos directly.",
+    "timestamp": "2025-12-27 19:14:03"
+  },
+  {
+    "title": "TextKD-GAN: Text Generation using KnowledgeDistillation and Generative Adversarial Networks",
+    "abstract": "Text generation is of particular interest in many NLP applications such as machine translation, language modeling, and text summarization. Generative adversarial networks (GANs) achieved a remarkable success in high quality image generation in computer vision,and recently, GANs have gained lots of interest from the NLP community as well. However, achieving similar success in NLP would be more challenging due to the discrete nature of text. In this work, we introduce a method using knowledge distillation to effectively exploit GAN setup for text generation. We demonstrate how autoencoders (AEs) can be used for providing a continuous representation of sentences, which is a smooth representation that assign non-zero probabilities to more than one word. We distill this representation to train the generator to synthesize similar smooth representations. We perform a number of experiments to validate our idea using different datasets and show that our proposed approach yields better performance in terms of the BLEU score and Jensen-Shannon distance (JSD) measure compared to traditional GAN-based text generation approaches without pre-training.",
+    "authors": [
+      "Md. Akmal Haidar",
+      "Mehdi Rezagholizadeh"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1905.01976v1",
+    "source": "arxiv",
+    "summary": "Text generation is of particular interest in many NLP applications such as machine translation, language modeling, and text summarization. We demonstrate how autoencoders can be used for providing a continuous representation of sentences. We distill this representation to train the generator to synthesize similar smooth representations.",
+    "timestamp": "2025-12-27 19:14:13"
+  }
+]

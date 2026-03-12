@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Creating Large Language Model Applications Utilizing LangChain: A Primer on Developing LLM Apps Fast",
+    "abstract": "This study focuses on the utilization of Large Language Models (LLMs) for the rapid development of applications, with a spotlight on LangChain, an open-source software library. LLMs have been rapidly adopted due to their capabilities in a range of tasks, including essay composition, code writing, explanation, and debugging, with OpenAI’s ChatGPT popularizing their usage among millions ofusers. The crux of the study centers around LangChain, designed to expedite the development of bespoke AI applications using LLMs. LangChain has been widely recognized in the AI community for its ability to seamlessly interact with various data sources and applications. The paper provides an examination of LangChain's core features, including its components and chains, acting as modular abstractions and customizable, use-case-specific pipelines, respectively. Through a series of practical examples, the study elucidates the potential of this framework in fostering the swift development of LLM-based applications.",
+    "authors": [
+      "Oguzhan Topsakal",
+      "T. Akinci"
+    ],
+    "year": 2023,
+    "url": "https://www.semanticscholar.org/paper/c0aec04ee86c0724d61c976f19590fbe9c615723",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Revolutionizing Mental Health Care through LangChain: A Journey with a Large Language Model",
+    "abstract": "Mental health challenges are on the rise in our modern society, and the imperative to address mental disorders, especially regarding anxiety, depression, and suicidal thoughts, underscores the need for effective interventions. This paper delves into the application of recent advancements in pretrained contextualized language models to introduce MindGuide, an innovative chatbot serving as a mental health assistant for individuals seeking guidance and support in these critical areas. MindGuide leverages the capabilities of LangChain and its ChatModels, specifically ChatOpenAI, as the bedrock of its reasoning engine. The system incorporates key features such as LangChain's ChatPrompt Template, HumanMessage Prompt Template, ConversationBufferMemory, and LLMChain, creating an advanced solution for early detection and comprehensive support within the field of mental health. Additionally, the paper discusses the implementation of Streamlit to enhance the user experience and interaction with the chatbot. This novel approach holds great promise for proactive mental health intervention and assistance.",
+    "authors": [
+      "Aditi Singh",
+      "Abul Ehtesham",
+      "Saifuddin Mahmud",
+      "Jong-Hoon Kim"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/529be5eef7767f2a793aa73f543aef8a67739a8a",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Automating Customer Service using LangChain: Building custom open-source GPT Chatbot for organizations",
+    "abstract": "In the digital age, the dynamics of customer service are evolving, driven by technological advancements and the integration of Large Language Models (LLMs). This research paper introduces a groundbreaking approach to automating customer service using LangChain, a custom LLM tailored for organizations. The paper explores the obsolescence of traditional customer support techniques, particularly Frequently Asked Questions (FAQs), and proposes a paradigm shift towards responsive, context-aware, and personalized customer interactions. The heart of this innovation lies in the fusion of open-source methodologies, web scraping, fine-tuning, and the seamless integration of LangChain into customer service platforms. This open-source state-of-the-art framework, presented as\"Sahaay,\"demonstrates the ability to scale across industries and organizations, offering real-time support and query resolution. Key elements of this research encompass data collection via web scraping, the role of embeddings, the utilization of Google's Flan T5 XXL, Base and Small language models for knowledge retrieval, and the integration of the chatbot into customer service platforms. The results section provides insights into their performance and use cases, here particularly within an educational institution. This research heralds a new era in customer service, where technology is harnessed to create efficient, personalized, and responsive interactions. Sahaay, powered by LangChain, redefines the customer-company relationship, elevating customer retention, value extraction, and brand image. As organizations embrace LLMs, customer service becomes a dynamic and customer-centric ecosystem.",
+    "authors": [
+      "Keivalya Pandya",
+      "M. Holia"
+    ],
+    "year": 2023,
+    "url": "https://www.semanticscholar.org/paper/78a48c296267ae59b4be60ebbbf96b5d7f6c693b",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Efficiency-Driven Custom Chatbot Development: Unleashing LangChain, RAG, and Performance-Optimized LLM Fusion",
+    "abstract": "",
+    "authors": [
+      "S. Vidivelli",
+      "Manikandan Ramachandran",
+      "A. Dharunbalaji"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/56016d4fd4c6a9cd5a58d8c84bb0fa01ec77d85d",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Cardiovascular Disease Prediction Using Langchain",
+    "abstract": "While traditional methods struggle to capture the full picture from electronic health records (EHRs), LangChain, a deep learning architecture, emerges as a promising tool for cardiovascular disease (CVD) prediction. By seamlessly integrating natural language processing (NLP) and traditional machine learning, LangChain delves into the rich tapestry of clinical notes, extracting crucial insights often hidden within the text. This, combined with its ability to handle diverse data types and capture temporal relationships, allows LangChain to create a comprehensive understanding of individual health profiles. This not only translates to improved CVD prediction accuracy but also unlocks valuable insights into the disease’ s progression, empowering healthcare professionals with the knowledge to implement early interventions and ultimately improve patient care and outcomes.",
+    "authors": [
+      "K. Ananthajothi",
+      "Joshua David",
+      "A. Kavin"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/9299a32765542b312e6365c0e32105e7485e41e0",
+    "source": "semantic_scholar"
+  }
+]

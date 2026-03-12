@@ -1,0 +1,113 @@
+# Text to Speech
+
+## Abstract
+This paper investigates Text to Speech. Based on 10 studies, we synthesize key findings and analyze methodologies. 10 experiments illustrate trends, challenges, and results. We highlight gaps in current approaches and propose potential directions for future research.
+
+## Introduction
+The study of Text to Speech has gained significant attention in recent years. Previous research includes Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers by Chengyi Wang, Sanyuan Chen, Yu Wu, Zi-Hua Zhang, Long Zhou, Shujie Liu, Zhuo Chen, Yanqing Liu, Huaming Wang, Jinyu Li, Lei He, Sheng Zhao, Furu Wei; CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens by Zhihao Du, Qian Chen, Shiliang Zhang, Kai Hu, Heng Lu, Yexin Yang, Hangrui Hu, Siqi Zheng, Yue Gu, Ziyang Ma, Zhifu Gao, Zhijie Yan; FastSpeech 2: Fast and High-Quality End-to-End Text to Speech by Yi Ren, Chenxu Hu, Xu Tan, Tao Qin, Sheng Zhao, Zhou Zhao, Tie-Yan Liu. Despite these efforts, challenges remain in addressing bias, performance disparities, and limitations in experimental methodologies. This paper synthesizes findings from multiple studies, provides a comprehensive overview of experimental results, and identifies directions for improving model robustness and fairness.
+
+## Literature Review
+Multilingual Large Language Models (LLMs) have been examined in 10 studies focusing on performance, bias, and fairness [1-10].
+
+**Performance disparities:** Models often perform differently across high- and low-resource languages, revealing disparities.
+
+**Bias in data:** LLMs inherit social and cultural biases from training datasets, influencing predictions for underrepresented groups.
+
+**Annotation bias:** Annotation processes vary based on annotators' background, introducing cultural biases into datasets.
+
+**Offensive language detection:** Detecting offensive language is challenging across languages due to cultural and linguistic variations.
+
+Overall, these studies highlight limitations and provide potential directions for future multilingual LLM research.
+
+
+## Methodology and Experiments
+To evaluate Text to Speech, 10 experiments were conducted using multiple LLMs, datasets, and languages.
+
+### Experiment 1: Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers
+- **Dataset(s):** 50 k hours of English speech (pre-training data)
+- **Models:** VALL-E
+- **Training Setup:** Pre-training VALL-E using discrete codes derived from an off-the-shelf neural audio codec model, scaling up TTS training data to 50k hours of English speech. Emerges in-context learning capability using a 3-second enrolled recording as a prompt.
+- **Metrics:** Speech naturalness, Speaker similarity
+- **Key Results:** VALL-E significantly outperforms the state-of-the-art zero-shot TTS system in terms of speech naturalness and speaker similarity. VALL-E could preserve the speaker's emotion and acoustic environment from the prompt.
+
+### Experiment 2: CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens
+- **Dataset(s):** Large-scale data
+- **Models:** CosyVoice
+- **Training Setup:** Speech represented with supervised semantic tokens derived from a multilingual speech recognition model by inserting vector quantization into the encoder. CosyVoice consists of an LLM for text-to-token generation and a conditional flow matching model for token-to-speech synthesis. Utilizes large-scale data.
+- **Metrics:** Content consistency, Speaker similarity
+- **Key Results:** Supervised semantic tokens significantly outperform existing unsupervised tokens in terms of content consistency and speaker similarity for zero-shot voice cloning. Utilizing large-scale data further improves synthesis performance, indicating scalable capacity.
+
+### Experiment 3: FastSpeech 2: Fast and High-Quality End-to-End Text to Speech
+- **Models:** FastSpeech 2, FastSpeech 2s
+- **Training Setup:** FastSpeech 2 directly trains with ground-truth target (instead of distilled output from a teacher model) and introduces pitch, energy, and more accurate duration as conditional inputs. FastSpeech 2s generates speech waveform directly from text in parallel.
+- **Metrics:** Voice quality, Inference speed, Training pipeline complexity, Training time
+- **Key Results:** FastSpeech 2 and 2s outperform FastSpeech in voice quality with a much simplified training pipeline and reduced training time. FastSpeech 2 and 2s can match the voice quality of autoregressive models while enjoying much faster inference speed.
+
+### Experiment 4: Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech
+- **Dataset(s):** LJ Speech (single speaker dataset)
+- **Models:** Proposed method (unnamed)
+- **Training Setup:** Parallel end-to-end TTS method using variational inference augmented with normalizing flows and an adversarial training process. Includes a stochastic duration predictor.
+- **Metrics:** Mean Opinion Score (MOS)
+- **Key Results:** Generates more natural sounding audio than current two-stage models. Outperforms the best publicly available TTS systems and achieves a MOS comparable to ground truth on LJ Speech.
+
+### Experiment 5: XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model
+- **Models:** XTTS
+- **Training Setup:** XTTS builds upon the Tortoise model, adding modifications for multilingual training, improved voice cloning, and faster training/inference. Trained in 16 languages.
+- **Metrics:** State-of-the-art results
+- **Key Results:** XTTS was trained in 16 languages and achieved state-of-the-art results in most of them.
+
+### Experiment 6: MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer
+- **Dataset(s):** 100K hours of in-the-wild speech
+- **Models:** MaskGCT
+- **Training Setup:** MaskGCT is a two-stage, fully non-autoregressive TTS model. The first stage predicts semantic tokens from a speech self-supervised learning model, and the second stage predicts acoustic tokens conditioned on these semantic tokens. It follows a mask-and-predict learning paradigm, trained with 100K hours of in-the-wild speech.
+- **Metrics:** Quality, Similarity, Intelligibility
+- **Key Results:** MaskGCT outperforms the current state-of-the-art zero-shot TTS systems in terms of quality, similarity, and intelligibility.
+
+### Experiment 7: VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild
+- **Dataset(s):** Audiobooks, Internet videos, Podcasts, RealEdit (new dataset for speech editing evaluation)
+- **Models:** VoiceCraft
+- **Training Setup:** VoiceCraft is a token infilling neural codec language model employing a Transformer decoder architecture and a token rearrangement procedure combining causal masking and delayed stacking. Evaluated on challenging and realistic datasets with diverse accents, speaking styles, recording conditions, and background noise/music.
+- **Metrics:** Naturalness (human evaluation)
+- **Key Results:** VoiceCraft achieves state-of-the-art performance on both speech editing and zero-shot TTS. Produces edited speech nearly indistinguishable from unedited recordings in terms of naturalness. Outperforms prior SotA models, including VALLE and XTTS-v2.
+
+### Experiment 8: VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers
+- **Dataset(s):** LibriSpeech, VCTK
+- **Models:** VALL-E 2
+- **Training Setup:** Builds upon VALL-E with two enhancements: Repetition Aware Sampling (refines nucleus sampling, stabilizes decoding, circumvents infinite loop) and Grouped Code Modeling (organizes codec codes into groups to shorten sequence length, boosts inference speed, addresses long sequence modeling challenges).
+- **Metrics:** Speech robustness, Naturalness, Speaker similarity
+- **Key Results:** VALL-E 2 surpasses previous systems in speech robustness, naturalness, and speaker similarity, reaching human parity on LibriSpeech and VCTK benchmarks. Consistently synthesizes high-quality speech for complex or repetitive sentences.
+
+### Experiment 9: BASE TTS: Lessons from building a billion-parameter Text-to-Speech model on 100K hours of data
+- **Dataset(s):** 100K hours of public domain speech data, Specialized dataset to measure emergent abilities
+- **Models:** BASE TTS
+- **Training Setup:** BASE TTS is a 1-billion-parameter autoregressive Transformer that converts raw texts into discrete codes ("speechcodes") followed by a convolution-based decoder. Trained on 100K hours of public domain speech data. Uses a novel speech tokenization technique featuring speaker ID disentanglement and compression with byte-pair encoding. BASE TTS variants built with 10K+ hours and 500M+ parameters.
+- **Metrics:** Speech naturalness
+- **Key Results:** Achieves a new state-of-the-art in speech naturalness. BASE TTS variants with 10K+ hours and 500M+ parameters demonstrate natural prosody on textually complex sentences.
+
+### Experiment 10: Natural language guidance of high-fidelity text-to-speech with synthetic annotations
+- **Dataset(s):** 45k hour dataset (with synthetic annotations), Found data (used entirely for training)
+- **Models:** Speech language model (unnamed)
+- **Training Setup:** Scalable method for labeling various aspects of speaker identity, style, and recording conditions applied to a 45k hour dataset. Uses simple methods for increasing audio fidelity. Relies entirely on found data for training.
+- **Metrics:** Audio fidelity
+- **Key Results:** Significantly outperforms recent work despite relying entirely on found data. Demonstrates high-fidelity speech generation in a diverse range of accents, prosodic styles, channel conditions, and acoustic conditions with a single model and natural language conditioning.
+
+
+
+## Results and Discussion
+Performance varies significantly across tasks, datasets, and languages. High-resource languages consistently achieve better outcomes than low-resource languages. Bias patterns are observed based on dataset and model choices, emphasizing the need for mitigation strategies. Cross-lingual performance often reveals hidden disparities that monolingual evaluations might miss.
+
+## Conclusion
+In conclusion, this paper presents a detailed analysis of Text to Speech. Based on 10 studies, trends, challenges, and methodologies were identified. 10 experiments revealed performance variations and bias patterns. These findings highlight the need for improved datasets, dynamic evaluation methods, and effective bias mitigation strategies, laying a foundation for future research in multilingual LLMs.
+
+References
+
+[1] Chengyi Wang, Sanyuan Chen, Yu Wu, Zi-Hua Zhang, Long Zhou, Shujie Liu, Zhuo Chen, Yanqing Liu, Huaming Wang, Jinyu Li, Lei He, Sheng Zhao, Furu Wei. (2023). Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers.
+[2] Zhihao Du, Qian Chen, Shiliang Zhang, Kai Hu, Heng Lu, Yexin Yang, Hangrui Hu, Siqi Zheng, Yue Gu, Ziyang Ma, Zhifu Gao, Zhijie Yan. (2024). CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens.
+[3] Yi Ren, Chenxu Hu, Xu Tan, Tao Qin, Sheng Zhao, Zhou Zhao, Tie-Yan Liu. (2020). FastSpeech 2: Fast and High-Quality End-to-End Text to Speech.
+[4] Jaehyeon Kim, Jungil Kong, Juhee Son. (2021). Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech.
+[5] Edresson Casanova, Kelly Davis, Eren Gölge, Görkem Göknar, Iulian Gulea, Logan Hart, Aya Aljafari, Joshua Meyer, Reuben Morais, Samuel Olayemi, Julian Weber. (2024). XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model.
+[6] Yuancheng Wang, Haoyue Zhan, Liwei Liu, Ruihong Zeng, Haotian Guo, Jiachen Zheng, Qiang Zhang, Xueyao Zhang, Shunsi Zhang, Zhizheng Wu. (2024). MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer.
+[7] Puyuan Peng, Po-Yao (Bernie) Huang, Shang-Wen Li, Abdelrahman Mohamed, David Harwath. (2024). VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild.
+[8] Sanyuan Chen, Shujie Liu, Long Zhou, Yanqing Liu, Xu Tan, Jinyu Li, Sheng Zhao, Yao Qian, Furu Wei. (2024). VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers.
+[9] Mateusz Lajszczak, Guillermo Cámbara, Yang Li, Fatih Beyhan, Arent van Korlaar, Fan Yang, Arnaud Joly, Álvaro Martín-Cortinas, Ammar Abbas, Adam Michalski, A. Moinet, S. Karlapati, Ewa Muszy'nska, Haohan Guo, Bartosz Putrycz, Soledad López Gambino, Kayeon Yoo, Elena Sokolova, Thomas Drugman. (2024). BASE TTS: Lessons from building a billion-parameter Text-to-Speech model on 100K hours of data.
+[10] Daniel Lyth, Simon King. (2024). Natural language guidance of high-fidelity text-to-speech with synthetic annotations.

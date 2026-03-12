@@ -1,8 +1,8 @@
-# agents/literature_agent.py
 import os
 import json
 import time
 import requests
+import re
 from datetime import datetime
 from transformers import BartTokenizer, BartForConditionalGeneration
 import torch
@@ -11,31 +11,29 @@ import xml.etree.ElementTree as ET
 
 class LiteratureAgent:
     """
-    Hybrid Paper Fetcher:
-    1. Try Semantic Scholar (with retries)
-    2. If fewer than LIMIT → fallback to arXiv (cs.CL, cs.AI, cs.LG)
-    3. Summarize abstracts using BART
+    Hybrid Literature Agent
+    NLP mode → paper fetching + BART summarization
+    ML mode  → paper fetching + ML metadata extraction
     """
 
-    def __init__(self, topic, model_name="facebook/bart-large-cnn", device=None):
+    def __init__(self, topic, model_name="facebook/bart-large-cnn", device=None, mode="nlp"):
         self.topic = topic
         self.model_name = model_name
+        self.mode = mode
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
 
-        # Folder structure
         self.raw_dir = "data/processed"
         self.summary_dir = "data/summaries"
         os.makedirs(self.raw_dir, exist_ok=True)
         os.makedirs(self.summary_dir, exist_ok=True)
 
-        print("📦 Loading summarization model:", self.model_name)
-        self.tokenizer = BartTokenizer.from_pretrained(self.model_name)
-        self.model = BartForConditionalGeneration.from_pretrained(self.model_name).to(self.device)
-        print("✅ Model loaded on:", self.device)
+        if self.mode == "nlp":
+            print("📦 Loading summarization model:", self.model_name)
+            self.tokenizer = BartTokenizer.from_pretrained(self.model_name)
+            self.model = BartForConditionalGeneration.from_pretrained(self.model_name).to(self.device)
+            print("✅ Model loaded on:", self.device)
 
-    # ============================================================
-    # 1. Semantic Scholar (with retry + year only)
-    # ============================================================
+    # ---------------- Semantic Scholar ----------------
     def fetch_semantic_scholar(self, limit):
         url = "https://api.semanticscholar.org/graph/v1/paper/search"
         params = {
@@ -44,177 +42,110 @@ class LiteratureAgent:
             "limit": limit
         }
 
-        retries = 3
-        delay = 3
-
-        for attempt in range(1, retries + 1):
+        for _ in range(3):
             try:
                 r = requests.get(url, params=params, timeout=25)
                 r.raise_for_status()
-                data = r.json().get("data", [])
                 break
-
-            except Exception as e:
-                print(f"❌ Semantic Scholar error (attempt {attempt}/{retries}):", e)
-                if attempt == retries:
-                    return []
-                time.sleep(delay)
-                delay *= 2  # exponential backoff
+            except:
+                time.sleep(3)
+        else:
+            return []
 
         papers = []
-        for p in data:
-            authors = [a.get("name") for a in p.get("authors", []) if a.get("name")]
-
-            # year only
-            yr = p.get("year")
-            yr = int(yr) if isinstance(yr, (int, float)) else None
-
+        for p in r.json().get("data", []):
             papers.append({
-                "title": p.get("title") or "Untitled",
+                "title": p.get("title"),
                 "abstract": p.get("abstract") or "",
-                "authors": authors,
-                "year": yr,
+                "authors": [a["name"] for a in p.get("authors", [])],
+                "year": p.get("year"),
                 "url": p.get("url"),
                 "source": "semantic_scholar"
             })
-
         return papers
 
-    # ============================================================
-    # 2. arXiv fallback (cs.CL + cs.AI + cs.LG)
-    # ============================================================
-    def fetch_arxiv(self, needed_count):
-        print(f"📡 Fetching {needed_count} fallback papers from arXiv…")
-
-        query = (
-            f"all:{self.topic} AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
-        )
-        url = f"https://export.arxiv.org/api/query?search_query={query}&start=0&max_results={needed_count}"
+    # ---------------- arXiv fallback ----------------
+    def fetch_arxiv(self, needed):
+        query = f"all:{self.topic} AND (cat:cs.CL OR cat:cs.AI OR cat:cs.LG)"
+        url = f"https://export.arxiv.org/api/query?search_query={query}&max_results={needed}"
 
         try:
             r = requests.get(url, timeout=25)
             r.raise_for_status()
-        except Exception as e:
-            print("❌ arXiv request failed:", e)
+        except:
             return []
 
         root = ET.fromstring(r.text)
         ns = {"atom": "http://www.w3.org/2005/Atom"}
-
         papers = []
 
-        for entry in root.findall("atom:entry", ns):
-            title = entry.find("atom:title", ns).text.strip()
-            abstract = entry.find("atom:summary", ns).text.strip()
-
-            # authors
-            authors = [a.find("atom:name", ns).text.strip()
-                       for a in entry.findall("atom:author", ns)]
-
-            # year only
-            date = entry.find("atom:published", ns).text[:4]
-            year = int(date) if date.isdigit() else None
-
-            # URL
-            url_link = entry.find("atom:id", ns).text
-
+        for e in root.findall("atom:entry", ns):
             papers.append({
-                "title": title,
-                "abstract": abstract,
-                "authors": authors,
-                "year": year,
-                "url": url_link,
+                "title": e.find("atom:title", ns).text.strip(),
+                "abstract": e.find("atom:summary", ns).text.strip(),
+                "authors": [a.find("atom:name", ns).text for a in e.findall("atom:author", ns)],
+                "year": int(e.find("atom:published", ns).text[:4]),
+                "url": e.find("atom:id", ns).text,
                 "source": "arxiv"
             })
+        return papers
 
-        return papers[:needed_count]
-
-    # ============================================================
-    # 3. Summarization
-    # ============================================================
-    def summarize_abstract(self, abstract, max_tokens=130, min_tokens=30):
-        if not abstract.strip():
-            return "No abstract available."
-
+    # ---------------- NLP summarization ----------------
+    def summarize_abstract(self, abstract):
         inputs = self.tokenizer(
-            abstract,
-            max_length=1024,
-            truncation=True,
-            return_tensors="pt"
+            abstract, max_length=1024, truncation=True, return_tensors="pt"
         ).to(self.device)
 
-        try:
-            ids = self.model.generate(
-                inputs["input_ids"],
-                num_beams=4,
-                max_length=max_tokens,
-                min_length=min_tokens,
-                early_stopping=True,
-                no_repeat_ngram_size=3
-            )
-            summary = self.tokenizer.decode(ids[0], skip_special_tokens=True)
-        except Exception as e:
-            summary = f"[Error summarizing: {e}]"
+        ids = self.model.generate(
+            inputs["input_ids"],
+            num_beams=4,
+            max_length=130,
+            min_length=30,
+            no_repeat_ngram_size=3,
+            early_stopping=True
+        )
+        return self.tokenizer.decode(ids[0], skip_special_tokens=True)
 
-        return summary
-
-    # ============================================================
-    # NEW → Save raw metadata in data/processed
-    # ============================================================
-    def save_raw_metadata(self, papers):
-        safe_topic = "".join(c if c.isalnum() else "_" for c in self.topic).lower()
-        out_path = os.path.join(self.raw_dir, f"{safe_topic}_raw.json")
-
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(papers, f, indent=2, ensure_ascii=False)
-
-        print(f"💾 Saved RAW metadata → {out_path}")
-
-    # ============================================================
-    # 4. Summarize all results
-    # ============================================================
-    def summarize_papers(self, papers):
-        print("🧠 Summarizing all papers...")
+    # ---------------- ML metadata extraction ----------------
+    def extract_ml_metadata(self, papers):
+        dataset_pat = r"(mnist|cifar|imagenet|uci|kaggle|imdb|coco)"
+        model_pat = r"(svm|random forest|xgboost|cnn|rnn|transformer|resnet)"
+        metric_pat = r"(accuracy|f1|precision|recall|auc|rmse)"
 
         results = []
-        for i, p in enumerate(papers, start=1):
-            print(f"📝 ({i}/{len(papers)}) {p['title']}")
-            summary = self.summarize_abstract(p["abstract"])
-            p["summary"] = summary
-            p["timestamp"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            results.append(p)
-
-        safe_topic = "".join(c if c.isalnum() else "_" for c in self.topic).lower()
-        out_path = os.path.join(self.summary_dir, f"{safe_topic}_summaries.json")
-
-        with open(out_path, "w", encoding="utf-8") as f:
-            json.dump(results, f, indent=2, ensure_ascii=False)
-
-        print(f"💾 Saved summarized papers → {out_path}")
+        for p in papers:
+            text = p["abstract"].lower()
+            results.append({
+                "paper_title": p["title"],
+                "datasets": list(set(re.findall(dataset_pat, text))),
+                "models": list(set(re.findall(model_pat, text))),
+                "metrics": list(set(re.findall(metric_pat, text))),
+                "year": p["year"],
+                "source": p["source"]
+            })
         return results
 
-    # ============================================================
-    # 5. Complete pipeline
-    # ============================================================
-    def run(self, limit=10):
-        print("🌐 Fetching main papers from Semantic Scholar…")
-        ss_papers = self.fetch_semantic_scholar(limit)
+    # ---------------- Save raw ----------------
+    def save_raw(self, data):
+        name = re.sub(r"\W+", "_", self.topic.lower())
+        path = f"{self.raw_dir}/{name}_raw.json"
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+        print(f"💾 Raw data saved → {path}")
 
-        if len(ss_papers) < limit:
-            needed = limit - len(ss_papers)
-            print(f"⚠️ Only {len(ss_papers)} found → Need {needed} more from arXiv.")
-            arxiv_papers = self.fetch_arxiv(needed)
-        else:
-            arxiv_papers = []
+    # ---------------- Run ----------------
+    def run(self, limit=5):
+        papers = self.fetch_semantic_scholar(limit)
+        if len(papers) < limit:
+            papers += self.fetch_arxiv(limit - len(papers))
 
-        combined = ss_papers + arxiv_papers
+        self.save_raw(papers)
 
-        if not combined:
-            print("❌ No papers found from any source!")
-            return []
+        if self.mode == "nlp":
+            for p in papers:
+                p["summary"] = self.summarize_abstract(p["abstract"])
+                p["timestamp"] = datetime.now().isoformat()
+            return papers
 
-        # ✨ NEW: save raw metadata
-        self.save_raw_metadata(combined)
-
-        # Summaries saved separately
-        return self.summarize_papers(combined)
+        print("📊 Extracting ML metadata...")
+        return self.extract_ml_metadata(papers)

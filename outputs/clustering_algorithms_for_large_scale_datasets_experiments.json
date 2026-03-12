@@ -1,0 +1,20 @@
+{
+  "experiments": [
+    {
+      "paper_title": "Parallel Clustering Algorithm for the k-medoids Problem in High-dimensional Space for Large-scale Datasets",
+      "datasets": [
+        "BIRCH",
+        "Stanford Dog"
+      ],
+      "models_used": [
+        "Parallel primal-dual heuristic algorithm for k-medoids",
+        "Novel vectorization technique (for handling images, text, and point data)"
+      ],
+      "metrics": [
+        "Solution quality",
+        "Run time"
+      ],
+      "key_results": "The proposed algorithm demonstrates superiority over existing k-medoids clustering algorithms in terms of solution quality and run time on BIRCH and Stanford Dog datasets. It introduces a novel vectorization technique that enables it to handle various data types, including text."
+    }
+  ]
+}

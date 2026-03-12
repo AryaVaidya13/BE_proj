@@ -1,42 +1,33 @@
-import os
 from core.logger import log
 from agents.literature_agent import LiteratureAgent
 from agents.experiment_agent import ExperimentAgent
 from agents.paper_agent import PaperAgent
 
 def main():
-    log("🚀 NLP Research Assistant v2.0 — Autonomous Mode")
+    log("🚀 Research Assistant v2.0")
 
-    topic = input("Enter your NLP topic: ").strip()
+    mode = input("Select mode (nlp/ml): ").strip().lower() or "nlp"
+    topic = input("Enter your topic: ").strip()
+
     try:
-        limit = int(input("How many papers do you want to fetch? (default 5): ") or 5)
-    except ValueError:
+        limit = int(input("How many papers? (default 5): ") or 5)
+    except:
         limit = 5
 
-    # Step 1: Literature
-    log("📚 Step 1: Fetching and summarizing literature...")
-    lit_agent = LiteratureAgent(topic, model_name="facebook/bart-large-cnn")
-    literature = lit_agent.run(limit=limit)
+    log("📚 Step 1: Literature analysis")
+    lit = LiteratureAgent(topic, mode=mode)
+    literature = lit.run(limit=limit)
 
-    # Step 2: Experiments
-    log("🧪 Step 2: Extracting experiment details...")
-    exp_agent = ExperimentAgent(summaries=literature, topic=topic)
-    exp_results = exp_agent.run()
+    log("🧪 Step 2: Experiment analysis")
+    exp = ExperimentAgent(literature, topic, mode=mode)
+    experiments = exp.run()
 
-    # Step 3: Paper generation
-    log("📝 Step 3: Generating paper from results...")
+    log("📝 Step 3: Paper generation")
+    paper = PaperAgent(topic=topic, literature=literature, experiments_bundle=experiments)
+    info = paper.run()
 
-    paper_agent = PaperAgent(
-        topic=topic,
-        literature=literature,
-        experiments_bundle=exp_results
-    )
-
-    paper_info = paper_agent.run()
-    paper_path = paper_info["pdf_path"]
-
-    log("📤 Pipeline complete.")
-    log(f"Final paper saved: {paper_path}")
+    log("📄 Final paper saved:")
+    log(info["pdf_path"])
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,63 @@
+{
+    "experiments": [
+        {
+            "paper_title": "Understanding Reasoning in Chain-of-Thought from the Hopfieldian View",
+            "datasets": [],
+            "models_used": [
+                "CoT reasoning",
+                "Representation-of-Thought (RoT) framework"
+            ],
+            "training_setup": "RoT framework applied to enhance CoT reasoning in Large Language Models",
+            "metrics": [],
+            "baseline_models": [
+                "CoT reasoning"
+            ],
+            "ablation_studies": "",
+            "key_results": "RoT improves the robustness and interpretability of CoT reasoning while offering fine-grained control over the reasoning process."
+        },
+        {
+            "paper_title": "Let's Do a Thought Experiment: Using Counterfactuals to Improve Moral Reasoning",
+            "datasets": [
+                "Moral Scenarios task in MMLU (Multi-task Language Understanding)"
+            ],
+            "models_used": [
+                "Language models",
+                "GPT-3"
+            ],
+            "training_setup": "New prompting framework: Thought Experiments (using counterfactuals); zero-shot baselines; zero-shot Chain-of-Thought (CoT) reasoning; 5 few-shot examples",
+            "metrics": [
+                "accuracy"
+            ],
+            "baseline_models": [
+                "zero-shot baselines",
+                "direct zero-shot",
+                "zero-shot Chain-of-Thought (CoT) reasoning"
+            ],
+            "ablation_studies": "",
+            "key_results": "Thought Experiments framework improves accuracy on Moral Scenarios task by 9-16% compared to other zero-shot baselines. Zero-shot Chain-of-Thought (CoT) reasoning reduces accuracy by ~4% compared to direct zero-shot. With 5 few-shot examples, accuracy can be improved to 80%."
+        },
+        {
+            "paper_title": "Chain-of-Thought Hub: A Continuous Effort to Measure Large Language Models' Reasoning Performance",
+            "datasets": [
+                "a suite of challenging reasoning benchmarks"
+            ],
+            "models_used": [
+                "GPT family",
+                "PaLM family",
+                "Claude-v1.3",
+                "PaLM-2",
+                "GPT-4",
+                "LLaMA-65B",
+                "code-davinci-002",
+                "GPT-3.5-Turbo"
+            ],
+            "training_setup": "Evaluation of multi-step reasoning capabilities of LLMs; assessment of potential impact of reinforcement learning from human feedback (RLHF)",
+            "metrics": [
+                "reasoning capabilities"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Model scale clearly correlates with reasoning capabilities. As of May 2023, Claude-v1.3 and PaLM-2 are comparable with GPT-4, while open-sourced models still lag behind. LLaMA-65B performs closely to code-davinci-002, indicating potential to approach GPT-3.5-Turbo with further development like RLHF."
+        }
+    ]
+}

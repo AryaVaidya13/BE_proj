@@ -34,6 +34,19 @@
     "source": "semantic_scholar"
   },
   {
+    "title": "RuBia: A Russian Language Bias Detection Dataset",
+    "abstract": "Warning: this work contains upsetting or disturbing content. Large language models (LLMs) tend to learn the social and cultural biases present in the raw pre-training data. To test if an LLM\u2019s behavior is fair, functional datasets are employed, and due to their purpose, these datasets are highly language and culture-specific. In this paper, we address a gap in the scope of multilingual bias evaluation by presenting a bias detection dataset specifically designed for the Russian language, dubbed as RuBia. The RuBia dataset is divided into 4 domains: gender, nationality, socio-economic status, and diverse, each of the domains is further divided into multiple fine-grained subdomains. Every example in the dataset consists of two sentences with the first reinforcing a potentially harmful stereotype or trope and the second contradicting it. These sentence pairs were first written by volunteers and then validated by native-speaking crowdsourcing workers. Overall, there are nearly 2,000 unique sentence pairs spread over 19 subdomains in RuBia. To illustrate the dataset\u2019s purpose, we conduct a diagnostic evaluation of state-of-the-art or near-state-of-the-art LLMs and discuss the LLMs\u2019 predisposition to social biases.",
+    "authors": [
+      "Veronika Grigoreva",
+      "Anastasiia Ivanova",
+      "I. Alimova",
+      "Ekaterina Artemova"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/d4a6a5c3b03440238d91433995c639df5608c174",
+    "source": "semantic_scholar"
+  },
+  {
     "title": "Investigating Language and Retrieval Bias in Multilingual Previously Fact-Checked Claim Detection",
     "abstract": "Multilingual Large Language Models (LLMs) offer powerful capabilities for cross-lingual fact-checking. However, these models often exhibit language bias, performing disproportionately better on high-resource languages such as English than on low-resource counterparts. We also present and inspect a novel concept - retrieval bias, when information retrieval systems tend to favor certain information over others, leaving the retrieval process skewed. In this paper, we study language and retrieval bias in the context of Previously Fact-Checked Claim Detection (PFCD). We evaluate six open-source multilingual LLMs across 20 languages using a fully multilingual prompting strategy, leveraging the AMC-16K dataset. By translating task prompts into each language, we uncover disparities in monolingual and cross-lingual performance and identify key trends based on model family, size, and prompting strategy. Our findings highlight persistent bias in LLM behavior and offer recommendations for improving equity in multilingual fact-checking. To investigate retrieval bias, we employed multilingual embedding models and look into the frequency of retrieved claims. Our analysis reveals that certain claims are retrieved disproportionately across different posts, leading to inflated retrieval performance for popular claims while under-representing less common ones.",
     "authors": [
@@ -43,23 +56,10 @@
       "Qiwei Peng",
       "Tomas Javurek",
       "Michal Gregor",
-      "Marián Simko"
+      "Mari\u00e1n Simko"
     ],
     "year": 2025,
     "url": "https://www.semanticscholar.org/paper/75d4efc7e6872957735f59f86f75dc1a3562fc98",
-    "source": "semantic_scholar"
-  },
-  {
-    "title": "RuBia: A Russian Language Bias Detection Dataset",
-    "abstract": "Warning: this work contains upsetting or disturbing content. Large language models (LLMs) tend to learn the social and cultural biases present in the raw pre-training data. To test if an LLM’s behavior is fair, functional datasets are employed, and due to their purpose, these datasets are highly language and culture-specific. In this paper, we address a gap in the scope of multilingual bias evaluation by presenting a bias detection dataset specifically designed for the Russian language, dubbed as RuBia. The RuBia dataset is divided into 4 domains: gender, nationality, socio-economic status, and diverse, each of the domains is further divided into multiple fine-grained subdomains. Every example in the dataset consists of two sentences with the first reinforcing a potentially harmful stereotype or trope and the second contradicting it. These sentence pairs were first written by volunteers and then validated by native-speaking crowdsourcing workers. Overall, there are nearly 2,000 unique sentence pairs spread over 19 subdomains in RuBia. To illustrate the dataset’s purpose, we conduct a diagnostic evaluation of state-of-the-art or near-state-of-the-art LLMs and discuss the LLMs’ predisposition to social biases.",
-    "authors": [
-      "Veronika Grigoreva",
-      "Anastasiia Ivanova",
-      "I. Alimova",
-      "Ekaterina Artemova"
-    ],
-    "year": 2024,
-    "url": "https://www.semanticscholar.org/paper/d4a6a5c3b03440238d91433995c639df5608c174",
     "source": "semantic_scholar"
   },
   {

@@ -1,0 +1,84 @@
+{
+    "experiments": [
+        {
+            "paper_title": "Creating Large Language Model Applications Utilizing LangChain: A Primer on Developing LLM Apps Fast",
+            "datasets": [],
+            "models_used": [
+                "LangChain",
+                "LLMs (general)"
+            ],
+            "training_setup": "",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Elucidates the potential of LangChain in fostering the swift development of LLM-based applications through practical examples."
+        },
+        {
+            "paper_title": "Revolutionizing Mental Health Care through LangChain: A Journey with a Large Language Model",
+            "datasets": [],
+            "models_used": [
+                "LangChain",
+                "ChatModels (specifically ChatOpenAI)",
+                "LangChain's ChatPrompt Template",
+                "HumanMessage Prompt Template",
+                "ConversationBufferMemory",
+                "LLMChain"
+            ],
+            "training_setup": "",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "MindGuide, an innovative chatbot serving as a mental health assistant for early detection and comprehensive support. This novel approach holds great promise for proactive mental health intervention and assistance."
+        },
+        {
+            "paper_title": "Automating Customer Service using LangChain: Building custom open-source GPT Chatbot for organizations",
+            "datasets": [
+                "Data collected via web scraping"
+            ],
+            "models_used": [
+                "LangChain (custom LLM)",
+                "Google's Flan T5 XXL",
+                "Google's Flan T5 Base",
+                "Google's Flan T5 Small"
+            ],
+            "training_setup": "Fine-tuning",
+            "metrics": [],
+            "baseline_models": [
+                "Traditional customer support techniques (e.g., FAQs)"
+            ],
+            "ablation_studies": "",
+            "key_results": "Sahaay demonstrates the ability to scale across industries and organizations, offering real-time support and query resolution, particularly within an educational institution. Redefines the customer-company relationship, elevating customer retention, value extraction, and brand image."
+        },
+        {
+            "paper_title": "Efficiency-Driven Custom Chatbot Development: Unleashing LangChain, RAG, and Performance-Optimized LLM Fusion",
+            "datasets": [],
+            "models_used": [],
+            "training_setup": "",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": ""
+        },
+        {
+            "paper_title": "Cardiovascular Disease Prediction Using Langchain",
+            "datasets": [
+                "Electronic health records (EHRs)",
+                "Clinical notes"
+            ],
+            "models_used": [
+                "LangChain (deep learning architecture)",
+                "Natural Language Processing (NLP)",
+                "Traditional machine learning"
+            ],
+            "training_setup": "",
+            "metrics": [
+                "CVD prediction accuracy"
+            ],
+            "baseline_models": [
+                "Traditional methods"
+            ],
+            "ablation_studies": "",
+            "key_results": "Improved CVD prediction accuracy. Unlocks valuable insights into the disease\u2019s progression, empowering healthcare professionals with knowledge to implement early interventions and improve patient care and outcomes."
+        }
+    ]
+}

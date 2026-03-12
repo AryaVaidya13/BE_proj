@@ -1,0 +1,72 @@
+[
+  {
+    "title": "A multilingual sentiment analysis model based on continual learning",
+    "abstract": "Multilingual sentiment analysis involves predicting the sentiment orientation of texts for multiple languages by taking advantage of multilingual models, ranging from LSTMs to transformer-based Language Models (LMs). However, these models perform poorly in handling new language tasks due to catastrophic forgetting problem. In this work, we propose a multilingual sentiment analysis model based on continual learning, called mLMs-EWC, which incorporates continual learning into the Multilingual Language Models. This allows the model to retain linguistic features of old languages while continually learning those of new languages. Experiments are conducted on French, English and Chinese datasets to compare and validate the performance of the mLMs-EWC model. The results show that the mLMs-EWC model outperfoms the Multi-BERT model by approximately 5.2 \\(\\%\\) and 4.5 \\(\\%\\) on French and English tasks, respectively. Additionally, experimental analysis demonstrates that the proposed model mitigates catastrophic forgetting in multilingual sentiment analysis tasks and enables continual learning on multilingual datasets. Finally, we evaluate our approach on a lightweight distilled model of ALBERT, which also shows promising results with a surprising 24.7 \\(\\%\\) improvement on English task.",
+    "authors": [
+      "Kexin Xu",
+      "Yuemei Xu"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/7314eb2a1d9a21a48cf7d88613fbca092ccb80a3",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Application of Deep Learning-Based Natural Language Processing in Multilingual Sentiment Analysis",
+    "abstract": "This study explores the application of deep learning-based natural language processing technologies in multilingual sentiment analysis. By examining the performance of deep learning models such as BERT and LSTM in multilingual settings, the research demonstrates the effectiveness of these models in cross-linguistic sentiment classification tasks. Despite progress, major challenges in multilingual sentiment analysis include language and cultural differences, insufficient complex context processing, and data imbalance. Future research directions include optimizing the models' contextual understanding abilities, leveraging multilingual data resources, exploring novel neural network architectures, and improving assessment metrics. With these measures, the accuracy and efficiency of multilingual sentiment analysis are expected to be significantly enhanced, further advancing the global application of natural language processing technologies.",
+    "authors": [
+      "Jiabei Liu",
+      "Keqin Li",
+      "Armando Zhu",
+      "Bo Hong",
+      "Peng Zhao",
+      "Shuying Dai",
+      "Changsong Wei",
+      "Wenqian Huang",
+      "Honghua Su"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/dc22186c72f07ea3809ecfd839d85d4d758e2568",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "EMSA: Explainable multilingual sentiment analysis models providing sentiment analysis across multiple languages",
+    "abstract": "Sentiment analysis across multiple languages remains a challenging problem due to linguistic diversity, domain-specific expressions, and the limited explainability of existing models. This study aims to address these issues by proposing the Explainable Multilingual Sentiment Analyzer (EMSA), a novel framework that integrates large language models with prompt engineering. EMSA employs a two-stage process, first generating sentiment reasoning through chain-of-thought prompts, and then producing sentiment classification with explicit interpretability. We evaluate EMSA on both the GubaSenti dataset (Chinese financial domain) and the SST dataset (English benchmark). Experimental results demonstrate that EMSA consistently outperforms pre-trained language models such as RoBERTa, XLNet, and ALBERT, while providing transparent reasoning steps that enhance user trust. These findings suggest that EMSA not only improves multilingual sentiment classification performance but also contributes to the development of more interpretable and practical sentiment analysis systems.",
+    "authors": [
+      "Li Zhao",
+      "Jinwei Zhou",
+      "Jinde Cao",
+      "Weina Zhu"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/b0fce43e4744f07977c8dab98738afd8e2231fed",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Multilingual Sentiment Analysis of Summarized Texts: A Cross-Language Study of Text Shortening Effects",
+    "abstract": "Summarization significantly impacts sentiment analysis across languages with diverse morphologies. This study examines extractive and abstractive summarization effects on sentiment classification in English, German, French, Spanish, Italian, Finnish, Hungarian, and Arabic. We assess sentiment shifts post-summarization using multilingual transformers (mBERT, XLM-RoBERTa, T5, and BART) and language-specific models (FinBERT, AraBERT). Results show extractive summarization better preserves sentiment, especially in morphologically complex languages, while abstractive summarization improves readability but introduces sentiment distortion, affecting sentiment accuracy. Languages with rich inflectional morphology, such as Finnish, Hungarian, and Arabic, experience greater accuracy drops than English or German. Findings emphasize the need for language-specific adaptations in sentiment analysis and propose a hybrid summarization approach balancing readability and sentiment preservation. These insights benefit multilingual sentiment applications, including social media monitoring, market analysis, and cross-lingual opinion mining.",
+    "authors": [
+      "Mikhail Krasitskii",
+      "Grigori Sidorov",
+      "O. Kolesnikova",
+      "L. Chanona-Hern\u00e1ndez",
+      "A. Gelbukh"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/e1532f4b8d30ec22e0cca46d27e352b7504c4fc6",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Zero-shot Sentiment Analysis in Low-Resource Languages Using a Multilingual Sentiment Lexicon",
+    "abstract": "Improving multilingual language models capabilities in low-resource languages is generally difficult due to the scarcity of large-scale data in those languages. In this paper, we relax the reliance on texts in low-resource languages by using multilingual lexicons in pretraining to enhance multilingual capabilities. Specifically, we focus on zero-shot sentiment analysis tasks across 34 languages, including 6 high/medium-resource languages, 25 low-resource languages, and 3 code-switching datasets. We demonstrate that pretraining using multilingual lexicons, without using any sentence-level sentiment data, achieves superior zero-shot performance compared to models fine-tuned on English sentiment datasets, and large language models like GPT\u20133.5, BLOOMZ, and XGLM. These findings are observable for unseen low-resource languages to code-mixed scenarios involving high-resource languages.",
+    "authors": [
+      "Fajri Koto",
+      "T. Beck",
+      "Zeerak Talat",
+      "Iryna Gurevych",
+      "Timothy Baldwin"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/d22e336171c7ac92167f9b03b0e660af922069b4",
+    "source": "semantic_scholar"
+  }
+]

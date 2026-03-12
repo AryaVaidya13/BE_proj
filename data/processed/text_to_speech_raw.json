@@ -1,0 +1,183 @@
+[
+  {
+    "title": "Neural Codec Language Models are Zero-Shot Text to Speech Synthesizers",
+    "abstract": "We introduce a language modeling approach for text to speech synthesis (TTS). Specifically, we train a neural codec language model (called VALL-E) using discrete codes derived from an off-the-shelf neural audio codec model, and regard TTS as a conditional language modeling task rather than continuous signal regression as in previous work. During the pre-training stage, we scale up the TTS training data to 50 k hours of English speech which is hundreds of times larger than existing systems. VALL-E emerges in-context learning capability and can be used to synthesize high-quality personalized speech with only a 3-second enrolled recording of an unseen speaker as a prompt. Experiment results show that VALL-E significantly outperforms the state-of-the-art zero-shot TTS system in terms of speech naturalness and speaker similarity. In addition, we find VALL-E could preserve the speaker's emotion and acoustic environment from the prompt in synthesis.",
+    "authors": [
+      "Chengyi Wang",
+      "Sanyuan Chen",
+      "Yu Wu",
+      "Zi-Hua Zhang",
+      "Long Zhou",
+      "Shujie Liu",
+      "Zhuo Chen",
+      "Yanqing Liu",
+      "Huaming Wang",
+      "Jinyu Li",
+      "Lei He",
+      "Sheng Zhao",
+      "Furu Wei"
+    ],
+    "year": 2023,
+    "url": "https://www.semanticscholar.org/paper/c2f91f35df893714418cc29096083dce0b441229",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "CosyVoice: A Scalable Multilingual Zero-shot Text-to-speech Synthesizer based on Supervised Semantic Tokens",
+    "abstract": "Recent years have witnessed a trend that large language model (LLM) based text-to-speech (TTS) emerges into the mainstream due to their high naturalness and zero-shot capacity. In this paradigm, speech signals are discretized into token sequences, which are modeled by an LLM with text as prompts and reconstructed by a token-based vocoder to waveforms. Obviously, speech tokens play a critical role in LLM-based TTS models. Current speech tokens are learned in an unsupervised manner, which lacks explicit semantic information and alignment to the text. In this paper, we propose to represent speech with supervised semantic tokens, which are derived from a multilingual speech recognition model by inserting vector quantization into the encoder. Based on the tokens, we further propose a scalable zero-shot TTS synthesizer, CosyVoice, which consists of an LLM for text-to-token generation and a conditional flow matching model for token-to-speech synthesis. Experimental results show that supervised semantic tokens significantly outperform existing unsupervised tokens in terms of content consistency and speaker similarity for zero-shot voice cloning. Moreover, we find that utilizing large-scale data further improves the synthesis performance, indicating the scalable capacity of CosyVoice. To the best of our knowledge, this is the first attempt to involve supervised speech tokens into TTS models.",
+    "authors": [
+      "Zhihao Du",
+      "Qian Chen",
+      "Shiliang Zhang",
+      "Kai Hu",
+      "Heng Lu",
+      "Yexin Yang",
+      "Hangrui Hu",
+      "Siqi Zheng",
+      "Yue Gu",
+      "Ziyang Ma",
+      "Zhifu Gao",
+      "Zhijie Yan"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/09042877c369a9224d094c37b403735a23368316",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "FastSpeech 2: Fast and High-Quality End-to-End Text to Speech",
+    "abstract": "Advanced text to speech (TTS) models such as FastSpeech can synthesize speech significantly faster than previous autoregressive models with comparable quality. The training of FastSpeech model relies on an autoregressive teacher model for duration prediction (to provide more information as input) and knowledge distillation (to simplify the data distribution in output), which can ease the one-to-many mapping problem (i.e., multiple speech variations correspond to the same text) in TTS. However, FastSpeech has several disadvantages: 1) the teacher-student distillation pipeline is complicated, 2) the duration extracted from the teacher model is not accurate enough, and the target mel-spectrograms distilled from teacher model suffer from information loss due to data simplification, both of which limit the voice quality. In this paper, we propose FastSpeech 2, which addresses the issues in FastSpeech and better solves the one-to-many mapping problem in TTS by 1) directly training the model with ground-truth target instead of the simplified output from teacher, and 2) introducing more variation information of speech (e.g., pitch, energy and more accurate duration) as conditional inputs. Specifically, we extract duration, pitch and energy from speech waveform and directly take them as conditional inputs during training and use predicted values during inference. We further design FastSpeech 2s, which is the first attempt to directly generate speech waveform from text in parallel, enjoying the benefit of full end-to-end training and even faster inference than FastSpeech. Experimental results show that 1) FastSpeech 2 and 2s outperform FastSpeech in voice quality with much simplified training pipeline and reduced training time; 2) FastSpeech 2 and 2s can match the voice quality of autoregressive models while enjoying much faster inference speed.",
+    "authors": [
+      "Yi Ren",
+      "Chenxu Hu",
+      "Xu Tan",
+      "Tao Qin",
+      "Sheng Zhao",
+      "Zhou Zhao",
+      "Tie-Yan Liu"
+    ],
+    "year": 2020,
+    "url": "https://www.semanticscholar.org/paper/1623d6ffb6efd94d21537db2b96b91a196842aef",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Conditional Variational Autoencoder with Adversarial Learning for End-to-End Text-to-Speech",
+    "abstract": "Several recent end-to-end text-to-speech (TTS) models enabling single-stage training and parallel sampling have been proposed, but their sample quality does not match that of two-stage TTS systems. In this work, we present a parallel end-to-end TTS method that generates more natural sounding audio than current two-stage models. Our method adopts variational inference augmented with normalizing flows and an adversarial training process, which improves the expressive power of generative modeling. We also propose a stochastic duration predictor to synthesize speech with diverse rhythms from input text. With the uncertainty modeling over latent variables and the stochastic duration predictor, our method expresses the natural one-to-many relationship in which a text input can be spoken in multiple ways with different pitches and rhythms. A subjective human evaluation (mean opinion score, or MOS) on the LJ Speech, a single speaker dataset, shows that our method outperforms the best publicly available TTS systems and achieves a MOS comparable to ground truth.",
+    "authors": [
+      "Jaehyeon Kim",
+      "Jungil Kong",
+      "Juhee Son"
+    ],
+    "year": 2021,
+    "url": "https://www.semanticscholar.org/paper/92bf1c069747374fbc3efb55e7a916a3e2d736da",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "XTTS: a Massively Multilingual Zero-Shot Text-to-Speech Model",
+    "abstract": "Most Zero-shot Multi-speaker TTS (ZS-TTS) systems support only a single language. Although models like YourTTS, VALL-E X, Mega-TTS 2, and Voicebox explored Multilingual ZS-TTS they are limited to just a few high/medium resource languages, limiting the applications of these models in most of the low/medium resource languages. In this paper, we aim to alleviate this issue by proposing and making publicly available the XTTS system. Our method builds upon the Tortoise model and adds several novel modifications to enable multilingual training, improve voice cloning, and enable faster training and inference. XTTS was trained in 16 languages and achieved state-of-the-art (SOTA) results in most of them.",
+    "authors": [
+      "Edresson Casanova",
+      "Kelly Davis",
+      "Eren Gölge",
+      "Görkem Göknar",
+      "Iulian Gulea",
+      "Logan Hart",
+      "Aya Aljafari",
+      "Joshua Meyer",
+      "Reuben Morais",
+      "Samuel Olayemi",
+      "Julian Weber"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/ce7c55df9c56f85412e038176598cb761c7e91d0",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "MaskGCT: Zero-Shot Text-to-Speech with Masked Generative Codec Transformer",
+    "abstract": "The recent large-scale text-to-speech (TTS) systems are usually grouped as autoregressive and non-autoregressive systems. The autoregressive systems implicitly model duration but exhibit certain deficiencies in robustness and lack of duration controllability. Non-autoregressive systems require explicit alignment information between text and speech during training and predict durations for linguistic units (e.g. phone), which may compromise their naturalness. In this paper, we introduce Masked Generative Codec Transformer (MaskGCT), a fully non-autoregressive TTS model that eliminates the need for explicit alignment information between text and speech supervision, as well as phone-level duration prediction. MaskGCT is a two-stage model: in the first stage, the model uses text to predict semantic tokens extracted from a speech self-supervised learning (SSL) model, and in the second stage, the model predicts acoustic tokens conditioned on these semantic tokens. MaskGCT follows the mask-and-predict learning paradigm. During training, MaskGCT learns to predict masked semantic or acoustic tokens based on given conditions and prompts. During inference, the model generates tokens of a specified length in a parallel manner. Experiments with 100K hours of in-the-wild speech demonstrate that MaskGCT outperforms the current state-of-the-art zero-shot TTS systems in terms of quality, similarity, and intelligibility. Audio samples are available at https://maskgct.github.io/. We release our code and model checkpoints at https://github.com/open-mmlab/Amphion/blob/main/models/tts/maskgct.",
+    "authors": [
+      "Yuancheng Wang",
+      "Haoyue Zhan",
+      "Liwei Liu",
+      "Ruihong Zeng",
+      "Haotian Guo",
+      "Jiachen Zheng",
+      "Qiang Zhang",
+      "Xueyao Zhang",
+      "Shunsi Zhang",
+      "Zhizheng Wu"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/2fbd84851d1133c30575e1b08f276dae843c4c81",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "VoiceCraft: Zero-Shot Speech Editing and Text-to-Speech in the Wild",
+    "abstract": "We introduce VoiceCraft, a token infilling neural codec language model, that achieves state-of-the-art performance on both speech editing and zero-shot text-to-speech (TTS) on audiobooks, internet videos, and podcasts. VoiceCraft employs a Transformer decoder architecture and introduces a token rearrangement procedure that combines causal masking and delayed stacking to enable generation within an existing sequence. On speech editing tasks, VoiceCraft produces edited speech that is nearly indistinguishable from unedited recordings in terms of naturalness, as evaluated by humans; for zero-shot TTS, our model outperforms prior SotA models including VALLE and the popular commercial model XTTS-v2. Crucially, the models are evaluated on challenging and realistic datasets, that consist of diverse accents, speaking styles, recording conditions, and background noise and music, and our model performs consistently well compared to other models and real recordings. In particular, for speech editing evaluation, we introduce a high quality, challenging, and realistic dataset named RealEdit. We encourage readers to listen to the demos at https://jasonppy.github.io/VoiceCraft_web.",
+    "authors": [
+      "Puyuan Peng",
+      "Po-Yao (Bernie) Huang",
+      "Shang-Wen Li",
+      "Abdelrahman Mohamed",
+      "David Harwath"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/61595e0aec1433541b3f8efe706293e51b9c7e53",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "VALL-E 2: Neural Codec Language Models are Human Parity Zero-Shot Text to Speech Synthesizers",
+    "abstract": "This paper introduces VALL-E 2, the latest advancement in neural codec language models that marks a milestone in zero-shot text-to-speech synthesis (TTS), achieving human parity for the first time. Based on its predecessor, VALL-E, the new iteration introduces two significant enhancements: Repetition Aware Sampling refines the original nucleus sampling process by accounting for token repetition in the decoding history. It not only stabilizes the decoding but also circumvents the infinite loop issue. Grouped Code Modeling organizes codec codes into groups to effectively shorten the sequence length, which not only boosts inference speed but also addresses the challenges of long sequence modeling. Our experiments on the LibriSpeech and VCTK datasets show that VALL-E 2 surpasses previous systems in speech robustness, naturalness, and speaker similarity. It is the first of its kind to reach human parity on these benchmarks. Moreover, VALL-E 2 consistently synthesizes high-quality speech, even for sentences that are traditionally challenging due to their complexity or repetitive phrases. The advantages of this work could contribute to valuable endeavors, such as generating speech for individuals with aphasia or people with amyotrophic lateral sclerosis. See https://aka.ms/valle2 for demos of VALL-E 2.",
+    "authors": [
+      "Sanyuan Chen",
+      "Shujie Liu",
+      "Long Zhou",
+      "Yanqing Liu",
+      "Xu Tan",
+      "Jinyu Li",
+      "Sheng Zhao",
+      "Yao Qian",
+      "Furu Wei"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/e1cde20b294d99e7335c9410026d76bb51c3e537",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "BASE TTS: Lessons from building a billion-parameter Text-to-Speech model on 100K hours of data",
+    "abstract": "We introduce a text-to-speech (TTS) model called BASE TTS, which stands for $\\textbf{B}$ig $\\textbf{A}$daptive $\\textbf{S}$treamable TTS with $\\textbf{E}$mergent abilities. BASE TTS is the largest TTS model to-date, trained on 100K hours of public domain speech data, achieving a new state-of-the-art in speech naturalness. It deploys a 1-billion-parameter autoregressive Transformer that converts raw texts into discrete codes (\"speechcodes\") followed by a convolution-based decoder which converts these speechcodes into waveforms in an incremental, streamable manner. Further, our speechcodes are built using a novel speech tokenization technique that features speaker ID disentanglement and compression with byte-pair encoding. Echoing the widely-reported\"emergent abilities\"of large language models when trained on increasing volume of data, we show that BASE TTS variants built with 10K+ hours and 500M+ parameters begin to demonstrate natural prosody on textually complex sentences. We design and share a specialized dataset to measure these emergent abilities for text-to-speech. We showcase state-of-the-art naturalness of BASE TTS by evaluating against baselines that include publicly available large-scale text-to-speech systems: YourTTS, Bark and TortoiseTTS. Audio samples generated by the model can be heard at https://amazon-ltts-paper.com/.",
+    "authors": [
+      "Mateusz Lajszczak",
+      "Guillermo Cámbara",
+      "Yang Li",
+      "Fatih Beyhan",
+      "Arent van Korlaar",
+      "Fan Yang",
+      "Arnaud Joly",
+      "Álvaro Martín-Cortinas",
+      "Ammar Abbas",
+      "Adam Michalski",
+      "A. Moinet",
+      "S. Karlapati",
+      "Ewa Muszy'nska",
+      "Haohan Guo",
+      "Bartosz Putrycz",
+      "Soledad López Gambino",
+      "Kayeon Yoo",
+      "Elena Sokolova",
+      "Thomas Drugman"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/cc4aaf7e07d0e35de5b7f77f2d783d6d1e214a13",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Natural language guidance of high-fidelity text-to-speech with synthetic annotations",
+    "abstract": "Text-to-speech models trained on large-scale datasets have demonstrated impressive in-context learning capabilities and naturalness. However, control of speaker identity and style in these models typically requires conditioning on reference speech recordings, limiting creative applications. Alternatively, natural language prompting of speaker identity and style has demonstrated promising results and provides an intuitive method of control. However, reliance on human-labeled descriptions prevents scaling to large datasets. Our work bridges the gap between these two approaches. We propose a scalable method for labeling various aspects of speaker identity, style, and recording conditions. We then apply this method to a 45k hour dataset, which we use to train a speech language model. Furthermore, we propose simple methods for increasing audio fidelity, significantly outperforming recent work despite relying entirely on found data. Our results demonstrate high-fidelity speech generation in a diverse range of accents, prosodic styles, channel conditions, and acoustic conditions, all accomplished with a single model and intuitive natural language conditioning. Audio samples can be heard at https://text-description-to-speech.com/.",
+    "authors": [
+      "Daniel Lyth",
+      "Simon King"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/61c2a081ffbee4b67a296f557aa9baf785a3eae6",
+    "source": "semantic_scholar"
+  }
+]

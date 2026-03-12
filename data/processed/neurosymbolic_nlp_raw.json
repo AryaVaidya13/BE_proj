@@ -1,0 +1,139 @@
+[
+  {
+    "title": "Neurosymbolic Association Rule Mining from Tabular Data",
+    "abstract": "Association Rule Mining (ARM) is the task of mining patterns among data features in the form of logical rules, with applications across a myriad of domains. However, high-dimensional datasets often result in an excessive number of rules, increasing execution time and negatively impacting downstream task performance. Managing this rule explosion remains a central challenge in ARM research. To address this, we introduce Aerial+, a novel neurosymbolic ARM method. Aerial+ leverages an under-complete autoencoder to create a neural representation of the data, capturing associations between features. It extracts rules from this neural representation by exploiting the model's reconstruction mechanism. Extensive evaluations on five datasets against seven baselines demonstrate that Aerial+ achieves state-of-the-art results by learning more concise, high-quality rule sets with full data coverage. When integrated into rule-based interpretable machine learning models, Aerial+ significantly reduces execution time while maintaining or improving accuracy.",
+    "authors": [
+      "Erkan Karabulut",
+      "Paul Groth",
+      "Victoria Degeler"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.19354v4",
+    "source": "arxiv"
+  },
+  {
+    "title": "A dissemination workshop for introducing young Italian students to NLP",
+    "abstract": "We describe and make available the game-based material developed for a laboratory run at several Italian science festivals to popularize NLP among young students.",
+    "authors": [
+      "Lucio Messina",
+      "Lucia Busso",
+      "Claudia Roberta Combei",
+      "Ludovica Pannitto",
+      "Alessio Miaschi",
+      "Gabriele Sarti",
+      "Malvina Nissim"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2104.12405v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Reasoning in Neurosymbolic AI",
+    "abstract": "Knowledge representation and reasoning in neural networks have been a long-standing endeavor which has attracted much attention recently. The principled integration of reasoning and learning in neural networks is a main objective of the area of neurosymbolic Artificial Intelligence (AI). In this chapter, a simple energy-based neurosymbolic AI system is described that can represent and reason formally about any propositional logic formula. This creates a powerful combination of learning from data and knowledge and logical reasoning. We start by positioning neurosymbolic AI in the context of the current AI landscape that is unsurprisingly dominated by Large Language Models (LLMs). We identify important challenges of data efficiency, fairness and safety of LLMs that might be addressed by neurosymbolic reasoning systems with formal reasoning capabilities. We then discuss the representation of logic by the specific energy-based system, including illustrative examples and empirical evaluation of the correspondence between logical reasoning and energy minimization using Restricted Boltzmann Machines (RBM). Learning from data and knowledge is also evaluated empirically and compared with a symbolic, neural and a neurosymbolic system. Results reported in this chapter in an accessible way are expected to reignite the research on the use of neural networks as massively-parallel models for logical reasoning and promote the principled integration of reasoning and learning in deep networks. We conclude the chapter with a discussion of the importance of positioning neurosymbolic AI within a broader framework of formal reasoning and accountability in AI, discussing the challenges for neurosynbolic AI to tackle the various known problems of reliability of deep learning.",
+    "authors": [
+      "Son Tran",
+      "Edjard Mota",
+      "Artur d'Avila Garcez"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2505.20313v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students",
+    "abstract": "Although Natural Language Processing (NLP) is at the core of many tools young people use in their everyday life, high school curricula (in Italy) do not include any computational linguistics education. This lack of exposure makes the use of such tools less responsible than it could be and makes choosing computational linguistics as a university degree unlikely. To raise awareness, curiosity, and longer-term interest in young people, we have developed an interactive workshop designed to illustrate the basic principles of NLP and computational linguistics to high school Italian students aged between 13 and 18 years. The workshop takes the form of a game in which participants play the role of machines needing to solve some of the most common problems a computer faces in understanding language: from voice recognition to Markov chains to syntactic parsing. Participants are guided through the workshop with the help of instructors, who present the activities and explain core concepts from computational linguistics. The workshop was presented at numerous outlets in Italy between 2019 and 2021, both face-to-face and online.",
+    "authors": [
+      "Ludovica Pannitto",
+      "Lucia Busso",
+      "Claudia Roberta Combei",
+      "Lucio Messina",
+      "Alessio Miaschi",
+      "Gabriele Sarti",
+      "Malvina Nissim"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2104.12422v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Enhancing Large Language Models with Neurosymbolic Reasoning for Multilingual Tasks",
+    "abstract": "Large language models (LLMs) often struggle to perform multi-target reasoning in long-context scenarios where relevant information is scattered across extensive documents. To address this challenge, we introduce NeuroSymbolic Augmented Reasoning (NSAR), which combines the benefits of neural and symbolic reasoning during inference. NSAR explicitly extracts symbolic facts from text and generates executable Python code to handle complex reasoning steps. Through extensive experiments across seven languages and diverse context lengths, we demonstrate that NSAR significantly outperforms both a vanilla RAG baseline and advanced prompting strategies in accurately identifying and synthesizing multiple pieces of information. Our results highlight the effectiveness of combining explicit symbolic operations with neural inference for robust, interpretable, and scalable reasoning in multilingual settings.",
+    "authors": [
+      "Sina Bagheri Nezhad",
+      "Ameeta Agrawal"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2506.02483v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Intermediate Languages Matter: Formal Languages and LLMs affect Neurosymbolic Reasoning",
+    "abstract": "Large language models (LLMs) achieve astonishing results on a wide range of tasks. However, their formal reasoning ability still lags behind. A promising approach is Neurosymbolic LLM reasoning. It works by using LLMs as translators from natural to formal languages and symbolic solvers for deriving correct results. Still, the contributing factors to the success of Neurosymbolic LLM reasoning remain unclear. This paper demonstrates that one previously overlooked factor is the choice of the formal language. We introduce the intermediate language challenge: selecting a suitable formal language for neurosymbolic reasoning. By comparing four formal languages across three datasets and seven LLMs, we show that the choice of formal language affects both syntactic and semantic reasoning capabilities. We also discuss the varying effects across different LLMs.",
+    "authors": [
+      "Alexander Beiser",
+      "David Penz",
+      "Nysret Musliu"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2509.04083v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Towards a Neurosymbolic Reasoning System Grounded in Schematic Representations",
+    "abstract": "Despite significant progress in natural language understanding, Large Language Models (LLMs) remain error-prone when performing logical reasoning, often lacking the robust mental representations that enable human-like comprehension. We introduce a prototype neurosymbolic system, Embodied-LM, that grounds understanding and logical reasoning in schematic representations based on image schemas-recurring patterns derived from sensorimotor experience that structure human cognition. Our system operationalizes the spatial foundations of these cognitive structures using declarative spatial reasoning within Answer Set Programming. Through evaluation on logical deduction problems, we demonstrate that LLMs can be guided to interpret scenarios through embodied cognitive structures, that these structures can be formalized as executable programs, and that the resulting representations support effective logical reasoning with enhanced interpretability. While our current implementation focuses on spatial primitives, it establishes the computational foundation for incorporating more complex and dynamic representations.",
+    "authors": [
+      "François Olivier",
+      "Zied Bouraoui"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2509.03644v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Sound and Complete Neurosymbolic Reasoning with LLM-Grounded Interpretations",
+    "abstract": "Large language models (LLMs) have demonstrated impressive capabilities in natural language understanding and generation, but they exhibit problems with logical consistency in the output they generate. How can we harness LLMs' broad-coverage parametric knowledge in formal reasoning despite their inconsistency? We present a method for directly integrating an LLM into the interpretation function of the formal semantics for a paraconsistent logic. We provide experimental evidence for the feasibility of the method by evaluating the function using datasets created from several short-form factuality benchmarks. Unlike prior work, our method offers a theoretical framework for neurosymbolic reasoning that leverages an LLM's knowledge while preserving the underlying logic's soundness and completeness properties.",
+    "authors": [
+      "Bradley P. Allen",
+      "Prateek Chhikara",
+      "Thomas Macaulay Ferguson",
+      "Filip Ilievski",
+      "Paul Groth"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2507.09751v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Guaranteed Conformance of Neurosymbolic Models to Natural Constraints",
+    "abstract": "Deep neural networks have emerged as the workhorse for a large section of robotics and control applications, especially as models for dynamical systems. Such data-driven models are in turn used for designing and verifying autonomous systems. They are particularly useful in modeling medical systems where data can be leveraged to individualize treatment. In safety-critical applications, it is important that the data-driven model is conformant to established knowledge from the natural sciences. Such knowledge is often available or can often be distilled into a (possibly black-box) model. For instance, an F1 racing car should conform to Newton's laws (which are encoded within a unicycle model). In this light, we consider the following problem - given a model $M$ and a state transition dataset, we wish to best approximate the system model while being a bounded distance away from $M$. We propose a method to guarantee this conformance. Our first step is to distill the dataset into a few representative samples called memories, using the idea of a growing neural gas. Next, using these memories we partition the state space into disjoint subsets and compute bounds that should be respected by the neural network in each subset. This serves as a symbolic wrapper for guaranteed conformance. We argue theoretically that this only leads to a bounded increase in approximation error; which can be controlled by increasing the number of memories. We experimentally show that on three case studies (Car Model, Drones, and Artificial Pancreas), our constrained neurosymbolic models conform to specified models (each encoding various constraints) with order-of-magnitude improvements compared to the augmented Lagrangian and vanilla training methods. Our code can be found at: https://github.com/kaustubhsridhar/Constrained_Models",
+    "authors": [
+      "Kaustubh Sridhar",
+      "Souradeep Dutta",
+      "James Weimer",
+      "Insup Lee"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2212.01346v8",
+    "source": "arxiv"
+  },
+  {
+    "title": "GR-NLP-TOOLKIT: An Open-Source NLP Toolkit for Modern Greek",
+    "abstract": "We present GR-NLP-TOOLKIT, an open-source natural language processing (NLP) toolkit developed specifically for modern Greek. The toolkit provides state-of-the-art performance in five core NLP tasks, namely part-of-speech tagging, morphological tagging, dependency parsing, named entity recognition, and Greeklishto-Greek transliteration. The toolkit is based on pre-trained Transformers, it is freely available, and can be easily installed in Python (pip install gr-nlp-toolkit). It is also accessible through a demonstration platform on HuggingFace, along with a publicly available API for non-commercial use. We discuss the functionality provided for each task, the underlying methods, experiments against comparable open-source toolkits, and future possible enhancements. The toolkit is available at: https://github.com/nlpaueb/gr-nlp-toolkit",
+    "authors": [
+      "Lefteris Loukas",
+      "Nikolaos Smyrnioudis",
+      "Chrysa Dikonomaki",
+      "Spyros Barbakos",
+      "Anastasios Toumazatos",
+      "John Koutsikakis",
+      "Manolis Kyriakakis",
+      "Mary Georgiou",
+      "Stavros Vassos",
+      "John Pavlopoulos",
+      "Ion Androutsopoulos"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2412.08520v1",
+    "source": "arxiv"
+  }
+]

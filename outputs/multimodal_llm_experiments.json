@@ -1,0 +1,72 @@
+{
+  "experiments": [
+    {
+      "paper_title": "Introducing Representations of Facial Affect in Automated Multimodal Deception Detection",
+      "datasets": [
+        "video dataset of people communicating truthfully or deceptively in real-world, high-stakes courtroom situations",
+        "Aff-Wild database"
+      ],
+      "models_used": [
+        "deep neural network trained on the Aff-Wild database (for facial affect extraction)",
+        "unimodal Support Vector Machines (SVM)",
+        "SVM-based multimodal fusion methods",
+        "adaptive boosting"
+      ],
+      "metrics": [
+        "AUC"
+      ],
+      "key_results": "Unimodal models trained on facial affect achieved an AUC of 80%. Facial affect contributed towards the highest-performing multimodal approach (adaptive boosting) that achieved an AUC of 91% when tested on speakers who were not part of training sets. This approach achieved a higher AUC than existing automated machine learning approaches that used interpretable visual, vocal, and verbal features but not facial affect."
+    },
+    {
+      "paper_title": "Wiki-LLaVA: Hierarchical Retrieval-Augmented Generation for Multimodal LLMs",
+      "datasets": [
+        "datasets tailored for visual question answering with external data"
+      ],
+      "models_used": [
+        "Wiki-LLaVA",
+        "Multimodal LLMs"
+      ],
+      "metrics": [],
+      "key_results": "The approach, Wiki-LLaVA, augmented the effectiveness and precision of generated dialogues by integrating an external knowledge source of multimodal documents through a hierarchical retrieval pipeline. Extensive experiments demonstrated the appropriateness of this approach."
+    },
+    {
+      "paper_title": "The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data",
+      "datasets": [
+        "MULTIMODAL UNIVERSE (100TB of multi-channel and hyper-spectral images, spectra, multivariate time series, associated scientific measurements and metadata)"
+      ],
+      "models_used": [],
+      "metrics": [],
+      "key_results": "This paper presents a large-scale multimodal dataset (MULTIMODAL UNIVERSE) and includes a range of benchmark tasks. It aims to enable the development of large multi-modal models for scientific applications, rather than presenting new experimental results from applying such models."
+    },
+    {
+      "paper_title": "Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation",
+      "datasets": [],
+      "models_used": [
+        "Large Language Models (LLMs)",
+        "Retrieval-Augmented Generation (RAG)",
+        "Multimodal RAG"
+      ],
+      "metrics": [],
+      "key_results": "This paper is a comprehensive survey of Multimodal RAG systems, covering datasets, benchmarks, metrics, evaluation, methodologies, and innovations. It does not present new experimental results from applying models, but rather analyzes the existing landscape, challenges, and future directions."
+    },
+    {
+      "paper_title": "Evaluating Open-Source Vision-Language Models for Multimodal Sarcasm Detection",
+      "datasets": [
+        "Muse",
+        "MMSD2.0",
+        "SarcNet"
+      ],
+      "models_used": [
+        "BLIP2",
+        "InstructBLIP",
+        "OpenFlamingo",
+        "LLaVA",
+        "PaliGemma",
+        "Gemma3",
+        "Qwen-VL"
+      ],
+      "metrics": [],
+      "key_results": "Current open-source vision-language models achieve moderate success in binary sarcasm detection on benchmark datasets (Muse, MMSD2.0, SarcNet) using zero-, one-, and few-shot prompting. However, they are still not able to generate high-quality explanations for sarcastic instances without task-specific finetuning."
+    }
+  ]
+}

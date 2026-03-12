@@ -1,0 +1,77 @@
+[
+  {
+    "title": "Learning to Impute: A General Framework for Semi-supervised Learning",
+    "abstract": "Recent semi-supervised learning methods have shown to achieve comparable results to their supervised counterparts while using only a small portion of labels in image classification tasks thanks to their regularization strategies. In this paper, we take a more direct approach for semi-supervised learning and propose learning to impute the labels of unlabeled samples such that a network achieves better generalization when it is trained on these labels. We pose the problem in a learning-to-learn formulation which can easily be incorporated to the state-of-the-art semi-supervised techniques and boost their performance especially when the labels are limited. We demonstrate that our method is applicable to both classification and regression problems including image classification and facial landmark detection tasks.",
+    "authors": [
+      "Wei-Hong Li",
+      "Chuan-Sheng Foo",
+      "Hakan Bilen"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1912.10364v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "FreeMatch: Self-adaptive Thresholding for Semi-supervised Learning",
+    "abstract": "Semi-supervised Learning (SSL) has witnessed great success owing to the impressive performances brought by various methods based on pseudo labeling and consistency regularization. However, we argue that existing methods might fail to utilize the unlabeled data more effectively since they either use a pre-defined / fixed threshold or an ad-hoc threshold adjusting scheme, resulting in inferior performance and slow convergence. We first analyze a motivating example to obtain intuitions on the relationship between the desirable threshold and model's learning status. Based on the analysis, we hence propose FreeMatch to adjust the confidence threshold in a self-adaptive manner according to the model's learning status. We further introduce a self-adaptive class fairness regularization penalty to encourage the model for diverse predictions during the early training stage. Extensive experiments indicate the superiority of FreeMatch especially when the labeled data are extremely rare. FreeMatch achieves 5.78%, 13.59%, and 1.28% error rate reduction over the latest state-of-the-art method FlexMatch on CIFAR-10 with 1 label per class, STL-10 with 4 labels per class, and ImageNet with 100 labels per class, respectively. Moreover, FreeMatch can also boost the performance of imbalanced SSL. The codes can be found at https://github.com/microsoft/Semi-supervised-learning.",
+    "authors": [
+      "Yidong Wang",
+      "Hao Chen",
+      "Qiang Heng",
+      "Wenxin Hou",
+      "Yue Fan",
+      "Zhen Wu",
+      "Jindong Wang",
+      "Marios Savvides",
+      "Takahiro Shinozaki",
+      "Bhiksha Raj",
+      "Bernt Schiele",
+      "Xing Xie"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2205.07246v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "InterLUDE: Interactions between Labeled and Unlabeled Data to Enhance Semi-Supervised Learning",
+    "abstract": "Semi-supervised learning (SSL) seeks to enhance task performance by training on both labeled and unlabeled data. Mainstream SSL image classification methods mostly optimize a loss that additively combines a supervised classification objective with a regularization term derived solely from unlabeled data. This formulation neglects the potential for interaction between labeled and unlabeled images. In this paper, we introduce InterLUDE, a new approach to enhance SSL made of two parts that each benefit from labeled-unlabeled interaction. The first part, embedding fusion, interpolates between labeled and unlabeled embeddings to improve representation learning. The second part is a new loss, grounded in the principle of consistency regularization, that aims to minimize discrepancies in the model's predictions between labeled versus unlabeled inputs. Experiments on standard closed-set SSL benchmarks and a medical SSL task with an uncurated unlabeled set show clear benefits to our approach. On the STL-10 dataset with only 40 labels, InterLUDE achieves 3.2% error rate, while the best previous method reports 14.9%.",
+    "authors": [
+      "Zhe Huang",
+      "Xiaowei Yu",
+      "Dajiang Zhu",
+      "Michael C. Hughes"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2403.10658v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Semi-Supervised Multimodal Multi-Instance Learning for Aortic Stenosis Diagnosis",
+    "abstract": "Automated interpretation of ultrasound imaging of the heart (echocardiograms) could improve the detection and treatment of aortic stenosis (AS), a deadly heart disease. However, existing deep learning pipelines for assessing AS from echocardiograms have two key limitations. First, most methods rely on limited 2D cineloops, thereby ignoring widely available Doppler imaging that contains important complementary information about pressure gradients and blood flow abnormalities associated with AS. Second, obtaining labeled data is difficult. There are often far more unlabeled echocardiogram recordings available, but these remain underutilized by existing methods. To overcome these limitations, we introduce Semi-supervised Multimodal Multiple-Instance Learning (SMMIL), a new deep learning framework for automatic interpretation for structural heart diseases like AS. When deployed, SMMIL can combine information from two input modalities, spectral Dopplers and 2D cineloops, to produce a study-level AS diagnosis. During training, SMMIL can combine a smaller labeled set and an abundant unlabeled set of both modalities to improve its classifier. Experiments demonstrate that SMMIL outperforms recent alternatives at 3-level AS severity classification as well as several clinically relevant AS detection tasks.",
+    "authors": [
+      "Zhe Huang",
+      "Xiaowei Yu",
+      "Benjamin S. Wessler",
+      "Michael C. Hughes"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2403.06024v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Interpolation Consistency Training for Semi-Supervised Learning",
+    "abstract": "We introduce Interpolation Consistency Training (ICT), a simple and computation efficient algorithm for training Deep Neural Networks in the semi-supervised learning paradigm. ICT encourages the prediction at an interpolation of unlabeled points to be consistent with the interpolation of the predictions at those points. In classification problems, ICT moves the decision boundary to low-density regions of the data distribution. Our experiments show that ICT achieves state-of-the-art performance when applied to standard neural network architectures on the CIFAR-10 and SVHN benchmark datasets. Our theoretical analysis shows that ICT corresponds to a certain type of data-adaptive regularization with unlabeled points which reduces overfitting to labeled points under high confidence values.",
+    "authors": [
+      "Vikas Verma",
+      "Kenji Kawaguchi",
+      "Alex Lamb",
+      "Juho Kannala",
+      "Arno Solin",
+      "Yoshua Bengio",
+      "David Lopez-Paz"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1903.03825v5",
+    "source": "arxiv"
+  }
+]

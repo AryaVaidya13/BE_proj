@@ -1,0 +1,175 @@
+{
+    "experiments": [
+        {
+            "paper_title": "Neurosymbolic Association Rule Mining from Tabular Data",
+            "datasets": [
+                "five datasets"
+            ],
+            "models_used": [
+                "Aerial+",
+                "under-complete autoencoder"
+            ],
+            "training_setup": "Aerial+ leverages an under-complete autoencoder to create a neural representation of the data, capturing associations between features. It extracts rules from this neural representation by exploiting the model's reconstruction mechanism.",
+            "metrics": [
+                "concise, high-quality rule sets with full data coverage",
+                "execution time",
+                "accuracy"
+            ],
+            "baseline_models": [
+                "seven baselines"
+            ],
+            "ablation_studies": "",
+            "key_results": "Aerial+ achieves state-of-the-art results by learning more concise, high-quality rule sets with full data coverage. When integrated into rule-based interpretable machine learning models, Aerial+ significantly reduces execution time while maintaining or improving accuracy."
+        },
+        {
+            "paper_title": "A dissemination workshop for introducing young Italian students to NLP",
+            "datasets": [],
+            "models_used": [],
+            "training_setup": "A laboratory run at several Italian science festivals.",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Game-based material was developed and made available for popularizing NLP among young students."
+        },
+        {
+            "paper_title": "Reasoning in Neurosymbolic AI",
+            "datasets": [],
+            "models_used": [
+                "energy-based neurosymbolic AI system",
+                "Restricted Boltzmann Machines (RBM)"
+            ],
+            "training_setup": "Empirical evaluation of learning from data and knowledge.",
+            "metrics": [
+                "correspondence between logical reasoning and energy minimization"
+            ],
+            "baseline_models": [
+                "symbolic system",
+                "neural system",
+                "neurosymbolic system"
+            ],
+            "ablation_studies": "",
+            "key_results": "Empirical evaluation of the correspondence between logical reasoning and energy minimization using Restricted Boltzmann Machines (RBM) was conducted. Learning from data and knowledge was evaluated empirically and compared with symbolic, neural, and neurosymbolic systems."
+        },
+        {
+            "paper_title": "Teaching NLP with Bracelets and Restaurant Menus: An Interactive Workshop for Italian Students",
+            "datasets": [],
+            "models_used": [],
+            "training_setup": "The workshop was presented at numerous outlets in Italy between 2019 and 2021, both face-to-face and online, to high school Italian students aged between 13 and 18 years.",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "An interactive workshop was developed to illustrate the basic principles of NLP and computational linguistics to high school Italian students."
+        },
+        {
+            "paper_title": "Enhancing Large Language Models with Neurosymbolic Reasoning for Multilingual Tasks",
+            "datasets": [],
+            "models_used": [
+                "NeuroSymbolic Augmented Reasoning (NSAR)",
+                "Large language models (LLMs)"
+            ],
+            "training_setup": "During inference, NSAR explicitly extracts symbolic facts from text and generates executable Python code to handle complex reasoning steps.",
+            "metrics": [
+                "accuracy in identifying and synthesizing multiple pieces of information"
+            ],
+            "baseline_models": [
+                "vanilla RAG baseline",
+                "advanced prompting strategies"
+            ],
+            "ablation_studies": "Extensive experiments across seven languages and diverse context lengths.",
+            "key_results": "NSAR significantly outperforms both a vanilla RAG baseline and advanced prompting strategies in accurately identifying and synthesizing multiple pieces of information."
+        },
+        {
+            "paper_title": "Intermediate Languages Matter: Formal Languages and LLMs affect Neurosymbolic Reasoning",
+            "datasets": [
+                "three datasets"
+            ],
+            "models_used": [
+                "seven LLMs"
+            ],
+            "training_setup": "LLMs are used as translators from natural to formal languages and symbolic solvers are used for deriving correct results.",
+            "metrics": [
+                "syntactic reasoning capabilities",
+                "semantic reasoning capabilities"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "Comparing four formal languages across three datasets and seven LLMs.",
+            "key_results": "The choice of formal language affects both syntactic and semantic reasoning capabilities. Varying effects across different LLMs were also discussed."
+        },
+        {
+            "paper_title": "Towards a Neurosymbolic Reasoning System Grounded in Schematic Representations",
+            "datasets": [
+                "logical deduction problems"
+            ],
+            "models_used": [
+                "Embodied-LM",
+                "Large Language Models (LLMs)"
+            ],
+            "training_setup": "The system operationalizes the spatial foundations of cognitive structures using declarative spatial reasoning within Answer Set Programming.",
+            "metrics": [
+                "effective logical reasoning with enhanced interpretability"
+            ],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "LLMs can be guided to interpret scenarios through embodied cognitive structures, these structures can be formalized as executable programs, and the resulting representations support effective logical reasoning with enhanced interpretability."
+        },
+        {
+            "paper_title": "Sound and Complete Neurosymbolic Reasoning with LLM-Grounded Interpretations",
+            "datasets": [
+                "datasets created from several short-form factuality benchmarks"
+            ],
+            "models_used": [
+                "Large language models (LLMs)"
+            ],
+            "training_setup": "An LLM is directly integrated into the interpretation function of the formal semantics for a paraconsistent logic.",
+            "metrics": [],
+            "baseline_models": [],
+            "ablation_studies": "",
+            "key_results": "Experimental evidence for the feasibility of the method was provided by evaluating the function using datasets created from several short-form factuality benchmarks."
+        },
+        {
+            "paper_title": "Guaranteed Conformance of Neurosymbolic Models to Natural Constraints",
+            "datasets": [
+                "state transition dataset",
+                "Car Model",
+                "Drones",
+                "Artificial Pancreas"
+            ],
+            "models_used": [
+                "constrained neurosymbolic models",
+                "deep neural networks"
+            ],
+            "training_setup": "The dataset is distilled into representative samples called memories using a growing neural gas. These memories are used to partition the state space into disjoint subsets, and bounds are computed for the neural network in each subset.",
+            "metrics": [
+                "conformance",
+                "approximation error"
+            ],
+            "baseline_models": [
+                "augmented Lagrangian",
+                "vanilla training methods"
+            ],
+            "ablation_studies": "",
+            "key_results": "On three case studies (Car Model, Drones, and Artificial Pancreas), constrained neurosymbolic models conform to specified models with order-of-magnitude improvements compared to augmented Lagrangian and vanilla training methods."
+        },
+        {
+            "paper_title": "GR-NLP-TOOLKIT: An Open-Source NLP Toolkit for Modern Greek",
+            "datasets": [],
+            "models_used": [
+                "GR-NLP-TOOLKIT",
+                "pre-trained Transformers"
+            ],
+            "training_setup": "",
+            "metrics": [
+                "state-of-the-art performance in part-of-speech tagging",
+                "state-of-the-art performance in morphological tagging",
+                "state-of-the-art performance in dependency parsing",
+                "state-of-the-art performance in named entity recognition",
+                "state-of-the-art performance in Greeklishto-Greek transliteration"
+            ],
+            "baseline_models": [
+                "comparable open-source toolkits"
+            ],
+            "ablation_studies": "",
+            "key_results": "GR-NLP-TOOLKIT provides state-of-the-art performance in five core NLP tasks for modern Greek (part-of-speech tagging, morphological tagging, dependency parsing, named entity recognition, and Greeklishto-Greek transliteration)."
+        }
+    ]
+}

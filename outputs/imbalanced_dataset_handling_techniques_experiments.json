@@ -1,0 +1,15 @@
+{
+  "experiments": [
+    {
+      "paper_title": "Selecting the suitable resampling strategy for imbalanced data classification regarding dataset properties",
+      "datasets": [
+        "uci"
+      ],
+      "models": [],
+      "evaluation_metrics": [
+        "accuracy"
+      ],
+      "reported_results": ""
+    }
+  ]
+}

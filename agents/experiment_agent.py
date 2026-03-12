@@ -6,74 +6,75 @@ import os
 
 
 class ExperimentAgent:
-    def __init__(self, summaries, topic):
+    def __init__(self, summaries, topic, mode="nlp"):
         self.summaries = summaries
         self.topic = topic
+        self.mode = mode
 
-        # Configure Gemini client
         genai.configure(api_key=GEMINI_API_KEY)
-
-        # Correct model
         self.model = genai.GenerativeModel("gemini-2.5-flash")
 
     def extract_experiments(self):
-        schema = """
+        if self.mode == "nlp":
+            schema = """
 {
   "experiments": [
     {
       "paper_title": "",
       "datasets": [],
       "models_used": [],
-      "training_setup": "",
       "metrics": [],
-      "baseline_models": [],
-      "ablation_studies": "",
       "key_results": ""
     }
   ]
 }
 """
+            instruction = "Extract NLP experimental details."
+
+        else:
+            schema = """
+{
+  "experiments": [
+    {
+      "paper_title": "",
+      "datasets": [],
+      "models": [],
+      "evaluation_metrics": [],
+      "reported_results": ""
+    }
+  ]
+}
+"""
+            instruction = "Extract Machine Learning experimental setups."
 
         prompt = f"""
-You are an expert NLP research assistant.
+You are an expert research analyst.
 
-Given the following paper summaries for the topic: {self.topic}
+Topic: {self.topic}
 
-Extract ONLY experimental details in clean JSON format.
+{instruction}
 
-Summaries:
+Input:
 {json.dumps(self.summaries, indent=2)}
 
-Return JSON **matching this exact format**:
+Return ONLY valid JSON matching:
 {schema}
-
-IMPORTANT:
-- Return ONLY valid JSON.
-- No extra comments or text.
 """
 
         response = self.model.generate_content(prompt)
-
-        try:
-            return json.loads(response.text)
-        except Exception:
-            cleaned = response.text.strip().replace("```json", "").replace("```", "")
-            return json.loads(cleaned)
-
-    def save_experiments(self, data):
-
-        safe_topic = re.sub(r"[^a-zA-Z0-9]+", "_", self.topic).lower()
-        path = f"outputs/{safe_topic}_experiments.json"
-
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(data, f, indent=4)
-
-        print(f"[✔] Saved experiment details → {path}")
+        cleaned = response.text.replace("```json", "").replace("```", "").strip()
+        return json.loads(cleaned)
 
     def run(self):
-        print("[🧪] Step 2: Extracting experiments from summaries...")
-
+        print("🧪 Extracting experimental insights...")
         data = self.extract_experiments()
-        self.save_experiments(data)
 
+        name = re.sub(r"\W+", "_", self.topic.lower())
+        path = f"outputs/{name}_experiments.json"
+        os.makedirs("outputs", exist_ok=True)
+
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+
+        print(f"✔ Experiments saved → {path}")
         return data

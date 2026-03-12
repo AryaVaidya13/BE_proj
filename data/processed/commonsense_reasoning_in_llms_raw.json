@@ -1,0 +1,120 @@
+[
+  {
+    "title": "Cross-Cultural Transfer of Commonsense Reasoning in LLMs: Evidence from the Arab World",
+    "abstract": "Large language models (LLMs) often reflect Western-centric biases, limiting their effectiveness in diverse cultural contexts. Although some work has explored cultural alignment, the potential for cross-cultural transfer, using alignment in one culture to improve performance in others, remains underexplored. This paper investigates cross-cultural transfer of commonsense reasoning in the Arab world, where linguistic and historical similarities coexist with local cultural differences. Using a culturally grounded commonsense reasoning dataset covering 13 Arab countries, we evaluate lightweight alignment methods such as in-context learning and demonstration-based reinforcement (DITTO), alongside baselines like supervised fine-tuning and direct preference optimization. Our results show that merely 12 culture-specific examples from one country can improve performance in others by 10\\% on average, within multilingual models. In addition, we demonstrate that out-of-culture demonstrations from Indonesia and US contexts can match or surpass in-culture alignment for MCQ reasoning, highlighting cultural commonsense transferability beyond the Arab world. These findings demonstrate that efficient cross-cultural alignment is possible and offer a promising approach to adapt LLMs to low-resource cultural settings.",
+    "authors": [
+      "Saeed Almheiri",
+      "Rania Hossam",
+      "Mena Attia",
+      "Chenxi Wang",
+      "Preslav Nakov",
+      "Timothy Baldwin",
+      "Fajri Koto"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/f73b08b8b557ef8cd0f4dff19819b707628f5622",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Data-Efficient Fine-Grained Cross-Cultural Transfer of Commonsense Reasoning in LLMs",
+    "abstract": "",
+    "authors": [
+      "M. Saiful",
+      "Yazeed Alnumay",
+      "Norah A. Alzahrani",
+      "Nouf M. Alotaibi",
+      "Sultan Hisham A. Alyahya",
+      "Al-540 Rashed",
+      "F. Mirza",
+      "Has-541 Shaykhah Z. Alsubaie",
+      "A. Alahmed",
+      "Ghadah Alabduljabbar",
+      "Raghad",
+      "Yousef Alkhathran",
+      "Raneem Almushayqih",
+      "Alnajim",
+      "Salman Alsubaihi",
+      "Maryam Al Mansour",
+      "Majed Al-544",
+      "Ali Alammari",
+      "Z. Alawami",
+      "Rochelle Choenni",
+      "Anne Lauscher",
+      "Leo Gao",
+      "J. Tow",
+      "Baber Abbasi",
+      "Stella Bider-556",
+      "Sid Black",
+      "Anthony DiPofi",
+      "Charles Foster",
+      "Laurence Golding",
+      "Jeffrey Hsu",
+      "Alain Le Noac\u2019h",
+      "Haonan Li",
+      "Kyle McDonell",
+      "Niklas Muennighoff",
+      "Emanuele Brandl",
+      "Laura Bugliarello",
+      "Cabello Pi-566",
+      "Ilias queras",
+      "Ruixiang Chalkidis",
+      "Cui",
+      "Constanza",
+      "Katerina Fierro",
+      "Phillip Margatina",
+      "Rust Anders",
+      "Ing Chen",
+      "Jianquan Li",
+      "Benyou Wang",
+      "Lian Zhang"
+    ],
+    "year": null,
+    "url": "https://www.semanticscholar.org/paper/a8e80acf7d488348479ee761d95a86a2a5d2d065",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Direct Value Optimization: Improving Chain-of-Thought Reasoning in LLMs with Refined Values",
+    "abstract": "We introduce Direct Value Optimization (DVO), an innovative reinforcement learning framework for enhancing large language models in complex reasoning tasks. Unlike traditional methods relying on preference labels, DVO utilizes value signals at individual reasoning steps, optimizing models via a mean squared error loss. The key benefit of DVO lies in its fine-grained supervision, circumventing the need for labor-intensive human annotations. Target values within the DVO are estimated using either Monte Carlo Tree Search or an outcome value model. Our empirical analysis on both mathematical and commonsense reasoning tasks shows that DVO consistently outperforms existing offline preference optimization techniques, even with fewer training steps. These findings underscore the importance of value signals in advancing reasoning capabilities and highlight DVO as a superior methodology under scenarios lacking explicit human preference information.",
+    "authors": [
+      "Hongbo Zhang",
+      "Han Cui",
+      "Guangsheng Bao",
+      "Linyi Yang",
+      "Jun Wang",
+      "Yue Zhang"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/5db8a5f40f4da1de0aeae6d0d065203f1a0d02c4",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Beyond English-Centric Training: How Reinforcement Learning Improves Cross-Lingual Reasoning in LLMs",
+    "abstract": "Enhancing the complex reasoning capabilities of Large Language Models (LLMs) attracts widespread attention. While reinforcement learning (RL) has shown superior performance for improving complex reasoning, its impact on cross-lingual generalization compared to Supervised Fine-Tuning (SFT) remains unexplored. We present the first systematic investigation into cross-lingual reasoning generalization of RL and SFT. Using Qwen2.5-3B-Base as our foundation model, we conduct experiments on diverse multilingual reasoning benchmarks, including math reasoning, commonsense reasoning, and scientific reasoning. Our investigation yields two significant findings: (1) Tuning with RL not only achieves higher accuracy but also demonstrates substantially stronger cross-lingual generalization capabilities compared to SFT. (2) RL training on non-English data yields better overall performance and generalization than training on English data, which is not observed with SFT. Furthermore, through comprehensive mechanistic analyses, we explore the underlying factors of RL's superiority and generalization across languages. Our results provide compelling evidence that RL enables the model with more robust reasoning strategies, offering crucial guidance for more equitable and effective multilingual reasoning.",
+    "authors": [
+      "Shulin Huang",
+      "Yiran Ding",
+      "Junshu Pan",
+      "Yue Zhang"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/61b763922db3e3d293ecd85c54305fd1f996320f",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Benchmarking Chinese Commonsense Reasoning of LLMs: From Chinese-Specifics to Reasoning-Memorization Correlations",
+    "abstract": "We introduce CHARM, the first benchmark for comprehensively and in-depth evaluating the commonsense reasoning ability of large language models (LLMs) in Chinese, which covers both globally known and Chinese-specific commonsense. We evaluated 7 English and 12 Chinese-oriented LLMs on CHARM, employing 5 representative prompt strategies for improving LLMs' reasoning ability, such as Chain-of-Thought. Our findings indicate that the LLM's language orientation and the task's domain influence the effectiveness of the prompt strategy, which enriches previous research findings. We built closely-interconnected reasoning and memorization tasks, and found that some LLMs struggle with memorizing Chinese commonsense, affecting their reasoning ability, while others show differences in reasoning despite similar memorization performance. We also evaluated the LLMs' memorization-independent reasoning abilities and analyzed the typical errors. Our study precisely identified the LLMs' strengths and weaknesses, providing the clear direction for optimization. It can also serve as a reference for studies in other fields. We will release CHARM at https://github.com/opendatalab/CHARM .",
+    "authors": [
+      "Jiaxing Sun",
+      "Weiquan Huang",
+      "Jiang Wu",
+      "Chenya Gu",
+      "Wei Li",
+      "Songyang Zhang",
+      "Hang Yan",
+      "Conghui He"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/333b7c8e9af8b49271663039edf62a9da01ad16a",
+    "source": "semantic_scholar"
+  }
+]

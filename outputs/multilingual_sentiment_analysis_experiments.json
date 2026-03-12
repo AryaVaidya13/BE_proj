@@ -1,0 +1,78 @@
+{
+  "experiments": [
+    {
+      "paper_title": "A multilingual sentiment analysis model based on continual learning",
+      "datasets": [
+        "French datasets",
+        "English datasets",
+        "Chinese datasets"
+      ],
+      "models_used": [
+        "mLMs-EWC (proposed continual learning model)",
+        "Multi-BERT",
+        "ALBERT (lightweight distilled model)"
+      ],
+      "metrics": [],
+      "key_results": "The mLMs-EWC model outperforms the Multi-BERT model by approximately 5.2% and 4.5% on French and English tasks, respectively. The proposed model mitigates catastrophic forgetting and enables continual learning. Evaluation on a distilled ALBERT model shows a 24.7% improvement on the English task."
+    },
+    {
+      "paper_title": "Application of Deep Learning-Based Natural Language Processing in Multilingual Sentiment Analysis",
+      "datasets": [],
+      "models_used": [
+        "BERT",
+        "LSTM"
+      ],
+      "metrics": [],
+      "key_results": "The research demonstrates the effectiveness of deep learning models like BERT and LSTM in cross-linguistic sentiment classification tasks."
+    },
+    {
+      "paper_title": "EMSA: Explainable multilingual sentiment analysis models providing sentiment analysis across multiple languages",
+      "datasets": [
+        "GubaSenti dataset (Chinese financial domain)",
+        "SST dataset (English benchmark)"
+      ],
+      "models_used": [
+        "EMSA (proposed framework integrating large language models with prompt engineering)",
+        "RoBERTa",
+        "XLNet",
+        "ALBERT"
+      ],
+      "metrics": [],
+      "key_results": "EMSA consistently outperforms pre-trained language models such as RoBERTa, XLNet, and ALBERT, while providing transparent reasoning steps that enhance user trust and improve interpretability."
+    },
+    {
+      "paper_title": "Multilingual Sentiment Analysis of Summarized Texts: A Cross-Language Study of Text Shortening Effects",
+      "datasets": [],
+      "models_used": [
+        "mBERT",
+        "XLM-RoBERTa",
+        "T5",
+        "BART",
+        "FinBERT",
+        "AraBERT"
+      ],
+      "metrics": [
+        "sentiment shifts",
+        "sentiment distortion",
+        "sentiment accuracy",
+        "accuracy drops"
+      ],
+      "key_results": "Extractive summarization better preserves sentiment, especially in morphologically complex languages. Abstractive summarization improves readability but introduces sentiment distortion, affecting sentiment accuracy. Languages with rich inflectional morphology (Finnish, Hungarian, Arabic) experience greater accuracy drops than English or German."
+    },
+    {
+      "paper_title": "Zero-shot Sentiment Analysis in Low-Resource Languages Using a Multilingual Sentiment Lexicon",
+      "datasets": [
+        "34 languages (including 6 high/medium-resource, 25 low-resource, and 3 code-switching datasets)"
+      ],
+      "models_used": [
+        "Models pretrained using multilingual lexicons",
+        "GPT-3.5",
+        "BLOOMZ",
+        "XGLM",
+        "Models fine-tuned on English sentiment datasets"
+      ],
+      "metrics": [],
+      "key_results": "Pretraining using multilingual lexicons (without sentence-level sentiment data) achieves superior zero-shot performance compared to models fine-tuned on English sentiment datasets and large language models like GPT-3.5, BLOOMZ, and XGLM, for both unseen low-resource languages and code-mixed scenarios."
+    }
+  ]
+}

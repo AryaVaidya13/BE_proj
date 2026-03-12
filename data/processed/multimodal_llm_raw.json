@@ -1,0 +1,98 @@
+[
+  {
+    "title": "Introducing Representations of Facial Affect in Automated Multimodal Deception Detection",
+    "abstract": "Automated deception detection systems can enhance health, justice, and security in society by helping humans detect deceivers in high-stakes situations across medical and legal domains, among others. This paper presents a novel analysis of the discriminative power of dimensional representations of facial affect for automated deception detection, along with interpretable features from visual, vocal, and verbal modalities. We used a video dataset of people communicating truthfully or deceptively in real-world, high-stakes courtroom situations. We leveraged recent advances in automated emotion recognition in-the-wild by implementing a state-of-the-art deep neural network trained on the Aff-Wild database to extract continuous representations of facial valence and facial arousal from speakers. We experimented with unimodal Support Vector Machines (SVM) and SVM-based multimodal fusion methods to identify effective features, modalities, and modeling approaches for detecting deception. Unimodal models trained on facial affect achieved an AUC of 80%, and facial affect contributed towards the highest-performing multimodal approach (adaptive boosting) that achieved an AUC of 91% when tested on speakers who were not part of training sets. This approach achieved a higher AUC than existing automated machine learning approaches that used interpretable visual, vocal, and verbal features to detect deception in this dataset, but did not use facial affect. Across all videos, deceptive and truthful speakers exhibited significant differences in facial valence and facial arousal, contributing computational support to existing psychological theories on affect and deception. The demonstrated importance of facial affect in our models informs and motivates the future development of automated, affect-aware machine learning approaches for modeling and detecting deception and other social behaviors in-the-wild.",
+    "authors": [
+      "Leena Mathur",
+      "Maja J Matari\u0107"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2008.13369v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Wiki-LLaVA: Hierarchical Retrieval-Augmented Generation for Multimodal LLMs",
+    "abstract": "Multimodal LLMs are the natural evolution of LLMs, and enlarge their capabilities so as to work beyond the pure textual modality. As research is being carried out to design novel architectures and vision-and-language adapters, in this paper we concentrate on endowing such models with the capability of answering questions that require external knowledge. Our approach, termed Wiki-LLaVA, aims at integrating an external knowledge source of multimodal documents, which is accessed through a hierarchical retrieval pipeline. Relevant passages, using this approach, are retrieved from the external knowledge source and employed as additional context for the LLM, augmenting the effectiveness and precision of generated dialogues. We conduct extensive experiments on datasets tailored for visual question answering with external data and demonstrate the appropriateness of our approach.",
+    "authors": [
+      "Davide Caffagni",
+      "Federico Cocchi",
+      "Nicholas Moratelli",
+      "Sara Sarto",
+      "Marcella Cornia",
+      "Lorenzo Baraldi",
+      "Rita Cucchiara"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2404.15406v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "The Multimodal Universe: Enabling Large-Scale Machine Learning with 100TB of Astronomical Scientific Data",
+    "abstract": "We present the MULTIMODAL UNIVERSE, a large-scale multimodal dataset of scientific astronomical data, compiled specifically to facilitate machine learning research. Overall, the MULTIMODAL UNIVERSE contains hundreds of millions of astronomical observations, constituting 100\\,TB of multi-channel and hyper-spectral images, spectra, multivariate time series, as well as a wide variety of associated scientific measurements and \"metadata\". In addition, we include a range of benchmark tasks representative of standard practices for machine learning methods in astrophysics. This massive dataset will enable the development of large multi-modal models specifically targeted towards scientific applications. All codes used to compile the MULTIMODAL UNIVERSE and a description of how to access the data is available at https://github.com/MultimodalUniverse/MultimodalUniverse",
+    "authors": [
+      " The Multimodal Universe Collaboration",
+      "Jeroen Audenaert",
+      "Micah Bowles",
+      "Benjamin M. Boyd",
+      "David Chemaly",
+      "Brian Cherinka",
+      "Ioana Ciuc\u0103",
+      "Miles Cranmer",
+      "Aaron Do",
+      "Matthew Grayling",
+      "Erin E. Hayes",
+      "Tom Hehir",
+      "Shirley Ho",
+      "Marc Huertas-Company",
+      "Kartheik G. Iyer",
+      "Maja Jablonska",
+      "Francois Lanusse",
+      "Henry W. Leung",
+      "Kaisey Mandel",
+      "Juan Rafael Mart\u00ednez-Galarza",
+      "Peter Melchior",
+      "Lucas Meyer",
+      "Liam H. Parker",
+      "Helen Qu",
+      "Jeff Shen",
+      "Michael J. Smith",
+      "Connor Stone",
+      "Mike Walmsley",
+      "John F. Wu"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2412.02527v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Ask in Any Modality: A Comprehensive Survey on Multimodal Retrieval-Augmented Generation",
+    "abstract": "Large Language Models (LLMs) suffer from hallucinations and outdated knowledge due to their reliance on static training data. Retrieval-Augmented Generation (RAG) mitigates these issues by integrating external dynamic information for improved factual grounding. With advances in multimodal learning, Multimodal RAG extends this approach by incorporating multiple modalities such as text, images, audio, and video to enhance the generated outputs. However, cross-modal alignment and reasoning introduce unique challenges beyond those in unimodal RAG. This survey offers a structured and comprehensive analysis of Multimodal RAG systems, covering datasets, benchmarks, metrics, evaluation, methodologies, and innovations in retrieval, fusion, augmentation, and generation. We review training strategies, robustness enhancements, loss functions, and agent-based approaches, while also exploring the diverse Multimodal RAG scenarios. In addition, we outline open challenges and future directions to guide research in this evolving field. This survey lays the foundation for developing more capable and reliable AI systems that effectively leverage multimodal dynamic external knowledge bases. All resources are publicly available at https://github.com/llm-lab-org/Multimodal-RAG-Survey.",
+    "authors": [
+      "Mohammad Mahdi Abootorabi",
+      "Amirhosein Zobeiri",
+      "Mahdi Dehghani",
+      "Mohammadali Mohammadkhani",
+      "Bardia Mohammadi",
+      "Omid Ghahroodi",
+      "Mahdieh Soleymani Baghshah",
+      "Ehsaneddin Asgari"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2502.08826v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "Evaluating Open-Source Vision-Language Models for Multimodal Sarcasm Detection",
+    "abstract": "Recent advances in open-source vision-language models (VLMs) offer new opportunities for understanding complex and subjective multimodal phenomena such as sarcasm. In this work, we evaluate seven state-of-the-art VLMs - BLIP2, InstructBLIP, OpenFlamingo, LLaVA, PaliGemma, Gemma3, and Qwen-VL - on their ability to detect multimodal sarcasm using zero-, one-, and few-shot prompting. Furthermore, we evaluate the models' capabilities in generating explanations to sarcastic instances. We evaluate the capabilities of VLMs on three benchmark sarcasm datasets (Muse, MMSD2.0, and SarcNet). Our primary objectives are twofold: (1) to quantify each model's performance in detecting sarcastic image-caption pairs, and (2) to assess their ability to generate human-quality explanations that highlight the visual-textual incongruities driving sarcasm. Our results indicate that, while current models achieve moderate success in binary sarcasm detection, they are still not able to generate high-quality explanations without task-specific finetuning.",
+    "authors": [
+      "Saroj Basnet",
+      "Shafkat Farabi",
+      "Tharindu Ranasinghe",
+      "Diptesh Kanoji",
+      "Marcos Zampieri"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2510.11852v1",
+    "source": "arxiv"
+  }
+]

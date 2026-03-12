@@ -1,0 +1,58 @@
+{
+  "experiments": [
+    {
+      "paper_title": "Cross-Cultural Transfer of Commonsense Reasoning in LLMs: Evidence from the Arab World",
+      "datasets": [
+        "culturally grounded commonsense reasoning dataset covering 13 Arab countries"
+      ],
+      "models_used": [
+        "multilingual models"
+      ],
+      "metrics": [
+        "performance"
+      ],
+      "key_results": "Merely 12 culture-specific examples from one country can improve performance in others by 10% on average, within multilingual models. Out-of-culture demonstrations from Indonesia and US contexts can match or surpass in-culture alignment for MCQ reasoning."
+    },
+    {
+      "paper_title": "Direct Value Optimization: Improving Chain-of-Thought Reasoning in LLMs with Refined Values",
+      "datasets": [
+        "mathematical reasoning tasks",
+        "commonsense reasoning tasks"
+      ],
+      "models_used": [
+        "large language models"
+      ],
+      "metrics": [
+        "performance"
+      ],
+      "key_results": "Direct Value Optimization (DVO) consistently outperforms existing offline preference optimization techniques, even with fewer training steps."
+    },
+    {
+      "paper_title": "Beyond English-Centric Training: How Reinforcement Learning Improves Cross-Lingual Reasoning in LLMs",
+      "datasets": [
+        "diverse multilingual reasoning benchmarks (math reasoning, commonsense reasoning, scientific reasoning)"
+      ],
+      "models_used": [
+        "Qwen2.5-3B-Base"
+      ],
+      "metrics": [
+        "accuracy"
+      ],
+      "key_results": "Tuning with Reinforcement Learning (RL) achieves higher accuracy and substantially stronger cross-lingual generalization capabilities compared to Supervised Fine-Tuning (SFT). RL training on non-English data yields better overall performance and generalization than training on English data, which is not observed with SFT."
+    },
+    {
+      "paper_title": "Benchmarking Chinese Commonsense Reasoning of LLMs: From Chinese-Specifics to Reasoning-Memorization Correlations",
+      "datasets": [
+        "CHARM (benchmark for Chinese commonsense reasoning)"
+      ],
+      "models_used": [
+        "7 English LLMs",
+        "12 Chinese-oriented LLMs"
+      ],
+      "metrics": [
+        "commonsense reasoning ability"
+      ],
+      "key_results": "The LLM's language orientation and task domain influence the effectiveness of prompt strategies. Some LLMs struggle with memorizing Chinese commonsense, affecting their reasoning, while others show differences in reasoning despite similar memorization."
+    }
+  ]
+}

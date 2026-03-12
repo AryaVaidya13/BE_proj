@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Parallel Clustering Algorithm for the k-medoids Problem in High-dimensional Space for Large-scale Datasets",
+    "abstract": "We present a robust, parallel primal-dual heuristic algorithm for the k-medoids clustering problem, a widely utilized method in data mining and machine learning. Our approach surpasses current algorithms by effectively addressing their limitations, such as time-consuming distance matrix calculations, inefficient nearest-neighbor searches, and difficulties in handling large-scale datasets. To overcome these challenges, we employ an efficient parallel implementation, combined with a pioneering subgradient search algorithm. We evaluate our algorithm on the BIRCH and Stanford Dog datasets and demonstrate its superiority over existing k-medoids clustering algorithms in terms of solution quality and run time. Additionally, we introduce a novel vectorization technique that enables our algorithm to handle various types of data, such as images, text, and point data. Overall, our work contributes to the field of data mining and machine learning by providing an efficient and effective solution for the k-medoids clustering problem. The proposed algorithm offers improved performance, and versatility, making it a valuable tool for a wide range of applications.",
+    "authors": [
+      "Sergey Vandanov",
+      "Aleksandr Plyasunov",
+      "Anton Ushakov"
+    ],
+    "year": 2023,
+    "url": "https://www.semanticscholar.org/paper/9dd4161be39e736fd26be6f0b706e8dd11f3d6d9",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Design and Comparative Analysis of New Personalized Recommender Algorithms with Specific Features for Large Scale Datasets",
+    "abstract": "Nowadays, because of the tremendous amount of information that humans and machines produce every day, it has become increasingly hard to choose the more relevant content across a broad range of choices. This research focuses on the design of two different intelligent optimization methods using Artificial Intelligence and Machine Learning for real-life applications that are used to improve the process of generation of recommenders. In the first method, the modified cluster based intelligent collaborative filtering is applied with the sequential clustering that operates on the values of dataset, user\u2032s neighborhood set, and the size of the recommendation list. This strategy splits the given data set into different subsets or clusters and the recommendation list is extracted from each group for constructing the better recommendation list. In the second method, the specific features-based customized recommender that works in the training and recommendation steps by applying the split and conquer strategy on the problem datasets, which are clustered into a minimum number of clusters and the better recommendation list, is created among all the clusters. This strategy automatically tunes the tuning parameter \u03bb that serves the role of supervised learning in generating the better recommendation list for the large datasets. The quality of the proposed recommenders for some of the large scale datasets is improved compared to some of the well-known existing methods. The proposed methods work well when \u03bb = 0.5 with the size of the recommendation list, |L| = 30 and the size of the neighborhood, |S| < 30. For a large value of |S|, the significant difference of the root mean square error becomes smaller in the proposed methods. For large scale datasets, simulation of the proposed methods when varying the user sizes and when the user size exceeds 500, the experimental results show that better values of the metrics are obtained and the proposed method 2 performs better than proposed method 1. The significant differences are obtained in these methods because the structure of computation of the methods depends on the number of user attributes, \u03bb, the number of bipartite graph edges, and |L|. The better values of the (Precision, Recall) metrics obtained with size as 3000 for the large scale Book-Crossing dataset in the proposed methods are (0.0004, 0.0042) and (0.0004, 0.0046) respectively. The average computational time of the proposed methods takes <10 seconds for the large scale datasets and yields better performance compared to the well-known existing methods.",
+    "authors": [
+      "S. Bhaskaran",
+      "Raja Marappan",
+      "B. Santhi"
+    ],
+    "year": 2020,
+    "url": "https://www.semanticscholar.org/paper/1f8cdb26c52b61331d7df4735f2cd89eb66a8442",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "On the Consistency and Large-Scale Extension of Multiple Kernel Clustering",
+    "abstract": "Existing multiple kernel clustering (MKC) algorithms have two ubiquitous problems. From the theoretical perspective, most MKC algorithms lack sufficient theoretical analysis, especially the consistency of learned parameters, such as the kernel weights. From the practical perspective, the high complexity makes MKC unable to handle large-scale datasets. This paper tries to address the above two issues. We first make a consistency analysis of an influential MKC method named Simple Multiple Kernel <inline-formula><tex-math notation=\"LaTeX\">$k$</tex-math><alternatives><mml:math><mml:mi>k</mml:mi></mml:math><inline-graphic xlink:href=\"liu-ieq2-3387433.gif\"/></alternatives></inline-formula>-Means (SimpleMKKM). Specifically, suppose that <inline-formula><tex-math notation=\"LaTeX\">$\\hat{\\boldsymbol{\\gamma }}_{n}$</tex-math><alternatives><mml:math><mml:msub><mml:mover accent=\"true\"><mml:mi>\u03b3</mml:mi><mml:mo>^</mml:mo></mml:mover><mml:mi>n</mml:mi></mml:msub></mml:math><inline-graphic xlink:href=\"liu-ieq3-3387433.gif\"/></alternatives></inline-formula> are the kernel weights learned by SimpleMKKM from the training samples. We also define the expected version of SimpleMKKM and denote its solution as <inline-formula><tex-math notation=\"LaTeX\">$\\boldsymbol{\\gamma }^*$</tex-math><alternatives><mml:math><mml:msup><mml:mi>\u03b3</mml:mi><mml:mo>*</mml:mo></mml:msup></mml:math><inline-graphic xlink:href=\"liu-ieq4-3387433.gif\"/></alternatives></inline-formula>. We establish an upper bound of <inline-formula><tex-math notation=\"LaTeX\">$\\Vert \\hat{\\boldsymbol{\\gamma }}_{n}-\\boldsymbol{\\gamma }^*\\Vert _\\infty$</tex-math><alternatives><mml:math><mml:mrow><mml:mrow><mml:mo>\u2225</mml:mo></mml:mrow><mml:msub><mml:mover accent=\"true\"><mml:mi>\u03b3</mml:mi><mml:mo>^</mml:mo></mml:mover><mml:mi>n</mml:mi></mml:msub><mml:mo>-</mml:mo><mml:msup><mml:mi>\u03b3</mml:mi><mml:mo>*</mml:mo></mml:msup><mml:msub><mml:mrow><mml:mo>\u2225</mml:mo></mml:mrow><mml:mi>\u221e</mml:mi></mml:msub></mml:mrow></mml:math><inline-graphic xlink:href=\"liu-ieq5-3387433.gif\"/></alternatives></inline-formula> in the order of <inline-formula><tex-math notation=\"LaTeX\">$\\widetilde{\\mathcal {O}}(1/\\sqrt{n})$</tex-math><alternatives><mml:math><mml:mrow><mml:mover accent=\"true\"><mml:mi mathvariant=\"script\">O</mml:mi><mml:mo>\u02dc</mml:mo></mml:mover><mml:mrow><mml:mo>(</mml:mo><mml:mn>1</mml:mn><mml:mo>/</mml:mo><mml:msqrt><mml:mi>n</mml:mi></mml:msqrt><mml:mo>)</mml:mo></mml:mrow></mml:mrow></mml:math><inline-graphic xlink:href=\"liu-ieq6-3387433.gif\"/></alternatives></inline-formula>, where <inline-formula><tex-math notation=\"LaTeX\">$n$</tex-math><alternatives><mml:math><mml:mi>n</mml:mi></mml:math><inline-graphic xlink:href=\"liu-ieq7-3387433.gif\"/></alternatives></inline-formula> is the sample number. Based on this result, we also derive its excess clustering risk calculated by a standard clustering loss function. For the large-scale extension, we replace the eigen decomposition of SimpleMKKM with singular value decomposition (SVD). Consequently, the complexity can be decreased to <inline-formula><tex-math notation=\"LaTeX\">$\\mathcal {O}(n)$</tex-math><alternatives><mml:math><mml:mrow><mml:mi mathvariant=\"script\">O</mml:mi><mml:mo>(</mml:mo><mml:mi>n</mml:mi><mml:mo>)</mml:mo></mml:mrow></mml:math><inline-graphic xlink:href=\"liu-ieq8-3387433.gif\"/></alternatives></inline-formula> such that SimpleMKKM can be implemented on large-scale datasets. We then deduce several theoretical results to verify the approximation ability of the proposed SVD-based method. The results of comprehensive experiments demonstrate the superiority of the proposed method.",
+    "authors": [
+      "Weixuan Liang",
+      "Chang Tang",
+      "Xinwang Liu",
+      "Yong Liu",
+      "Jiyuan Liu",
+      "En Zhu",
+      "Kunlun He"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/082852ee35425176a49848ef4a3adc0e1c60572f",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "The methods for improving large-scale multi-view clustering efficiency: a survey",
+    "abstract": "The diversity and large scale of multi-view data have brought more significant challenges to conventional clustering technology. Recently, multi-view clustering has received widespread attention because it can better use different views\u2019 consensus and complementary information to improve clustering performance. Simultaneously, many researchers have proposed various algorithms to reduce the computational complexity to accommodate the demands of large-scale multi-view clustering. However, the current reviews do not summarize from the perspective of reducing the computational complexity of large-scale multi-view clustering. Therefore, this paper outlines various high-frequency methods used in recent years to reduce the computational complexity of large-scale multi-view clustering, i.e. third-order tensor t-SVD, anchors-based graph construction, matrix blocking, and matrix factorization, and compares the corresponding algorithms based on several open datasets. Finally, the strengths and weaknesses of the current algorithm and the point of improvement are analyzed.",
+    "authors": [
+      "Zengbiao Yang",
+      "Yihua Tan"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/344e719ed4415c7910ace45f4645bd07e7a707ca",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Parallel Algorithms for Clustering High-Dimensional Large-Scale Datasets",
+    "abstract": "",
+    "authors": [
+      "H. Nagesh",
+      "Sanjay Goil",
+      "A. Choudhary"
+    ],
+    "year": 2001,
+    "url": "https://www.semanticscholar.org/paper/65b2e06e640467ea7b0e08d919001ed6b08e65cf",
+    "source": "semantic_scholar"
+  }
+]
