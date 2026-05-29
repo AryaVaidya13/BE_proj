@@ -1,0 +1,240 @@
+[
+  {
+    "title": "Exploring Text Specific and Blackbox Fairness Algorithms in Multimodal Clinical NLP",
+    "abstract": "Clinical machine learning is increasingly multimodal, collected in both structured tabular formats and unstructured forms such as freetext. We propose a novel task of exploring fairness on a multimodal clinical dataset, adopting equalized odds for the downstream medical prediction tasks. To this end, we investigate a modality-agnostic fairness algorithm - equalized odds post processing - and compare it to a text-specific fairness algorithm: debiased clinical word embeddings. Despite the fact that debiased word embeddings do not explicitly address equalized odds of protected groups, we show that a text-specific approach to fairness may simultaneously achieve a good balance of performance and classical notions of fairness. We hope that our paper inspires future contributions at the critical intersection of clinical NLP and fairness. The full source code is available here: https://github.com/johntiger1/multimodal_fairness",
+    "authors": [
+      "John Chen",
+      "Ian Berlot-Attwell",
+      "Safwan Hossain",
+      "Xindi Wang",
+      "Frank Rudzicz"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2011.09625v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Lightweight Transformers for Clinical Natural Language Processing",
+    "abstract": "Specialised pre-trained language models are becoming more frequent in NLP since they can potentially outperform models trained on generic texts. BioBERT and BioClinicalBERT are two examples of such models that have shown promise in medical NLP tasks. Many of these models are overparametrised and resource-intensive, but thanks to techniques like Knowledge Distillation (KD), it is possible to create smaller versions that perform almost as well as their larger counterparts. In this work, we specifically focus on development of compact language models for processing clinical texts (i.e. progress notes, discharge summaries etc). We developed a number of efficient lightweight clinical transformers using knowledge distillation and continual learning, with the number of parameters ranging from 15 million to 65 million. These models performed comparably to larger models such as BioBERT and ClinicalBioBERT and significantly outperformed other compact models trained on general or biomedical data. Our extensive evaluation was done across several standard datasets and covered a wide range of clinical text-mining tasks, including Natural Language Inference, Relation Extraction, Named Entity Recognition, and Sequence Classification. To our knowledge, this is the first comprehensive study specifically focused on creating efficient and compact transformers for clinical NLP tasks. The models and code used in this study can be found on our Huggingface profile at https://huggingface.co/nlpie and Github page at https://github.com/nlpie-research/Lightweight-Clinical-Transformers, respectively, promoting reproducibility of our results.",
+    "authors": [
+      "Omid Rohanian",
+      "Mohammadmahdi Nouriborji",
+      "Hannah Jauncey",
+      "Samaneh Kouchaki",
+      "ISARIC Clinical Characterisation Group",
+      "Lei Clifton",
+      "Laura Merson",
+      "David A. Clifton"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2302.04725v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Dilated Convolutional Attention Network for Medical Code Assignment from Clinical Text",
+    "abstract": "Medical code assignment, which predicts medical codes from clinical texts, is a fundamental task of intelligent medical information systems. The emergence of deep models in natural language processing has boosted the development of automatic assignment methods. However, recent advanced neural architectures with flat convolutions or multi-channel feature concatenation ignore the sequential causal constraint within a text sequence and may not learn meaningful clinical text representations, especially for lengthy clinical notes with long-term sequential dependency. This paper proposes a Dilated Convolutional Attention Network (DCAN), integrating dilated convolutions, residual connections, and label attention, for medical code assignment. It adopts dilated convolutions to capture complex medical patterns with a receptive field which increases exponentially with dilation size. Experiments on a real-world clinical dataset empirically show that our model improves the state of the art.",
+    "authors": [
+      "Shaoxiong Ji",
+      "Erik Cambria",
+      "Pekka Marttinen"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2009.14578v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Using Bottleneck Adapters to Identify Cancer in Clinical Notes under Low-Resource Constraints",
+    "abstract": "Processing information locked within clinical health records is a challenging task that remains an active area of research in biomedical NLP. In this work, we evaluate a broad set of machine learning techniques ranging from simple RNNs to specialised transformers such as BioBERT on a dataset containing clinical notes along with a set of annotations indicating whether a sample is cancer-related or not.\n  Furthermore, we specifically employ efficient fine-tuning methods from NLP, namely, bottleneck adapters and prompt tuning, to adapt the models to our specialised task. Our evaluations suggest that fine-tuning a frozen BERT model pre-trained on natural language and with bottleneck adapters outperforms all other strategies, including full fine-tuning of the specialised BioBERT model. Based on our findings, we suggest that using bottleneck adapters in low-resource situations with limited access to labelled data or processing capacity could be a viable strategy in biomedical text mining. The code used in the experiments are going to be made available at https://github.com/omidrohanian/bottleneck-adapters.",
+    "authors": [
+      "Omid Rohanian",
+      "Hannah Jauncey",
+      "Mohammadmahdi Nouriborji",
+      "Vinod Kumar Chauhan",
+      "Bronner P. Gon\u00e7alves",
+      "Christiana Kartsonaki",
+      "ISARIC Clinical Characterisation Group",
+      "Laura Merson",
+      "David Clifton"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2210.09440v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "An Open Natural Language Processing Development Framework for EHR-based Clinical Research: A case demonstration using the National COVID Cohort Collaborative (N3C)",
+    "abstract": "While we pay attention to the latest advances in clinical natural language processing (NLP), we can notice some resistance in the clinical and translational research community to adopt NLP models due to limited transparency, interpretability, and usability. In this study, we proposed an open natural language processing development framework. We evaluated it through the implementation of NLP algorithms for the National COVID Cohort Collaborative (N3C). Based on the interests in information extraction from COVID-19 related clinical notes, our work includes 1) an open data annotation process using COVID-19 signs and symptoms as the use case, 2) a community-driven ruleset composing platform, and 3) a synthetic text data generation workflow to generate texts for information extraction tasks without involving human subjects. The corpora were derived from texts from three different institutions (Mayo Clinic, University of Kentucky, University of Minnesota). The gold standard annotations were tested with a single institution's (Mayo) ruleset. This resulted in performances of 0.876, 0.706, and 0.694 in F-scores for Mayo, Minnesota, and Kentucky test datasets, respectively. The study as a consortium effort of the N3C NLP subgroup demonstrates the feasibility of creating a federated NLP algorithm development and benchmarking platform to enhance multi-institution clinical NLP study and adoption. Although we use COVID-19 as a use case in this effort, our framework is general enough to be applied to other domains of interest in clinical NLP.",
+    "authors": [
+      "Sijia Liu",
+      "Andrew Wen",
+      "Liwei Wang",
+      "Huan He",
+      "Sunyang Fu",
+      "Robert Miller",
+      "Andrew Williams",
+      "Daniel Harris",
+      "Ramakanth Kavuluru",
+      "Mei Liu",
+      "Noor Abu-el-rub",
+      "Dalton Schutte",
+      "Rui Zhang",
+      "Masoud Rouhizadeh",
+      "John D. Osborne",
+      "Yongqun He",
+      "Umit Topaloglu",
+      "Stephanie S Hong",
+      "Joel H Saltz",
+      "Thomas Schaffter",
+      "Emily Pfaff",
+      "Christopher G. Chute",
+      "Tim Duong",
+      "Melissa A. Haendel",
+      "Rafael Fuentes",
+      "Peter Szolovits",
+      "Hua Xu",
+      "Hongfang Liu",
+      "National COVID Cohort Collaborative",
+      "Natural Language Processing",
+      " Subgroup",
+      "National COVID Cohort Collaborative"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2110.10780v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "Publicly Available Clinical BERT Embeddings",
+    "abstract": "Contextual word embedding models such as ELMo (Peters et al., 2018) and BERT (Devlin et al., 2018) have dramatically improved performance for many natural language processing (NLP) tasks in recent months. However, these models have been minimally explored on specialty corpora, such as clinical text; moreover, in the clinical domain, no publicly-available pre-trained BERT models yet exist. In this work, we address this need by exploring and releasing BERT models for clinical text: one for generic clinical text and another for discharge summaries specifically. We demonstrate that using a domain-specific model yields performance improvements on three common clinical NLP tasks as compared to nonspecific embeddings. These domain-specific models are not as performant on two clinical de-identification tasks, and argue that this is a natural consequence of the differences between de-identified source text and synthetically non de-identified task text.",
+    "authors": [
+      "Emily Alsentzer",
+      "John R. Murphy",
+      "Willie Boag",
+      "Wei-Hung Weng",
+      "Di Jin",
+      "Tristan Naumann",
+      "Matthew B. A. McDermott"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1904.03323v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "Clinical ModernBERT: An efficient and long context encoder for biomedical text",
+    "abstract": "We introduce Clinical ModernBERT, a transformer based encoder pretrained on large scale biomedical literature, clinical notes, and medical ontologies, incorporating PubMed abstracts, MIMIC IV clinical data, and medical codes with their textual descriptions. Building on ModernBERT the current state of the art natural language text encoder featuring architectural upgrades such as rotary positional embeddings (RoPE), Flash Attention, and extended context length up to 8,192 tokens our model adapts these innovations specifically for biomedical and clinical domains. Clinical ModernBERT excels at producing semantically rich representations tailored for long context tasks. We validate this both by analyzing its pretrained weights and through empirical evaluation on a comprehensive suite of clinical NLP benchmarks.",
+    "authors": [
+      "Simon A. Lee",
+      "Anthony Wu",
+      "Jeffrey N. Chiang"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.03964v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Microphone Array Signal Processing and Deep Learning for Speech Enhancement",
+    "abstract": "Multi-channel acoustic signal processing is a well-established and powerful tool to exploit the spatial diversity between a target signal and non-target or noise sources for signal enhancement. However, the textbook solutions for optimal data-dependent spatial filtering rest on the knowledge of second-order statistical moments of the signals, which have traditionally been difficult to acquire. In this contribution, we compare model-based, purely data-driven, and hybrid approaches to parameter estimation and filtering, where the latter tries to combine the benefits of model-based signal processing and data-driven deep learning to overcome their individual deficiencies. We illustrate the underlying design principles with examples from noise reduction, source separation, and dereverberation.",
+    "authors": [
+      "Reinhold Haeb-Umbach",
+      "Tomohiro Nakatani",
+      "Marc Delcroix",
+      "Christoph Boeddeker",
+      "Tsubasa Ochiai"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2501.07215v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Multiple Sclerosis Severity Classification From Clinical Text",
+    "abstract": "Multiple Sclerosis (MS) is a chronic, inflammatory and degenerative neurological disease, which is monitored by a specialist using the Expanded Disability Status Scale (EDSS) and recorded in unstructured text in the form of a neurology consult note. An EDSS measurement contains an overall \"EDSS\" score and several functional subscores. Typically, expert knowledge is required to interpret consult notes and generate these scores. Previous approaches used limited context length Word2Vec embeddings and keyword searches to predict scores given a consult note, but often failed when scores were not explicitly stated. In this work, we present MS-BERT, the first publicly available transformer model trained on real clinical data other than MIMIC. Next, we present MSBC, a classifier that applies MS-BERT to generate embeddings and predict EDSS and functional subscores. Lastly, we explore combining MSBC with other models through the use of Snorkel to generate scores for unlabelled consult notes. MSBC achieves state-of-the-art performance on all metrics and prediction tasks and outperforms the models generated from the Snorkel ensemble. We improve Macro-F1 by 0.12 (to 0.88) for predicting EDSS and on average by 0.29 (to 0.63) for predicting functional subscores over previous Word2Vec CNN and rule-based approaches.",
+    "authors": [
+      "Alister D Costa",
+      "Stefan Denkovski",
+      "Michal Malyska",
+      "Sae Young Moon",
+      "Brandon Rufino",
+      "Zhen Yang",
+      "Taylor Killian",
+      "Marzyeh Ghassemi"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2010.15316v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Clinical Productivity System - A Decision Support Model",
+    "abstract": "Purpose: This goal of this study was to evaluate the effects of a data-driven clinical productivity system that leverages Electronic Health Record (EHR) data to provide productivity decision support functionality in a real-world clinical setting. The system was implemented for a large behavioral health care provider seeing over 75,000 distinct clients a year. Design/methodology/approach: The key metric in this system is a \"VPU\", which simultaneously optimizes multiple aspects of clinical care. The resulting mathematical value of clinical productivity was hypothesized to tightly link the organization's performance to its expectations and, through transparency and decision support tools at the clinician level, affect significant changes in productivity, quality, and consistency relative to traditional models of clinical productivity. Findings: In only 3 months, every single variable integrated into the VPU system showed significant improvement, including a 30% rise in revenue, 10% rise in clinical percentage, a 25% rise in treatment plan completion, a 20% rise in case rate eligibility, along with similar improvements in compliance/audit issues, outcomes collection, access, etc. Practical implications: A data-driven clinical productivity system employing decision support functionality is effective because of the impact on clinician behavior relative to traditional clinical productivity systems. Critically, the model is also extensible to integration with outcomes-based productivity. Originality/Value: EHR's are only a first step - the problem is turning that data into useful information. Technology can leverage the data in order to produce actionable information that can inform clinical practice and decision-making. Without additional technology, EHR's are essentially just copies of paper-based records stored in electronic form.",
+    "authors": [
+      "Casey C. Bennett"
+    ],
+    "year": 2012,
+    "url": "http://arxiv.org/abs/1206.0021v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Implications of mappings between ICD clinical diagnosis codes and Human Phenotype Ontology terms",
+    "abstract": "Objective: Integrating EHR data with other resources is essential in rare disease research due to low disease prevalence. Such integration is dependent on the alignment of ontologies used for data annotation. The International Classification of Diseases (ICD) is used to annotate clinical diagnoses; the Human Phenotype Ontology (HPO) to annotate phenotypes. Although these ontologies overlap in biomedical entities described, the extent to which they are interoperable is unknown. We investigate how well aligned these ontologies are and whether such alignments facilitate EHR data integration.\n  Materials and Methods: We conducted an empirical analysis of the coverage of mappings between ICD and HPO. We interpret this mapping coverage as a proxy for how easily clinical data can be integrated with research ontologies such as HPO. We quantify how exhaustively ICD codes are mapped to HPO by analyzing mappings in the UMLS Metathesaurus. We analyze the proportion of ICD codes mapped to HPO within a real-world EHR dataset.\n  Results and Discussion: Our analysis revealed that only 2.2% of ICD codes have direct mappings to HPO in UMLS. Within our EHR dataset, less than 50% of ICD codes have mappings to HPO terms. ICD codes that are used frequently in EHR data tend to have mappings to HPO; ICD codes that represent rarer medical conditions are seldom mapped.\n  Conclusion: We find that interoperability between ICD and HPO via UMLS is limited. While other mapping sources could be incorporated, there are no established conventions for what resources should be used to complement UMLS.",
+    "authors": [
+      "Amelia LM Tan",
+      "Rafael S Gon\u00e7alves",
+      "William Yuan",
+      "Gabriel A Brat",
+      "The Consortium for Clinical Characterization of COVID-19 by EHR",
+      "Robert Gentleman",
+      "Isaac S Kohane"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2407.08874v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Bidirectional LSTM-CRF for Clinical Concept Extraction",
+    "abstract": "Extraction of concepts present in patient clinical records is an essential step in clinical research. The 2010 i2b2/VA Workshop on Natural Language Processing Challenges for clinical records presented concept extraction (CE) task, with aim to identify concepts (such as treatments, tests, problems) and classify them into predefined categories. State-of-the-art CE approaches heavily rely on hand crafted features and domain specific resources which are hard to collect and tune. For this reason, this paper employs bidirectional LSTM with CRF decoding initialized with general purpose off-the-shelf word embeddings for CE. The experimental results achieved on 2010 i2b2/VA reference standard corpora using bidirectional LSTM CRF ranks closely with top ranked systems.",
+    "authors": [
+      "Raghavendra Chalapathy",
+      "Ehsan Zare Borzeshi",
+      "Massimo Piccardi"
+    ],
+    "year": 2016,
+    "url": "http://arxiv.org/abs/1610.05858v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Temporal Relation Extraction in Clinical Texts: A Span-based Graph Transformer Approach",
+    "abstract": "Temporal information extraction from unstructured text is essential for contextualizing events and deriving actionable insights, particularly in the medical domain. We address the task of extracting clinical events and their temporal relations using the well-studied I2B2 2012 Temporal Relations Challenge corpus. This task is inherently challenging due to complex clinical language, long documents, and sparse annotations. We introduce GRAPHTREX, a novel method integrating span-based entity-relation extraction, clinical large pre-trained language models (LPLMs), and Heterogeneous Graph Transformers (HGT) to capture local and global dependencies. Our HGT component facilitates information propagation across the document through innovative global landmarks that bridge distant entities. Our method improves the state-of-the-art with 5.5% improvement in the tempeval $F_1$ score over the previous best and up to 8.9% improvement on long-range relations, which presents a formidable challenge. We further demonstrate generalizability by establishing a strong baseline on the E3C corpus. This work not only advances temporal information extraction but also lays the groundwork for improved diagnostic and prognostic models through enhanced temporal reasoning.",
+    "authors": [
+      "Rochana Chaturvedi",
+      "Peyman Baghershahi",
+      "Sourav Medya",
+      "Barbara Di Eugenio"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2503.18085v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Distinguishing Clinical Sentiment: The Importance of Domain Adaptation in Psychiatric Patient Health Records",
+    "abstract": "Recently natural language processing (NLP) tools have been developed to identify and extract salient risk indicators in electronic health records (EHRs). Sentiment analysis, although widely used in non-medical areas for improving decision making, has been studied minimally in the clinical setting. In this study, we undertook, to our knowledge, the first domain adaptation of sentiment analysis to psychiatric EHRs by defining psychiatric clinical sentiment, performing an annotation project, and evaluating multiple sentence-level sentiment machine learning (ML) models. Results indicate that off-the-shelf sentiment analysis tools fail in identifying clinically positive or negative polarity, and that the definition of clinical sentiment that we provide is learnable with relatively small amounts of training data. This project is an initial step towards further refining sentiment analysis methods for clinical use. Our long-term objective is to incorporate the results of this project as part of a machine learning model that predicts inpatient readmission risk. We hope that this work will initiate a discussion concerning domain adaptation of sentiment analysis to the clinical setting.",
+    "authors": [
+      "Eben Holderness",
+      "Philip Cawkwell",
+      "Kirsten Bolton",
+      "James Pustejovsky",
+      "Mei-Hua Hall"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1904.03225v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Bidirectional LSTM-CRF for Clinical Concept Extraction",
+    "abstract": "Automated extraction of concepts from patient clinical records is an essential facilitator of clinical research. For this reason, the 2010 i2b2/VA Natural Language Processing Challenges for Clinical Records introduced a concept extraction task aimed at identifying and classifying concepts into predefined categories (i.e., treatments, tests and problems). State-of-the-art concept extraction approaches heavily rely on handcrafted features and domain-specific resources which are hard to collect and define. For this reason, this paper proposes an alternative, streamlined approach: a recurrent neural network (the bidirectional LSTM with CRF decoding) initialized with general-purpose, off-the-shelf word embeddings. The experimental results achieved on the 2010 i2b2/VA reference corpora using the proposed framework outperform all recent methods and ranks closely to the best submission from the original 2010 i2b2/VA challenge.",
+    "authors": [
+      "Raghavendra Chalapathy",
+      "Ehsan Zare Borzeshi",
+      "Massimo Piccardi"
+    ],
+    "year": 2016,
+    "url": "http://arxiv.org/abs/1611.08373v1",
+    "source": "arxiv"
+  }
+]

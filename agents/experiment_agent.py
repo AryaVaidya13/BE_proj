@@ -4,6 +4,8 @@ from core.config import GEMINI_API_KEY
 import re
 import os
 
+from core.utils import safe_generate
+
 
 class ExperimentAgent:
     def __init__(self, summaries, topic, mode="nlp"):
@@ -12,61 +14,62 @@ class ExperimentAgent:
         self.mode = mode
 
         genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel("gemini-2.5-flash")
+        self.model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
 
     def extract_experiments(self):
-        if self.mode == "nlp":
-            schema = """
-{
-  "experiments": [
-    {
-      "paper_title": "",
-      "datasets": [],
-      "models_used": [],
-      "metrics": [],
-      "key_results": ""
-    }
-  ]
-}
-"""
-            instruction = "Extract NLP experimental details."
 
-        else:
-            schema = """
+        schema = """
 {
-  "experiments": [
+  "papers": [
     {
       "paper_title": "",
-      "datasets": [],
-      "models": [],
+      "methodology": "",
+      "models_used": [],
+      "dataset": "",
       "evaluation_metrics": [],
-      "reported_results": ""
+      "key_results": "",
+      "key_contribution": "",
+      "limitations": ""
     }
   ]
 }
 """
-            instruction = "Extract Machine Learning experimental setups."
 
         prompt = f"""
 You are an expert research analyst.
 
 Topic: {self.topic}
 
-{instruction}
+Your job is to extract DETAILED structured information for EACH paper.
+
+IMPORTANT RULES:
+- DO NOT summarize multiple papers together
+- Each paper must have its own entry
+- Be specific and descriptive
+- Capture technical depth
+- Include limitations and contributions
 
 Input:
 {json.dumps(self.summaries, indent=2)}
 
-Return ONLY valid JSON matching:
+Return ONLY valid JSON in this format:
 {schema}
 """
 
-        response = self.model.generate_content(prompt)
-        cleaned = response.text.replace("```json", "").replace("```", "").strip()
-        return json.loads(cleaned)
+        response = safe_generate(self.model, prompt)
+
+        cleaned = response.text.strip()
+        cleaned = re.sub(r"```json|```", "", cleaned)
+
+        try:
+            return json.loads(cleaned)
+        except Exception as e:
+            print("⚠️ JSON parsing failed:", e)
+            return {"papers": []}
 
     def run(self):
-        print("🧪 Extracting experimental insights...")
+        print("🧪 Extracting detailed experimental insights...")
+
         data = self.extract_experiments()
 
         name = re.sub(r"\W+", "_", self.topic.lower())
@@ -77,4 +80,5 @@ Return ONLY valid JSON matching:
             json.dump(data, f, indent=2)
 
         print(f"✔ Experiments saved → {path}")
+
         return data

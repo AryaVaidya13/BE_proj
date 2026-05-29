@@ -1,0 +1,75 @@
+[
+  {
+    "title": "Audio Adversarial Examples: Targeted Attacks on Speech-to-Text",
+    "abstract": "We construct targeted audio adversarial examples on automatic speech recognition. Given any audio waveform, we can produce another that is over 99.9% similar, but transcribes as any phrase we choose (recognizing up to 50 characters per second of audio). We apply our white-box iterative optimization-based attack to Mozilla's implementation DeepSpeech end-to-end, and show it has a 100% success rate. The feasibility of this attack introduce a new domain to study adversarial examples.",
+    "authors": [
+      "Nicholas Carlini",
+      "D. Wagner"
+    ],
+    "year": 2018,
+    "url": "https://www.semanticscholar.org/paper/6a5704ac5fdacb7121a0c02a9be4de2bdc5a40fc",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Careless Whisper: Speech-to-Text Hallucination Harms",
+    "abstract": "Speech-to-text services aim to transcribe input audio as accurately as possible. They increasingly play a role in everyday life, for example in personal voice assistants or in customer-company interactions. We evaluate Open AI\u2019s Whisper, a state-of-the-art automated speech recognition service outperforming industry competitors, as of 2023. While many of Whisper\u2019s transcriptions were highly accurate, we find that roughly 1% of audio transcriptions contained entire hallucinated phrases or sentences which did not exist in any form in the underlying audio. We thematically analyze the Whisper-hallucinated content, finding that 38% of hallucinations include explicit harms such as perpetuating violence, making up inaccurate associations, or implying false authority. We then study why hallucinations occur by observing the disparities in hallucination rates between speakers with aphasia (who have a lowered ability to express themselves using speech and voice) and a control group. We find that hallucinations disproportionately occur for individuals who speak with longer shares of non-vocal durations\u2014a common symptom of aphasia. We call on industry practitioners to ameliorate these language-model-based hallucinations in Whisper, and to raise awareness of potential biases amplified by hallucinations in downstream applications of speech-to-text models.",
+    "authors": [
+      "Allison Koenecke",
+      "A. S. G. Choi",
+      "Katelyn X. Mei",
+      "Hilke Schellmann",
+      "Mona Sloane"
+    ],
+    "year": 2024,
+    "url": "https://www.semanticscholar.org/paper/b2bc4582f4c33a70fe48549f88edb72645a6e4f7",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Pemanfaatan AI Speech To Text untuk Menstimulasi Kemampuan Berbicara Anak Usia Dini",
+    "abstract": "Speaking is a vital basic skill for early childhood, as it is the foundation for future communication and language development. In the digital era, technologies such as speech-to-text offer new opportunities to create interactive and visual-based learning experiences, thus supporting children in developing their speaking skills more effectively. This study aims to explore the use of speech-to-text technology in supporting children's speaking skills at Nurul Huda Palaran Kindergarten. The approach applied is descriptive qualitative, with sources designed through observation, interviews, and documentation to provide an in-depth understanding of the application of this technology in the learning process. The data analysis process follows three main stages adapted from Miles and Huberman, namely data reduction, data presentation, and drawing conclusions. The study shows that the application of speech-to-text technology has a positive impact on improving children's pronunciation, fluency, and vocabulary mastery. This technology provides direct feedback to children in the form of text from speech, which helps children recognize errors and correct them. However, several challenges were found, such as inaccurate transcription for certain pronunciations, which were successfully overcome through teacher assistance to provide further guidance. In conclusion, the integration of speech-to-text technology is an effective innovative approach to support the development of early childhood speaking skills. The success of implementing this technology is highly dependent on the combination of optimal use of technology and a humanistic approach by teachers to create a balanced learning experience.\n\u00a0\nABSTRAK\nBerbicara adalah sebuah keterampilan dasar yang vital bagi anak usia dini, karena menjadi pondasi bagi perkembangan komunikasi dan bahasa dimasa depan. Dalam era digital, teknologi seperti speech-to-text menawarkan kesempatan baru untuk memunculkan pengalaman belajar yang interaktif dan berbasis visual, sehingga mendukung anak dalam mengembangkan kemampuan berbicara secara lebih efektif. Penelitian ini bertujuan untuk mengeksplorasi penggunaan teknologi speech-to-text dalam menunjang kecakapan berbicara anak di TK Nurul Huda Palaran. Pendekatan yang diterapkan adalah kualitatif deskriptif, dengan sumber yang dirancang melalui observasi, wawancara, dan dokumentasi untuk memberikan pemahaman mendalam tentang penerapan teknologi ini dalam proses pembelajaran. Proses analisis data mengikuti tiga tahap utama yang diadaptasi dari Miles dan Huberman, yaitu reduksi data, penyajian data, dan penarikan kesimpulan. Telaah menunjukkan bahwa penerapan teknologi speech-to-text memiliki dampak positif dalam meningkatkan aspek pelafalan, kelancaran berbicara, dan penguasaan kosakata anak. Teknologi ini memberikan umpan balik langsung kepada anak dalam bentuk teks dari ucapan, yang membantu anak mengenali kesalahan dan memperbaikinya. Meski demikian, ditemukan beberapa tantangan, seperti ketidakakuratan transkripsi untuk pelafalan tertentu, yang berhasil diatasi melalui pendampingan guru untuk memberikan bimbingan lebih lanjut. Kesimpulannya, integrasi teknologi speech-to-text merupakan pendekatan inovatif yang efektif untuk mendukung pengembangan kemampuan berbicara anak usia dini. Keberhasilan penerapan teknologi ini sangat bergantung pada kombinasi antara pemanfaatan teknologi secara optimal dan pendekatan humanistik oleh guru untuk menciptakan pengalaman belajar yang seimbang.",
+    "authors": [
+      "Suci Rahmadani",
+      "Mohammad Salehudin",
+      "Anak usia Dini",
+      "Speech To Text Teknologi Kemampuan Berbicara"
+    ],
+    "year": 2025,
+    "url": "https://www.semanticscholar.org/paper/9dc0ee0ad98e09b4fa2e256c2ed96f837da07b29",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "On Decoder-Only Architecture For Speech-to-Text and Large Language Model Integration",
+    "abstract": "Large language models (LLMs) have achieved remarkable success in the field of natural language processing, enabling better human-computer interaction using natural language. However, the seamless integration of speech signals into LLMs has not been explored well. The \u201cdecoder-only\u201c architecture has also not been well studied for speech processing tasks. In this research, we introduce Speech-LLaMA, a novel approach that effectively incorporates acoustic information into text-based large language models. Our method leverages Connectionist Temporal Classification and a simple audio encoder to map the compressed acoustic features to the continuous semantic space of the LLM. In addition, we further probe the decoder-only architecture for speech-to-text tasks by training a smaller scale randomly initialized speech-LLaMA model from speech-text paired data alone. We conduct experiments on multilingual speech-to-text translation tasks and demonstrate a significant improvement over strong baselines, highlighting the potential advantages of decoder-only models for speech-to-text conversion.",
+    "authors": [
+      "Jian Wu",
+      "Yashesh Gaur",
+      "Zhuo Chen",
+      "Long Zhou",
+      "Yilun Zhu",
+      "Tianrui Wang",
+      "Jinyu Li",
+      "Shujie Liu",
+      "Bo Ren",
+      "Linquan Liu",
+      "Yu Wu"
+    ],
+    "year": 2023,
+    "url": "https://www.semanticscholar.org/paper/8e1868f84091272544cb4209c4ccaad7cc88af27",
+    "source": "semantic_scholar"
+  },
+  {
+    "title": "Fairseq S2T: Fast Speech-to-Text Modeling with Fairseq",
+    "abstract": "We introduce fairseq S2T, a fairseq extension for speech-to-text (S2T) modeling tasks such as end-to-end speech recognition and speech-to-text translation. It follows fairseq\u2019s careful design for scalability and extensibility. We provide end-to-end workflows from data pre-processing, model training to offline (online) inference. We implement state-of-the-art RNN-based as well as Transformer-based models and open-source detailed training recipes. Fairseq\u2019s machine translation models and language models can be seamlessly integrated into S2T workflows for multi-task learning or transfer learning. Fairseq S2T is available at https://github.com/pytorch/fairseq/tree/master/examples/speech_to_text.",
+    "authors": [
+      "Changhan Wang",
+      "Yun Tang",
+      "Xutai Ma",
+      "Anne Wu",
+      "Dmytro Okhonko",
+      "J. Pino"
+    ],
+    "year": 2020,
+    "url": "https://www.semanticscholar.org/paper/2fb4522a8560c8778c2a4e8a94690a24b9c4450a",
+    "source": "semantic_scholar"
+  }
+]

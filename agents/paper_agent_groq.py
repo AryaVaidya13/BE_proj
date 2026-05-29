@@ -3,8 +3,8 @@ import json
 import re
 from typing import List, Dict
 
-import google.generativeai as genai
-from core.config import GEMINI_API_KEY
+from groq import Groq
+from core.config import GROQ_API_KEY
 
 from reportlab.platypus import (
     BaseDocTemplate,
@@ -19,8 +19,6 @@ from reportlab.lib.enums import TA_CENTER, TA_JUSTIFY
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
-from core.utils import safe_generate
-
 
 try:
     pdfmetrics.registerFont(TTFont("TimesNewRoman", "times.ttf"))
@@ -29,7 +27,7 @@ except:
     DEFAULT_FONT = "Helvetica"
 
 
-class PaperAgent:
+class PaperAgentGroq:
     def __init__(
         self,
         literature: List[Dict],
@@ -44,100 +42,76 @@ class PaperAgent:
         self.output_dir = os.path.abspath(output_dir)
         os.makedirs(self.output_dir, exist_ok=True)
 
-        genai.configure(api_key=GEMINI_API_KEY)
-        self.model = genai.GenerativeModel("gemini-3.1-flash-lite-preview")
+        self.client = Groq(api_key=GROQ_API_KEY)
 
     def _safe_filename(self, text: str):
         return re.sub(r"[^A-Za-z0-9]+", "_", text).strip("_")
 
-    # ✅ CLEAN MODEL OUTPUT
-    def _clean_section_output(self, text: str):
-        text = re.sub(r"^#+\s*", "", text, flags=re.MULTILINE)
-        text = re.sub(
-            r"^(Abstract|Index Terms|I\.|II\.|III\.|IV\.|V\.|VI\.).*",
-            "",
-            text,
-            flags=re.MULTILINE
-        )
-        return text.strip()
-
-    def _generate_section(self, section_name, extra_instructions=""):
+    def _generate_full_paper_with_llm(self):
 
         prompt = f"""
-Write ONLY the content for the section: {section_name}
+Write a formal SURVEY research paper.
 
 Topic:
-{self.topic}
+"{self.topic}"
 
-STRICT INSTRUCTIONS:
-- DO NOT include the section title
-- IEEE academic style
-- 500–900 words
+Structure EXACTLY like this:
+
+Abstract
+
+Index Terms
+
+I. Introduction
+
+II. Related Work
+
+III. Methodology
+
+IV. Experimental Analysis
+
+V. Discussion
+
+VI. Conclusion and Future Work
+
+Rules:
+- Formal academic writing
+- Paragraphs only
 - No bullet points
-- Deep explanation
-
-{extra_instructions}
+- Cite papers like [1], [2]
+- Do NOT hallucinate datasets or results
 
 Literature:
 {json.dumps(self.literature, indent=2)}
 
 Experiments:
 {json.dumps(self.experiments_bundle, indent=2)}
+
+Return only the paper text.
 """
 
-        response = safe_generate(self.model, prompt)
-        return self._clean_section_output(response.text)
+        response = self.client.chat.completions.create(
+            model="llama-3.3-70b-versatile",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.3
+        )
 
-    def _generate_full_paper(self):
-
-        print("✍ Generating sections...")
-
-        abstract = self._generate_section("Abstract")
-        index_terms = "Clinical NLP, EHR, Transformers, Machine Learning"
-
-        intro = self._generate_section("Introduction")
-        related = self._generate_section("Related Work")
-        methodology = self._generate_section("Methodology")
-        experiments = self._generate_section("Experimental Analysis")
-        discussion = self._generate_section("Discussion")
-        conclusion = self._generate_section("Conclusion")
-
-        return f"""
-Abstract
-{abstract}
-
-Index Terms
-{index_terms}
-
-I. Introduction
-{intro}
-
-II. Related Work
-{related}
-
-III. Methodology
-{methodology}
-
-IV. Experimental Analysis
-{experiments}
-
-V. Discussion
-{discussion}
-
-VI. Conclusion
-{conclusion}
-"""
+        return response.choices[0].message.content.strip()
 
     def _generate_references(self):
 
+        if not self.literature:
+            return ["No references available"]
+
         refs = []
+
         for i, paper in enumerate(self.literature, start=1):
             title = paper.get("title", "Untitled")
             authors = ", ".join(paper.get("authors", [])) or "Unknown"
             year = paper.get("year", "n.d.")
             url = paper.get("url", "")
 
-            refs.append(f"[{i}] {authors}, \"{title},\" {year}. Available: {url}")
+            ref = f"[{i}] {authors}, \"{title},\" {year}. Available: {url}"
+            refs.append(ref)
 
         return refs
 
@@ -165,22 +139,21 @@ VI. Conclusion
             parent=base,
             fontSize=18,
             alignment=TA_CENTER,
-            spaceAfter=12,
+            spaceAfter=10,
         )
 
         author_style = ParagraphStyle(
-            "Authors",
+            "Author",
             parent=base,
-            fontSize=10,
             alignment=TA_CENTER,
-            spaceAfter=14,
+            spaceAfter=6,
         )
 
         heading_style = ParagraphStyle(
             "Heading",
             parent=base,
-            fontSize=11,
-            spaceBefore=8,
+            fontSize=12,
+            spaceBefore=10,
             spaceAfter=4,
         )
 
@@ -193,71 +166,42 @@ VI. Conclusion
             bottomMargin=40,
         )
 
-        # 🔥 ONLY TWO COLUMN FRAMES (no weird header frame)
         frame1 = Frame(doc.leftMargin, doc.bottomMargin, doc.width / 2 - 6, doc.height)
         frame2 = Frame(doc.leftMargin + doc.width / 2 + 6, doc.bottomMargin, doc.width / 2 - 6, doc.height)
 
-        template = PageTemplate(
-            id="IEEE",
-            frames=[frame1, frame2],
-            onPage=self._add_page_number
-        )
-
+        template = PageTemplate(id="TwoCol", frames=[frame1, frame2], onPage=self._add_page_number)
         doc.addPageTemplates([template])
 
         story = []
 
-        # ✅ TITLE (FULL WIDTH EFFECT via spanning)
         story.append(Paragraph(self.topic, title_style))
 
-        # ✅ AUTHORS (STACKED + CENTERED)
-        authors_text = """
-        <b>[Author Name]</b><br/>
-        [Department Name]<br/>
-        [College Name]<br/>
-        [Mumbai, India]<br/>
-        author@email.com
-        <br/><br/>
+        story.append(Paragraph("Author Name 1", author_style))
+        story.append(Paragraph("Department / University", author_style))
+        story.append(Paragraph("email@domain.com", author_style))
+        story.append(Spacer(1, 6))
 
-        <b>[Co-Author Name]</b><br/>
-        [Department Name]<br/>
-        [College Name]<br/>
-        [Mumbai, India]<br/>
-        coauthor@email.com
-        """
+        story.append(Paragraph("Author Name 2", author_style))
+        story.append(Paragraph("Department / University", author_style))
+        story.append(Paragraph("email@domain.com", author_style))
+        story.append(Spacer(1, 14))
 
-        story.append(Paragraph(authors_text, author_style))
+        lines = paper_text.split("\n")
 
-        # 🔥 FIX SECTION FORMATTING
-        for line in paper_text.split("\n"):
+        for line in lines:
             line = line.strip()
 
             if not line:
                 story.append(Spacer(1, 6))
                 continue
 
-            # ✅ ABSTRACT BOLD
-            if line == "Abstract":
-                story.append(Paragraph("<b>Abstract</b>", heading_style))
-                continue
-
-            # ✅ INDEX TERMS
-            if line == "Index Terms":
-                story.append(Paragraph("<b>Index Terms</b>", heading_style))
-                continue
-
-            # ✅ ALL CAPS SECTION HEADINGS
-            match = re.match(r"^(I\.|II\.|III\.|IV\.|V\.|VI\.)\s*(.*)", line)
-            if match:
-                roman, title = match.groups()
-                formatted = f"<b>{roman} {title.upper()}</b>"
-                story.append(Paragraph(formatted, heading_style))
-                continue
-
-            story.append(Paragraph(line, base))
+            if re.match(r"^(Abstract|Index Terms|I\.|II\.|III\.|IV\.|V\.|VI\.)", line):
+                story.append(Paragraph(f"<b>{line}</b>", heading_style))
+            else:
+                story.append(Paragraph(line, base))
 
         story.append(Spacer(1, 10))
-        story.append(Paragraph("<b>REFERENCES</b>", heading_style))
+        story.append(Paragraph("<b>References</b>", heading_style))
 
         for ref in self._generate_references():
             story.append(Paragraph(ref, base))
@@ -285,7 +229,7 @@ VI. Conclusion
         # Authors
         authors_para = doc.add_paragraph()
         authors_para.alignment = WD_ALIGN_PARAGRAPH.CENTER
-        authors_para.add_run("Author Name\nDepartment Name\nCollege Name\nMumbai, India\nauthor@email.com").bold = True
+        authors_para.add_run("Author Name 1\nDepartment / University\nemail@domain.com\n\nAuthor Name 2\nDepartment / University\nemail@domain.com").bold = True
 
         # Content
         for line in paper_text.split("\n"):
@@ -293,33 +237,25 @@ VI. Conclusion
             if not line:
                 continue
 
-            if line == "Abstract" or line == "Index Terms":
-                p = doc.add_paragraph()
-                p.add_run(line).bold = True
-                continue
-
-            match = re.match(r"^(I\.|II\.|III\.|IV\.|V\.|VI\.)\s*(.*)", line)
-            if match:
-                roman, heading = match.groups()
-                p = doc.add_heading(f"{roman} {heading.upper()}", level=1)
+            if re.match(r"^(Abstract|Index Terms|I\.|II\.|III\.|IV\.|V\.|VI\.)", line):
+                p = doc.add_heading(line, level=1)
                 continue
 
             doc.add_paragraph(line)
 
         # References
-        doc.add_heading("REFERENCES", level=1)
+        doc.add_heading("References", level=1)
         for ref in self._generate_references():
             doc.add_paragraph(ref)
 
         doc.save(docx_path)
         print(f"📄 Word Doc saved → {docx_path}")
-
         return docx_path
 
     def generate_paper(self):
-        print("[📝] Generating detailed research paper...")
+        print("[📝] Generating paper...")
 
-        paper_text = self._generate_full_paper()
+        paper_text = self._generate_full_paper_with_llm()
 
         txt_path = os.path.join(
             self.output_dir,

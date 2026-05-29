@@ -1,0 +1,65 @@
+[
+  {
+    "title": "Scale-free Characteristics of Multilingual Legal Texts and the Limitations of LLMs",
+    "abstract": "We present a comparative analysis of text complexity across domains using scale-free metrics. We quantify linguistic complexity via Heaps' exponent $\u03b2$ (vocabulary growth), Taylor's exponent $\u03b1$ (word-frequency fluctuation scaling), compression rate $r$ (redundancy), and entropy. Our corpora span three domains: legal documents (statutes, cases, deeds) as a specialized domain, general natural language texts (literature, Wikipedia), and AI-generated (GPT) text. We find that legal texts exhibit slower vocabulary growth (lower $\u03b2$) and higher term consistency (higher $\u03b1$) than general texts. Within legal domain, statutory codes have the lowest $\u03b2$ and highest $\u03b1$, reflecting strict drafting conventions, while cases and deeds show higher $\u03b2$ and lower $\u03b1$. In contrast, GPT-generated text shows the statistics more aligning with general language patterns. These results demonstrate that legal texts exhibit domain-specific structures and complexities, which current generative models do not fully replicate.",
+    "authors": [
+      "Haoyang Chen",
+      "Kumiko Tanaka-Ishii"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2509.17367v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Recurrent Neural Network based Part-of-Speech Tagger for Code-Mixed Social Media Text",
+    "abstract": "This paper describes Centre for Development of Advanced Computing's (CDACM) submission to the shared task-'Tool Contest on POS tagging for Code-Mixed Indian Social Media (Facebook, Twitter, and Whatsapp) Text', collocated with ICON-2016. The shared task was to predict Part of Speech (POS) tag at word level for a given text. The code-mixed text is generated mostly on social media by multilingual users. The presence of the multilingual words, transliterations, and spelling variations make such content linguistically complex. In this paper, we propose an approach to POS tag code-mixed social media text using Recurrent Neural Network Language Model (RNN-LM) architecture. We submitted the results for Hindi-English (hi-en), Bengali-English (bn-en), and Telugu-English (te-en) code-mixed data.",
+    "authors": [
+      "Raj Nath Patel",
+      "Prakash B. Pimpale",
+      "M Sasikumar"
+    ],
+    "year": 2016,
+    "url": "http://arxiv.org/abs/1611.04989v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Expressive Text-to-Image Generation with Rich Text",
+    "abstract": "Plain text has become a prevalent interface for text-to-image synthesis. However, its limited customization options hinder users from accurately describing desired outputs. For example, plain text makes it hard to specify continuous quantities, such as the precise RGB color value or importance of each word. Furthermore, creating detailed text prompts for complex scenes is tedious for humans to write and challenging for text encoders to interpret. To address these challenges, we propose using a rich-text editor supporting formats such as font style, size, color, and footnote. We extract each word's attributes from rich text to enable local style control, explicit token reweighting, precise color rendering, and detailed region synthesis. We achieve these capabilities through a region-based diffusion process. We first obtain each word's region based on attention maps of a diffusion process using plain text. For each region, we enforce its text attributes by creating region-specific detailed prompts and applying region-specific guidance, and maintain its fidelity against plain-text generation through region-based injections. We present various examples of image generation from rich text and demonstrate that our method outperforms strong baselines with quantitative evaluations.",
+    "authors": [
+      "Songwei Ge",
+      "Taesung Park",
+      "Jun-Yan Zhu",
+      "Jia-Bin Huang"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2304.06720v4",
+    "source": "arxiv"
+  },
+  {
+    "title": "Text or Pixels? It Takes Half: On the Token Efficiency of Visual Text Inputs in Multimodal LLMs",
+    "abstract": "Large language models (LLMs) and their multimodal variants can now process visual inputs, including images of text. This raises an intriguing question: can we compress textual inputs by feeding them as images to reduce token usage while preserving performance? In this paper, we show that visual text representations are a practical and surprisingly effective form of input compression for decoder LLMs. We exploit the idea of rendering long text inputs as a single image and provide it directly to the model. This leads to dramatically reduced number of decoder tokens required, offering a new form of input compression. Through experiments on two distinct benchmarks RULER (long-context retrieval) and CNN/DailyMail (document summarization) we demonstrate that this text-as-image method yields substantial token savings (often nearly half) without degrading task performance.",
+    "authors": [
+      "Yanhong Li",
+      "Zixuan Lan",
+      "Jiawei Zhou"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2510.18279v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "CORE-Text: Improving Scene Text Detection with Contrastive Relational Reasoning",
+    "abstract": "Localizing text instances in natural scenes is regarded as a fundamental challenge in computer vision. Nevertheless, owing to the extremely varied aspect ratios and scales of text instances in real scenes, most conventional text detectors suffer from the sub-text problem that only localizes the fragments of text instance (i.e., sub-texts). In this work, we quantitatively analyze the sub-text problem and present a simple yet effective design, COntrastive RElation (CORE) module, to mitigate that issue. CORE first leverages a vanilla relation block to model the relations among all text proposals (sub-texts of multiple text instances) and further enhances relational reasoning via instance-level sub-text discrimination in a contrastive manner. Such way naturally learns instance-aware representations of text proposals and thus facilitates scene text detection. We integrate the CORE module into a two-stage text detector of Mask R-CNN and devise our text detector CORE-Text. Extensive experiments on four benchmarks demonstrate the superiority of CORE-Text. Code is available: \\url{https://github.com/jylins/CORE-Text}.",
+    "authors": [
+      "Jingyang Lin",
+      "Yingwei Pan",
+      "Rongfeng Lai",
+      "Xuehang Yang",
+      "Hongyang Chao",
+      "Ting Yao"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2112.07513v1",
+    "source": "arxiv"
+  }
+]

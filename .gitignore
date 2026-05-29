@@ -1,2 +1,8 @@
 core/config.py
 agents/check_models.py
+Streamlit implementation be_proj .mp4
+__pycache__/
+*.pyc
+outputs/
+venv/
+.env

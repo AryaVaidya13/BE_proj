@@ -1,0 +1,152 @@
+[
+  {
+    "title": "Exploring Text Specific and Blackbox Fairness Algorithms in Multimodal Clinical NLP",
+    "abstract": "Clinical machine learning is increasingly multimodal, collected in both structured tabular formats and unstructured forms such as freetext. We propose a novel task of exploring fairness on a multimodal clinical dataset, adopting equalized odds for the downstream medical prediction tasks. To this end, we investigate a modality-agnostic fairness algorithm - equalized odds post processing - and compare it to a text-specific fairness algorithm: debiased clinical word embeddings. Despite the fact that debiased word embeddings do not explicitly address equalized odds of protected groups, we show that a text-specific approach to fairness may simultaneously achieve a good balance of performance and classical notions of fairness. We hope that our paper inspires future contributions at the critical intersection of clinical NLP and fairness. The full source code is available here: https://github.com/johntiger1/multimodal_fairness",
+    "authors": [
+      "John Chen",
+      "Ian Berlot-Attwell",
+      "Safwan Hossain",
+      "Xindi Wang",
+      "Frank Rudzicz"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2011.09625v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Lightweight Transformers for Clinical Natural Language Processing",
+    "abstract": "Specialised pre-trained language models are becoming more frequent in NLP since they can potentially outperform models trained on generic texts. BioBERT and BioClinicalBERT are two examples of such models that have shown promise in medical NLP tasks. Many of these models are overparametrised and resource-intensive, but thanks to techniques like Knowledge Distillation (KD), it is possible to create smaller versions that perform almost as well as their larger counterparts. In this work, we specifically focus on development of compact language models for processing clinical texts (i.e. progress notes, discharge summaries etc). We developed a number of efficient lightweight clinical transformers using knowledge distillation and continual learning, with the number of parameters ranging from 15 million to 65 million. These models performed comparably to larger models such as BioBERT and ClinicalBioBERT and significantly outperformed other compact models trained on general or biomedical data. Our extensive evaluation was done across several standard datasets and covered a wide range of clinical text-mining tasks, including Natural Language Inference, Relation Extraction, Named Entity Recognition, and Sequence Classification. To our knowledge, this is the first comprehensive study specifically focused on creating efficient and compact transformers for clinical NLP tasks. The models and code used in this study can be found on our Huggingface profile at https://huggingface.co/nlpie and Github page at https://github.com/nlpie-research/Lightweight-Clinical-Transformers, respectively, promoting reproducibility of our results.",
+    "authors": [
+      "Omid Rohanian",
+      "Mohammadmahdi Nouriborji",
+      "Hannah Jauncey",
+      "Samaneh Kouchaki",
+      "ISARIC Clinical Characterisation Group",
+      "Lei Clifton",
+      "Laura Merson",
+      "David A. Clifton"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2302.04725v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Using Bottleneck Adapters to Identify Cancer in Clinical Notes under Low-Resource Constraints",
+    "abstract": "Processing information locked within clinical health records is a challenging task that remains an active area of research in biomedical NLP. In this work, we evaluate a broad set of machine learning techniques ranging from simple RNNs to specialised transformers such as BioBERT on a dataset containing clinical notes along with a set of annotations indicating whether a sample is cancer-related or not.\n  Furthermore, we specifically employ efficient fine-tuning methods from NLP, namely, bottleneck adapters and prompt tuning, to adapt the models to our specialised task. Our evaluations suggest that fine-tuning a frozen BERT model pre-trained on natural language and with bottleneck adapters outperforms all other strategies, including full fine-tuning of the specialised BioBERT model. Based on our findings, we suggest that using bottleneck adapters in low-resource situations with limited access to labelled data or processing capacity could be a viable strategy in biomedical text mining. The code used in the experiments are going to be made available at https://github.com/omidrohanian/bottleneck-adapters.",
+    "authors": [
+      "Omid Rohanian",
+      "Hannah Jauncey",
+      "Mohammadmahdi Nouriborji",
+      "Vinod Kumar Chauhan",
+      "Bronner P. Gon\u00e7alves",
+      "Christiana Kartsonaki",
+      "ISARIC Clinical Characterisation Group",
+      "Laura Merson",
+      "David Clifton"
+    ],
+    "year": 2022,
+    "url": "http://arxiv.org/abs/2210.09440v2",
+    "source": "arxiv"
+  },
+  {
+    "title": "Plague Dot Text: Text mining and annotation of outbreak reports of the Third Plague Pandemic (1894-1952)",
+    "abstract": "The design of models that govern diseases in population is commonly built on information and data gathered from past outbreaks. However, epidemic outbreaks are never captured in statistical data alone but are communicated by narratives, supported by empirical observations. Outbreak reports discuss correlations between populations, locations and the disease to infer insights into causes, vectors and potential interventions. The problem with these narratives is usually the lack of consistent structure or strong conventions, which prohibit their formal analysis in larger corpora. Our interdisciplinary research investigates more than 100 reports from the third plague pandemic (1894-1952) evaluating ways of building a corpus to extract and structure this narrative information through text mining and manual annotation. In this paper we discuss the progress of our ongoing exploratory project, how we enhance optical character recognition (OCR) methods to improve text capture, our approach to structure the narratives and identify relevant entities in the reports. The structured corpus is made available via Solr enabling search and analysis across the whole collection for future research dedicated, for example, to the identification of concepts. We show preliminary visualisations of the characteristics of causation and differences with respect to gender as a result of syntactic-category-dependent corpus statistics. Our goal is to develop structured accounts of some of the most significant concepts that were used to understand the epidemiology of the third plague pandemic around the globe. The corpus enables researchers to analyse the reports collectively allowing for deep insights into the global epidemiological consideration of plague in the early twentieth century.",
+    "authors": [
+      "Arlene Casey",
+      "Mike Bennett",
+      "Richard Tobin",
+      "Claire Grover",
+      "Iona Walker",
+      "Lukas Engelmann",
+      "Beatrice Alex"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2002.01415v3",
+    "source": "arxiv"
+  },
+  {
+    "title": "TILFA: A Unified Framework for Text, Image, and Layout Fusion in Argument Mining",
+    "abstract": "A main goal of Argument Mining (AM) is to analyze an author's stance. Unlike previous AM datasets focusing only on text, the shared task at the 10th Workshop on Argument Mining introduces a dataset including both text and images. Importantly, these images contain both visual elements and optical characters. Our new framework, TILFA (A Unified Framework for Text, Image, and Layout Fusion in Argument Mining), is designed to handle this mixed data. It excels at not only understanding text but also detecting optical characters and recognizing layout details in images. Our model significantly outperforms existing baselines, earning our team, KnowComp, the 1st place in the leaderboard of Argumentative Stance Classification subtask in this shared task.",
+    "authors": [
+      "Qing Zong",
+      "Zhaowei Wang",
+      "Baixuan Xu",
+      "Tianshi Zheng",
+      "Haochen Shi",
+      "Weiqi Wang",
+      "Yangqiu Song",
+      "Ginny Y. Wong",
+      "Simon See"
+    ],
+    "year": 2023,
+    "url": "http://arxiv.org/abs/2310.05210v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Text mining in education",
+    "abstract": "The explosive growth of online education environments is generating a massive volume of data, specially in text format from forums, chats, social networks, assessments, essays, among others. It produces exciting challenges on how to mine text data in order to find useful knowledge for educational stakeholders. Despite the increasing number of educational applications of text mining published recently, we have not found any paper surveying them. In this line, this work presents a systematic overview of the current status of the Educational Text Mining field. Our final goal is to answer three main research questions: Which are the text mining techniques most used in educational environments? Which are the most used educational resources? And which are the main applications or educational goals? Finally, we outline the conclusions and the more interesting future trends.",
+    "authors": [
+      "R. Ferreira-Mello",
+      "M. Andre",
+      "A. Pinheiro",
+      "E. Costa",
+      "C. Romero"
+    ],
+    "year": 2024,
+    "url": "http://arxiv.org/abs/2403.00769v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Clinical ModernBERT: An efficient and long context encoder for biomedical text",
+    "abstract": "We introduce Clinical ModernBERT, a transformer based encoder pretrained on large scale biomedical literature, clinical notes, and medical ontologies, incorporating PubMed abstracts, MIMIC IV clinical data, and medical codes with their textual descriptions. Building on ModernBERT the current state of the art natural language text encoder featuring architectural upgrades such as rotary positional embeddings (RoPE), Flash Attention, and extended context length up to 8,192 tokens our model adapts these innovations specifically for biomedical and clinical domains. Clinical ModernBERT excels at producing semantically rich representations tailored for long context tasks. We validate this both by analyzing its pretrained weights and through empirical evaluation on a comprehensive suite of clinical NLP benchmarks.",
+    "authors": [
+      "Simon A. Lee",
+      "Anthony Wu",
+      "Jeffrey N. Chiang"
+    ],
+    "year": 2025,
+    "url": "http://arxiv.org/abs/2504.03964v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Dilated Convolutional Attention Network for Medical Code Assignment from Clinical Text",
+    "abstract": "Medical code assignment, which predicts medical codes from clinical texts, is a fundamental task of intelligent medical information systems. The emergence of deep models in natural language processing has boosted the development of automatic assignment methods. However, recent advanced neural architectures with flat convolutions or multi-channel feature concatenation ignore the sequential causal constraint within a text sequence and may not learn meaningful clinical text representations, especially for lengthy clinical notes with long-term sequential dependency. This paper proposes a Dilated Convolutional Attention Network (DCAN), integrating dilated convolutions, residual connections, and label attention, for medical code assignment. It adopts dilated convolutions to capture complex medical patterns with a receptive field which increases exponentially with dilation size. Experiments on a real-world clinical dataset empirically show that our model improves the state of the art.",
+    "authors": [
+      "Shaoxiong Ji",
+      "Erik Cambria",
+      "Pekka Marttinen"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2009.14578v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Automated Spelling Correction for Clinical Text Mining in Russian",
+    "abstract": "The main goal of this paper is to develop a spell checker module for clinical text in Russian. The described approach combines string distance measure algorithms with technics of machine learning embedding methods. Our overall precision is 0.86, lexical precision - 0.975 and error precision is 0.74. We develop spell checker as a part of medical text mining tool regarding the problems of misspelling, negation, experiencer and temporality detection.",
+    "authors": [
+      "Ksenia Balabaeva",
+      "Anastasia Funkner",
+      "Sergey Kovalchuk"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2004.04987v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Multiple Sclerosis Severity Classification From Clinical Text",
+    "abstract": "Multiple Sclerosis (MS) is a chronic, inflammatory and degenerative neurological disease, which is monitored by a specialist using the Expanded Disability Status Scale (EDSS) and recorded in unstructured text in the form of a neurology consult note. An EDSS measurement contains an overall \"EDSS\" score and several functional subscores. Typically, expert knowledge is required to interpret consult notes and generate these scores. Previous approaches used limited context length Word2Vec embeddings and keyword searches to predict scores given a consult note, but often failed when scores were not explicitly stated. In this work, we present MS-BERT, the first publicly available transformer model trained on real clinical data other than MIMIC. Next, we present MSBC, a classifier that applies MS-BERT to generate embeddings and predict EDSS and functional subscores. Lastly, we explore combining MSBC with other models through the use of Snorkel to generate scores for unlabelled consult notes. MSBC achieves state-of-the-art performance on all metrics and prediction tasks and outperforms the models generated from the Snorkel ensemble. We improve Macro-F1 by 0.12 (to 0.88) for predicting EDSS and on average by 0.29 (to 0.63) for predicting functional subscores over previous Word2Vec CNN and rule-based approaches.",
+    "authors": [
+      "Alister D Costa",
+      "Stefan Denkovski",
+      "Michal Malyska",
+      "Sae Young Moon",
+      "Brandon Rufino",
+      "Zhen Yang",
+      "Taylor Killian",
+      "Marzyeh Ghassemi"
+    ],
+    "year": 2020,
+    "url": "http://arxiv.org/abs/2010.15316v1",
+    "source": "arxiv"
+  }
+]

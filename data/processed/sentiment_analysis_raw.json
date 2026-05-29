@@ -1,0 +1,64 @@
+[
+  {
+    "title": "SemEval-2015 Task 10: Sentiment Analysis in Twitter",
+    "abstract": "In this paper, we describe the 2015 iteration of the SemEval shared task on Sentiment Analysis in Twitter. This was the most popular sentiment analysis shared task to date with more than 40 teams participating in each of the last three years. This year's shared task competition consisted of five sentiment prediction subtasks. Two were reruns from previous years: (A) sentiment expressed by a phrase in the context of a tweet, and (B) overall sentiment of a tweet. We further included three new subtasks asking to predict (C) the sentiment towards a topic in a single tweet, (D) the overall sentiment towards a topic in a set of tweets, and (E) the degree of prior polarity of a phrase.",
+    "authors": [
+      "Sara Rosenthal",
+      "Saif M Mohammad",
+      "Preslav Nakov",
+      "Alan Ritter",
+      "Svetlana Kiritchenko",
+      "Veselin Stoyanov"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1912.02387v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Sentiment Analysis in Twitter for Macedonian",
+    "abstract": "We present work on sentiment analysis in Twitter for Macedonian. As this is pioneering work for this combination of language and genre, we created suitable resources for training and evaluating a system for sentiment analysis of Macedonian tweets. In particular, we developed a corpus of tweets annotated with tweet-level sentiment polarity (positive, negative, and neutral), as well as with phrase-level sentiment, which we made freely available for research purposes. We further bootstrapped several large-scale sentiment lexicons for Macedonian, motivated by previous work for English. The impact of several different pre-processing steps as well as of various features is shown in experiments that represent the first attempt to build a system for sentiment analysis in Twitter for the morphologically rich Macedonian language. Overall, our experimental results show an F1-score of 92.16, which is very strong and is on par with the best results for English, which were achieved in recent SemEval competitions.",
+    "authors": [
+      "Dame Jovanoski",
+      "Veno Pachovski",
+      "Preslav Nakov"
+    ],
+    "year": 2021,
+    "url": "http://arxiv.org/abs/2109.13725v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "Two-dimensional Sentiment Analysis of text",
+    "abstract": "Sentiment Analysis aims to get the underlying viewpoint of the text, which could be anything that holds a subjective opinion, such as an online review, Movie rating, Comments on Blog posts etc. This paper presents a novel approach that classify text in two-dimensional Emotional space, based on the sentiments of the author. The approach uses existing lexical resources to extract feature set, which is trained using Supervised Learning techniques.",
+    "authors": [
+      "Rahul Tejwani"
+    ],
+    "year": 2014,
+    "url": "http://arxiv.org/abs/1406.2022v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "SemEval-2013 Task 2: Sentiment Analysis in Twitter",
+    "abstract": "In recent years, sentiment analysis in social media has attracted a lot of research interest and has been used for a number of applications. Unfortunately, research has been hindered by the lack of suitable datasets, complicating the comparison between approaches. To address this issue, we have proposed SemEval-2013 Task 2: Sentiment Analysis in Twitter, which included two subtasks: A, an expression-level subtask, and B, a message-level subtask. We used crowdsourcing on Amazon Mechanical Turk to label a large Twitter training dataset along with additional test sets of Twitter and SMS messages for both subtasks. All datasets used in the evaluation are released to the research community. The task attracted significant interest and a total of 149 submissions from 44 teams. The best-performing team achieved an F1 of 88.9% and 69% for subtasks A and B, respectively.",
+    "authors": [
+      "Preslav Nakov",
+      "Zornitsa Kozareva",
+      "Alan Ritter",
+      "Sara Rosenthal",
+      "Veselin Stoyanov",
+      "Theresa Wilson"
+    ],
+    "year": 2019,
+    "url": "http://arxiv.org/abs/1912.06806v1",
+    "source": "arxiv"
+  },
+  {
+    "title": "JU_KS@SAIL_CodeMixed-2017: Sentiment Analysis for Indian Code Mixed Social Media Texts",
+    "abstract": "This paper reports about our work in the NLP Tool Contest @ICON-2017, shared task on Sentiment Analysis for Indian Languages (SAIL) (code mixed). To implement our system, we have used a machine learning algo-rithm called Multinomial Na\u00efve Bayes trained using n-gram and SentiWordnet features. We have also used a small SentiWordnet for English and a small SentiWordnet for Bengali. But we have not used any SentiWordnet for Hindi language. We have tested our system on Hindi-English and Bengali-English code mixed social media data sets released for the contest. The performance of our system is very close to the best system participated in the contest. For both Bengali-English and Hindi-English runs, our system was ranked at the 3rd position out of all submitted runs and awarded the 3rd prize in the contest.",
+    "authors": [
+      "Kamal Sarkar"
+    ],
+    "year": 2018,
+    "url": "http://arxiv.org/abs/1802.05737v1",
+    "source": "arxiv"
+  }
+]
